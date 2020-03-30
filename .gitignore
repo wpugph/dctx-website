@@ -35,6 +35,7 @@ web/private/scripts/quicksilver
 !web/private/config/
 !.circleci
 .bashrc
+!web/wp-content/themes/dctx
 
 # Add directories containing build assets below.
 # Keep all additions above the "cut" line.
@@ -110,3 +111,7 @@ Thumbs.db
 # SASS #
 ##########
 .sass-cache
+
+# custom
+.vscode
+!web/wp-content/themes/dctx
