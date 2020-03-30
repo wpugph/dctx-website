@@ -1,0 +1,4 @@
+REFERENCE_SITE_URL="https://live-gh-action1.pantheonsite.io/"
+QA_PANTHEONENV="qa1"
+PANTHEONENV="staging"
+PANTHEONSITENAME="dxtcovid"
