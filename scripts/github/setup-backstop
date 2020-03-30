@@ -1,0 +1,72 @@
+#!/bin/bash
+
+export PROJECT_ROOT="$(pwd)"
+. $PROJECT_ROOT/config
+echo "project Root:"$PROJECT_ROOT
+cat $PROJECT_ROOT/config
+
+export PROJECT_ROOT="$(pwd)"
+. $PROJECT_ROOT/config  
+
+# sh $PROJECT_ROOT/scripts/github/load-keys
+# echo "Host *\n\tStrictHostKeyChecking no\n\n" > "$SSH_DIR/config"
+# cat $SSH_DIR/config
+# ssh-add -l
+
+cd $PROJECT_ROOT
+rm $PROJECT_ROOT/composer.lock
+composer install
+echo 'wp composer build success!!'
+
+ssh-add -l
+
+#sh $PROJECT_ROOT/scripts/github/load-keys
+
+export PATH="$PATH:$COMPOSER_HOME/vendor/bin"
+echo "COMPOSER PATH:"$PATH
+export PROJECT_ROOT="$(pwd)"
+export GITHUB_BRANCH=${GITHUB_REF##*heads/}
+printf "[\e[0;34mNOTICE\e[0m] Setting up SSH access to server for rsync usage.\n"
+SSH_DIR="$HOME/.ssh"
+echo "SSHDIR PATH:"$SSH_DIR
+
+mkdir -p "$SSH_DIR"
+chmod 700 "$SSH_DIR"
+touch "$SSH_DIR/id_rsa1"
+touch "$SSH_DIR/config"
+echo "Host *\n\tStrictHostKeyChecking no\n\n" > "$SSH_DIR/config"
+# echo "${{ secrets.STAGING_PRIVATE_KEY }}" > "$SSH_DIR/id_rsa1"
+echo "$STAGING_PRIVATE_KEY" > "$SSH_DIR/id_rsa1"
+chmod 600 "$SSH_DIR/id_rsa1"
+chmod 600 "$SSH_DIR/config"
+eval "$(ssh-agent -s)"
+ssh-add "$SSH_DIR/id_rsa1"
+ssh-add -l
+cat $SSH_DIR/id_rsa1
+cat $SSH_DIR/config
+echo "SSH PRIVATE KEY IMPORTED!!!"
+
+export QA_SITE_URL="https://$QA_PANTHEONENV-$PANTHEONSITENAME.pantheonsite.io/"
+export TEST_SITE_URL="https://$PANTHEONENV-$PANTHEONSITENAME.pantheonsite.io/"
+export REFERENCE_SITE_URL="$REFERENCE_SITE_URL"
+
+cd $PROJECT_ROOT
+printf "[\e[0;34mNOTICE\e[0m] Installing BackstopJS\n"
+
+# install backstop
+npm install backstopjs || exit 0
+$PROJECT_ROOT/node_modules/backstopjs/cli/index.js -v
+# Backstop get reference
+echo -e "\nRunning backstop reference on ${REFERENCE_SITE_URL}..."
+$PROJECT_ROOT/node_modules/backstopjs/cli/index.js reference --config=$PROJECT_ROOT/scripts/github/test/backstopjs/backstopConfig.js
+# Backstop test url
+echo -e "\nRunning backstop test on ${TEST_SITE_URL}..."
+VISUAL_REGRESSION_RESULTS=$($PROJECT_ROOT/node_modules/backstopjs/cli/index.js test --config=$PROJECT_ROOT/scripts/github/test/backstopjs/backstopConfig.js)
+$PROJECT_ROOT/node_modules/backstopjs/cli/index.js test --config=$PROJECT_ROOT/scripts/github/test/backstopjs/backstopConfig.js
+/home/runner/terminus/vendor/bin/terminus auth:whoami
+
+/home/runner/terminus/vendor/bin/terminus connection:set $PANTHEONSITENAME.$QA_PANTHEONENV sftp
+rsync -rLvz --size-only --ipv4 --progress -e 'ssh -p 2222' ./backstop_data/. --temp-dir=~/tmp/ $QA_PANTHEONENV.$PANTHEONSITEUUID@appserver.$QA_PANTHEONENV.$PANTHEONSITEUUID.drush.in:code/web/backstop_data/ --exclude='*.git*' --exclude node_modules/ --exclude gulp/ --exclude source/
+
+echo 'View backstop report here\n'
+echo $QA_SITE_URL/backstop_data/html_report

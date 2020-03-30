@@ -1,0 +1,14 @@
+#!/bin/bash
+
+export PROJECT_ROOT="$(pwd)"
+. $PROJECT_ROOT/config
+
+mkdir ~/terminus
+cd ~/terminus
+curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install || exit 0
+/home/runner/terminus/vendor/bin/terminus self:info
+/home/runner/terminus/vendor/bin/terminus auth:login --machine-token="$MACHINETOKEN" --email="$PANTHEONEMAIL"
+/home/runner/terminus/vendor/bin/terminus auth:whoami
+/home/runner/terminus/vendor/bin/terminus connection:set $PANTHEONSITENAME.$PANTHEONENV sftp
+
+/home/runner/terminus/vendor/bin/terminus art

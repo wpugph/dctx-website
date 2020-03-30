@@ -1,0 +1,157 @@
+name: Pantheon Build
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    env:
+      PANTHEONSITEUUID: "${{ secrets.PANTHEONSITEUUID }}"
+      PANTHEONEMAIL: "${{ secrets.PANTHEONEMAIL }}"
+      MACHINETOKEN: "${{ secrets.MACHINETOKEN }}"
+      STAGING_PRIVATE_KEY: "${{ secrets.STAGING_PRIVATE_KEY }}"
+      PROJECT_ROOT: "$(pwd)"
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup Caches
+      id: cache
+      uses: actions/cache@v1
+      with:
+        path: |
+          vendor
+          terminus
+          web/wp
+          web/wp-content
+        # key: ${{ runner.os }}-cache
+        key: cache
+
+    - name: Cache found load keys
+      if: steps.cache-vendor.outputs.cache-hit != 'true'
+      run: |
+        echo 'Cache found'
+        ls web
+        echo 'root folder'
+        ls
+        
+        export PROJECT_ROOT="$(pwd)"
+        . $PROJECT_ROOT/config
+        sh $PROJECT_ROOT/scripts/github/load-keys
+        # ssh-add -l
+        # if this is tru maybe we can use on each step
+
+    - name: Terminus Setup
+      id: cache-vendor
+      run: |
+        
+        export PROJECT_ROOT="$(pwd)"
+        . $PROJECT_ROOT/config  
+
+        sh $PROJECT_ROOT/scripts/github/load-variables
+
+        sh $PROJECT_ROOT/scripts/github/setup-terminus
+
+        printf "[\e[0;34mNOTICE\e[0m] Terminus Setup COMPLETE!!!.\n"
+        ls
+
+    # - name: Save composer build
+    #   uses: actions/upload-artifact@v1
+    #   with:
+    #     name: vendor-dep
+    #     path: |
+    #       vendor
+
+    - name: Install SSH key and composer
+      id: cache-composer
+      run: |
+        export PROJECT_ROOT="$(pwd)"
+        . $PROJECT_ROOT/config  
+        sh $PROJECT_ROOT/scripts/github/build-wp-composer
+        ls
+    # individual path should be saved instead of piped
+    # vendor
+    # node_modules
+    # terminus
+    # wp compiled
+    # wp customized uncompiled
+
+    - name: Save Vender folder
+      uses: actions/upload-artifact@v1
+      with:
+        name: vendor-data
+        path: vendor
+
+    - name: Save WP compiled
+      uses: actions/upload-artifact@v1
+      with:
+        name: wp-compiled
+        path: web
+    
+    - name: Save WP custom
+      uses: actions/upload-artifact@v1
+      with:
+        name: wp-compiled
+        path: web/wp-content/themes
+
+
+    # - name: Upload custom code
+    #   uses: actions/upload-artifact@v1
+    #   with:
+    #     name: custom-code
+    #     path: |
+    #       web/backstop_data
+  
+  backstop-test:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Cache prime
+      id: cache
+      uses: actions/cache@v1
+      with:
+        path: |
+          vendor
+          web
+        key: ${{ runner.os }}-cache
+    
+    - name: Cache found - Running Backstop
+      id: cache-backstop
+      if: steps.cache-vendor.outputs.cache-hit != 'true'
+      run: |
+        echo 'Cache found'
+        ls
+        export PROJECT_ROOT="$(pwd)"
+        . $PROJECT_ROOT/config
+        sh $PROJECT_ROOT/scripts/github/setup-backstop
+        echo 'not uploading'ß
+        ls 
+  
+    - name: Save backstop data
+      uses: actions/upload-artifact@v1
+      with:
+        name: backstop-data
+        path: backstop_data
+
+  deploy-live:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+    # deploy to test environment if pass
+    - name: Test build
+      id: cache
+      uses: actions/cache@v1
+      with:
+        path: vendor
+        key: ${{ runner.os }}-cache
+    
+    - name: Cache found
+      if: steps.cache-vendor.outputs.cache-hit != 'true'
+      run: |
+        echo 'Cache found'
+        ls
+  
+  
