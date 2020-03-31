@@ -237,9 +237,9 @@ if ( ! function_exists('remove_empty_p')) {/*{{{*/
 	add_filter('the_content', 'remove_empty_p', 20, 1);
 }/*}}}*/
 
-add_filter('the_generator', '__return_null');
+add_filter( 'the_generator', '__return_null' );
 
-add_filter('xmlrpc_enabled', '__return_false');
+add_filter( 'xmlrpc_enabled', '__return_false' );
 
 /**
  * Add security headers for Nginx based sites
