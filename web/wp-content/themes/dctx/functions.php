@@ -1,4 +1,4 @@
-<?php 
+<?php // phpcs:disable
 
 define('ROOT', get_stylesheet_directory_uri() . '/');
 define('IMAGES', ROOT . 'images/');
@@ -236,6 +236,8 @@ if ( ! function_exists('remove_empty_p')) {/*{{{*/
 	
 	add_filter('the_content', 'remove_empty_p', 20, 1);
 }/*}}}*/
+
+// phpcs:enable
 
 add_filter( 'the_generator', '__return_null' );
 
