@@ -1,0 +1,4 @@
+REFERENCE_SITE_URL="https://www.dctx.ph/"
+QA_PANTHEONENV="staging1"
+PANTHEONENV="staging2"
+PANTHEONSITENAME="dxtcovid"
