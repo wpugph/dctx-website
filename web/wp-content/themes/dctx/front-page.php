@@ -1,4 +1,6 @@
-<?php get_header(); ?>
+<?php // phpcs:disable
+
+get_header(); ?>
 
 <section class="hero">
 	<div class="container clearfix">
@@ -53,7 +55,7 @@
 
 				<div class="card-content">
 					<h3>Vulnerability-Tested</h3>
-					<p>Our solutions will allow information to be user-initiated and self-sovereign, meaning here is better control over user data.</p>
+					<p>Our solutions will allow information to be user-initiated and self-sovereign, meaning there is better control over user data.</p>
 				</div>
 			</div>
 
