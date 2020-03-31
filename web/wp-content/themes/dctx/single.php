@@ -5,8 +5,20 @@
 
 		<div class="main-content">
 			<?php while (have_posts()) : the_post(); ?>
-				<h1><?php the_title(); ?></h1>
+				<h1 class="post-title"><?php the_title(); ?></h1>
 				<?php dctx_post_meta(); ?>
+
+				<?php if (has_post_thumbnail()): ?>
+					<div class="featured-image">
+						<?php the_post_thumbnail('full'); ?>
+
+						<?php if (get_post( get_post_thumbnail_id())->post_content): ?>
+							 <div class="featured-image-caption">
+								  <?php echo wp_kses_post(get_post( get_post_thumbnail_id() )->post_content ); ?>
+							 </div>
+						<?php endif; ?>
+					</div>
+				<?php endif; ?>
 
 				<div><?php the_content(); ?></div>
 

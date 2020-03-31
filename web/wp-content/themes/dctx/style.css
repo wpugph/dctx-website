@@ -388,6 +388,191 @@ header .header-container .nav-main #menu-header-menu li:hover ul {
 	color: #fff;
 }
 
+.blog .page-title,
+.archive .page-title {
+	text-align: center;
+    background: #ff7043;
+    color: #fff;
+    padding: 20px;
+	margin-bottom: 20px;
+}
+
+.blog #main a,
+.archive #main a {
+	color: #00BCD4;
+}
+
+.blog #main a:hover,
+.archive #main a:hover {
+	text-decoration: none;
+}
+
+.blog .posts,
+.archive .posts {
+	margin: 20px 0;
+}
+
+.blog #main .posts .button,
+.archive #main .posts .button {
+	color: #fff;
+}
+
+.blog #main .posts .button:hover,
+.archive #main .posts .button:hover {
+	color: #00BCD4;
+}
+
+.blog .posts .post,
+.archive .posts .post {
+	margin-bottom: 40px;
+    padding: 30px 40px 40px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.blog .posts div:last-of-type,
+.archive .posts div:last-of-type {
+	margin-bottom: 0;
+}
+
+.blog .posts .post .post-title,
+.archive .posts .post .post-title {
+	padding-bottom: 10px;
+}
+
+.blog #main .posts .post .post-title a,
+.archive #main .posts .post .post-title a {
+	color: #212121;
+	text-decoration: none;
+}
+
+.blog #main .posts .post .post-meta,
+.archive #main .posts .post .post-meta {
+	color: #aaa;
+	padding-bottom: 20px;
+}
+
+.blog #main .posts .post .post-title a:hover,
+.archive #main .posts .post .post-title a:hover {
+	color: #00BCD4;
+}
+
+.blog .paging,
+.archive .paging {
+	text-align: center;
+	padding-top: 20px;
+}
+
+.blog .paging ul,
+.archive .paging ul {
+	display: inline-block;
+	list-style: none;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+.blog .paging ul li,
+.archive .paging ul li {
+	float: left;
+	margin-right: 10px;
+}
+
+.blog #main .paging ul li a,
+.archive #main .paging ul li a {
+	font-size: 1.3rem;
+	font-weight: 600;
+	color: #aaa;
+	text-decoration: none;
+}
+
+.blog #main .paging ul li a:hover,
+.archive #main .paging ul li a:hover {
+	color: #00BCD4;
+}
+
+.blog #main .paging ul li.active a,
+.archive #main .paging ul li.active a {
+	color: #212121;
+}
+
+.blog #main .paging ul li:last-of-type,
+.archive #main .paging ul li:last-of-type {
+	margin-right: 0;
+}
+
+.single #main .post-title {
+	padding-top: 40px;
+}
+
+.single #main a {
+	color: #00BCD4;
+}
+
+.single #main a:hover {
+	text-decoration: none;
+}
+
+.single #main .post-meta {
+	color: #aaa;
+	padding-bottom: 20px;
+}
+
+.single #main .post-title {
+	padding-bottom: 10px;
+}
+
+.single #main .featured-image {
+	padding: 20px 0 30px;
+}
+
+.single #main .featured-image-caption {
+	padding-top: 10px;
+	text-align: center;
+	font-size: 0.9rem;
+	color: #aaa;
+}
+
+.single #main .related-posts {
+	padding-bottom: 40px;
+}
+
+.single #main .related-posts h2 {
+	padding-bottom: 0;
+}
+
+.single #main .related-posts li a {
+	font-size: 1.2rem;
+}
+
+.single #main .author-container {
+	overflow: hidden;
+	padding: 40px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.single #main .author-container .author-img {
+	float: left;
+	width: 15%;
+}
+
+.single #main .author-container .author-info {
+	float: left;
+	width: 83%;
+}
+
+.single #main .author-container p {
+	padding-bottom: 0;
+}
+
+.single #main .comments-container {
+	padding: 40px 0;
+}
+
+/* TraceCOVID page - start */
+
 .page-id-24 .hero {
 	margin-top: 60px;
 }
@@ -438,7 +623,7 @@ header .header-container .nav-main #menu-header-menu li:hover ul {
 }
 
 .page-id-24 .hero .container > div:last-of-type {
-	width: 40$;
+	width: 40%; 
 	float: right;
 }
 
@@ -535,6 +720,226 @@ header .header-container .nav-main #menu-header-menu li:hover ul {
 	margin-bottom: 16px;
 	display: block;
 }
+
+/* TraceCOVID page - end */
+
+
+
+/* RapidPass.ph page - start */
+
+.page-id-40 .hero {
+	margin-top: 60px;
+}
+
+.page-id-40 .hero h2 {
+	color: #42257a;
+	font-weight: 700;
+	font-size: 2.3rem;
+}
+
+.page-id-40 .hero h4 {
+	font-weight: 400;
+}
+
+.page-id-40 .hero .button-group {
+	margin: 0;
+}
+
+.page-id-40 .hero .button:first-of-type {
+	background: #5e35b1;
+	border: 1px solid #5e35b1;
+}
+
+.page-id-40 .hero .button:first-of-type:hover {
+	background: transparent;
+	color: #5e35b1;
+}
+
+.page-id-40 .hero .button:last-of-type {
+	background: transparent;
+	border: 1px solid transparent;
+	color: #bbb;
+	padding: 8px 0;
+}
+
+.page-id-40 .hero .button:last-of-type:hover {
+	color: #5e35b1;
+}
+
+.page-id-40 .hero .container > div {
+	float: left;
+}
+
+.page-id-40 .hero .container > div:first-of-type {
+	margin-top: 30px;
+	width: 35%;
+	float: left;
+}
+
+.page-id-40 .hero .container > div:last-of-type {
+	width: 65%;
+	float: right;
+}
+
+.page-id-40 .hero .container > div:last-of-type img {
+	position: relative;
+	z-index: 1;
+	right: 80px;
+}
+
+.page-id-40 .curve {
+	width: 100%;
+	position: relative;
+	z-index: 10;
+	top: -240px;
+	margin-bottom: -240px;
+}
+
+.page-id-40 .curve img {
+	width: 100%;
+}
+
+.page-id-40 .how-it-works {
+	position: relative;
+	z-index: 3;
+	background: #EEEEEE;
+	padding: 80px 0 60px;
+	text-align: center;
+}
+
+.page-id-40 .how-it-works h2 {
+	color: #42257a;
+	font-weight: 700;
+	margin-bottom: 30px;
+}
+
+.page-id-40 .how-it-works .card-content {
+	padding: 0 20px;
+}
+
+.page-id-40 .how-it-works .items .item {
+	float: left;
+	min-width: 220px;
+	margin: 0 1%;
+
+}
+
+.page-id-40 .how-it-works .items .item .item-img {
+	background-color: #5e35b1;
+	min-height: 180px;
+	min-width: 180px;
+	border-radius: 15px;
+	padding: 20px;
+}
+
+.page-id-40 .how-it-works .items .item h3 span {
+	color: #ff7043;
+}
+
+
+.page-id-40 .personnel-pass {
+	margin-top: 30px;
+	
+}
+
+.page-id-40 .vehicle-verification {
+	margin-bottom: 60px;
+}
+
+.page-id-40 .personnel-pass,
+.page-id-40 .vehicle-verification {
+	color: #42257a;
+	font-weight: 700;
+	font-size: 2.3rem;
+}
+
+.page-id-40 .personnel-pass,
+.page-id-40 .vehicle-verification {
+	font-weight: 400;
+}
+
+.page-id-40 .personnel-pass,
+.page-id-40 .vehicle-verification {
+	width: 100%;
+}
+
+.page-id-40 .personnel-pass img {
+	float: left;
+	margin-top: 30px;
+	width: 34%;
+	position: relative;
+	z-index: 1;
+}
+
+.page-id-40 .personnel-pass .text-area {
+	margin-top: 30px;
+	width: 64%;
+	float: right;
+}
+
+
+.page-id-40 .vehicle-verification img {
+	float: right;
+	margin-top: 30px;
+	width: 34%;
+	position: relative;
+	z-index: 1;
+}
+
+.page-id-40 .vehicle-verification .text-area {
+	margin-top: 30px;
+	width: 64%;
+	float: left;
+}
+
+
+.page-id-40 .about {
+	background: #5e35b1;
+	color: #fff;
+	padding: 60px 0;
+}
+
+.page-id-40 .about .container > div {
+	float: left;
+}
+
+.page-id-40 .about .container > div:first-of-type {
+	width: 70%;
+}
+
+.page-id-40 .about .container > div:last-of-type {
+	width: 30%;
+}
+
+.page-id-40 .about h3 {
+	font-weight: 400;
+	font-size: 2.2rem;
+	margin-top: 30px;
+	padding-left: 18px;
+}
+
+.page-id-40 .about h2 {
+	font-weight: 700;
+	text-align: left;
+}
+
+.page-id-40 .about p {
+	padding: 0 0 20px;
+}
+
+.page-id-40 .about p:last-of-type {
+	padding-bottom: 0;
+}
+
+.page-id-40 .about h3 strong {
+	font-weight: 700;
+	font-size: 4rem;
+	margin-bottom: 16px;
+	display: block;
+}
+
+/* RapidPass.ph page - end */
+
 
 .volunteer {
 	background: #fcfcfc;
@@ -885,15 +1290,18 @@ footer p:last-of-type {
 	width: 100%;
 }
 
+
 /* RESPONSIVE STYLES */
 @media (max-width: 1240px) {
-	.page-id-24 .hero .container > div:first-of-type {
+	.page-id-24 .hero .container > div:first-of-type,
+	.page-id-40 .hero .container > div:first-of-type {
 		margin-top: 0;
 	}
 }
 
 @media (max-width: 1022px) {
-	.page-id-24 .preventions {
+	.page-id-24 .preventions.
+	.page-id-24 .how-it-works {
 		padding: 90px 0 60px;
 	}
 }
@@ -909,8 +1317,13 @@ footer p:last-of-type {
 }
 
 @media (max-width: 960px) {
-	.page-id-24 .hero .container > div:last-of-type img {
+	.page-id-24 .hero .container > div:last-of-type img,
+	.page-id-40 .hero .container > div:last-of-type img {
 		right: 40px;
+	}
+
+	.single #main .author-container .author-info {
+		float: right;
 	}
 }
 
@@ -923,15 +1336,18 @@ footer p:last-of-type {
 		padding-right: 55%;
 	}
 
-	.page-id-24 .hero {
+	.page-id-24 .hero,
+	.page-id-40 .hero {
 		margin: 40px 0 60px;
 	}
 
-	.page-id-24 .curve {
+	.page-id-24 .curve,
+	.page-id-40 .curve {
 		display: none;
 	}
 
-	.page-id-24 .preventions {
+	.page-id-24 .preventions,
+	.page-id-40 .preventions {
 		padding: 60px 0 40px;
 	}
 }
@@ -1006,50 +1422,64 @@ footer p:last-of-type {
 		margin-bottom: 45px;
 	}
 
-	.page-id-24 .hero .container > div {
+	.page-id-24 .hero .container > div,
+	.page-id-40 .hero .container > div {
 		width: 100% !important;
 		float: none !important;
 		text-align: center;
 	}
 
-	.page-id-24 .hero .container > div:first-of-type {
+	.page-id-24 .hero .container > div:first-of-type,
+	.page-id-40 .hero .container > div:first-of-type {
 		margin: 0 auto;
 	}
 
-	.page-id-24 .hero .container > div:last-of-type img {
+	.page-id-24 .hero .container > div:last-of-type img,
+	.page-id-40 .hero .container > div:last-of-type img {
 		margin-top: 60px;
 		right: 0;
 	}
 
-	.page-id-24 .preventions {
+	.page-id-24 .preventions,
+	.page-id-40 .how-it-works  {
 		padding: 60px 0 66px;
 	}
 
-	.page-id-24 .preventions h2 {
+	.page-id-24 .preventions h2,
+	.page-id-40 .how-it-works h2 {
 		margin-bottom: 20px;
 	}
 
-	.page-id-24 .preventions .items .item {
+	.page-id-24 .preventions .items .item
+	.page-id-24 .how-it-works .items .item {
 		float: none;
 		width: 100%;
 		margin: 0;
 	}
 
-	.page-id-24 .preventions .items .item:last-of-type {
+	.page-id-24 .preventions .items .item:last-of-type,
+	.page-id-40 .preventions .items .item:last-of-type {
 		margin-right: 0;
 	}
 
-	.page-id-24 .preventions .items .item:last-of-type p {
+	.page-id-24 .preventions .items .item:last-of-type p,
+	.page-id-40 .preventions .items .item:last-of-type p {
 		padding-bottom: 0;
 	}
 
-	.page-id-24 .about h2 {
+	.page-id-24 .about h2,
+	.page-id-40 .about h2 {
 		text-align: left;
 	}
 
-	.page-id-24 .about .container > div:last-of-type {
+	.page-id-24 .about .container > div:last-of-type,
+	.page-id-40 .about .container > div:last-of-type {
 		width: 65%;
 		float: right;
+	}
+
+	.single #main .author-container .author-info {
+		width: 80%;
 	}
 
 	.volunteer .card-image {
@@ -1159,20 +1589,24 @@ footer p:last-of-type {
 }
 
 @media (max-width: 740px) {
-	.page-id-24 .about {
+	.page-id-24 .about,
+	.page-id-40 .about {
 		padding: 70px 0;
 	}
 
-	.page-id-24 .about h2 {
+	.page-id-24 .about h2,
+	.page-id-40 .about h2 {
 		text-align: center;
 	}
 
-	.page-id-24 .about h3 {
+	.page-id-24 .about h3,
+	.page-id-40 .about h3 {
 		padding: 0;
 		margin-bottom: 30px;
 	}
 
-	.page-id-24 .about .container > div {
+	.page-id-24 .about .container > div,
+	.page-id-40 .about .container > div {
 		width: 100% !important;
 		float: none !important;
 		text-align: center;
@@ -1204,11 +1638,16 @@ footer p:last-of-type {
 		width: auto;
 	}
 
-	/*.home .projects #tracecovid h3 img {
-		padding-right: 0;
-		margin: 0 auto 20px;
-		display: block;
-	}*/
+	.single #main .author-container .author-img {
+		float: none;
+		width: 100%;
+	}
+
+	.single #main .author-container .author-info {
+		padding-top: 20px;
+		float: none;
+		width: 100%;
+	}
 	
 	.members .column {
 		width: 90%;
