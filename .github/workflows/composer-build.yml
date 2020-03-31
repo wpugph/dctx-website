@@ -57,7 +57,7 @@ jobs:
         printf "[\e[0;34mNOTICE\e[0m] Terminus Setup COMPLETE!!!.\n"
         ls
 
-    - name: Install SSH key and composer
+    - name: Composer build and deploy
       id: cache-composer
       run: |
         export PROJECT_ROOT="$(pwd)"
