@@ -28,6 +28,7 @@
 	"wpackagist-plugin/stream": "dev-trunk",
 	"wpackagist-plugin/wordpress-seo": "dev-trunk",
 	"wpackagist-plugin/disable-gutenberg": "dev-trunk",
+	"wpackagist-plugin/all-in-one-wp-security-and-firewall": "dev-trunk",
 	"wpackagist-plugin/wp-native-php-sessions": ">=0.6.9",
 	"wpackagist-plugin/wp-responsive-menu": "dev-trunk",
     "wpackagist-theme/twentynineteen": "^1.2"
