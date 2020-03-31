@@ -1,0 +1,19 @@
+name: Run PHPCS on pull requests
+
+on: pull_request
+
+jobs:
+  phpcs:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+      with:
+         ref: ${{ github.event.pull_request.head.sha }}
+    - uses: docker://rtcamp/action-phpcs-code-review:v2.0.0
+      env:
+        GH_BOT_TOKEN: ${{ secrets.GH_BOT_TOKEN }}
+        SKIP_FOLDERS: scripts, tests, vendor, web/wp, web/private, web/wp-content/plugins, web/wp-content/themes/dctx/partials, web/wp-content/themes/dctx/images
+      with:
+        args: "WordPress,WordPress-Core,WordPress-Docs"
