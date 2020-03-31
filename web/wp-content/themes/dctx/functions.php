@@ -241,4 +241,24 @@ add_filter('the_generator', '__return_null');
 
 add_filter('xmlrpc_enabled', '__return_false');
 
+/**
+ * Add security headers
+ *
+ * @param [type] $headers add security headers as array.
+ *
+ * @return array
+ */
+function pantheon_add_securityheaders( $headers ) {
+	if ( ! is_admin() ) {
+		$headers['Referrer-Policy']             = 'no-referrer-when-downgrade';
+		$headers['X-Content-Type-Options']      = 'nosniff';
+		$headers['XX-XSS-Protection']           = '1; mode=block';
+		$headers['Feature-Policy: geolocation'] = 'geolocation "none" ; camera "none"';
+		$headers['Content-Security-Policy:']    = 'script-src "self"';
+	}
+
+	return $headers;
+}
+add_filter( 'wp_headers', 'pantheon_add_securityheaders' );
+
 ?>

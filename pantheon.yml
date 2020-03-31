@@ -1,6 +1,6 @@
 api_version: 1
 php_version: 7.3
-enforce_https: transitional
+enforce_https: full
 web_docroot: true
 protected_web_paths:
   - /xmlrpc.php
