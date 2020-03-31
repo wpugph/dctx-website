@@ -2,3 +2,8 @@ api_version: 1
 php_version: 7.3
 enforce_https: transitional
 web_docroot: true
+protected_web_paths:
+  - /xmlrpc.php
+  - /wp-admin
+  - /wp-content
+  - /wp-includes
