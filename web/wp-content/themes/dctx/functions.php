@@ -256,8 +256,8 @@ function additional_securityheaders( $headers ) {
 		$headers['X-Content-Type-Options']  = 'nosniff';
 		$headers['XX-XSS-Protection']       = '1; mode=block';
 		$headers['Feature-Policy']          = 'geolocation "none" ; camera "none"';
-		$headers['Content-Security-Policy'] = "style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google.com; style-src-elem https://fonts.googleapis.com";
 		$headers['X-Frame-Options']         = 'SAMEORIGIN';
+		$headers['Content-Security-Policy'] = "script-src-elem 'self' 'unsafe-inline' https://www.google.com https://js-agent.newrelic.com https://bam.nr-data.net https://www.gstatic.com; script-src 'unsafe-inline' 'unsafe-eval' https://www.google.com https://fonts.googleapis.com https://cdnjs.cloudflare.com https://www.gstatic.com https://js-agent.newrelic.com/";
 	}
 
 	return $headers;
