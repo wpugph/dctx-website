@@ -18,7 +18,7 @@ If you wand to contribute and want to have a copy of your development environmen
 2) Clone the repo locally or fork this repo
 3) Create a branch against master and name it as ISSUE#-short_description (eg. 123-add_footer_color). Always make sure that your branch is up to date from master. Always push all your fix against the new branch that you created. Never push to Master.
 4) Once pushed, https://github.com/wpugph/dctx-website/pulls you can create a PR from here.
-5) One the PR is approved and merged, the changes will be visible in the staging site https://staging-dctx1.pantheonsite.io/ then checked manually before being pushed to live by the repo maintainers
+5) One the PR is approved and merged, the changes will be visible in the staging site https://dev-dctx1.pantheonsite.io/ then checked manually before being pushed to live by the repo maintainers
 
 ### Pantheon development guidelines
 - Live is read-only so plugins cannot be installed there as well as themes
