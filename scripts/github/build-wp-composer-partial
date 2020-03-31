@@ -73,9 +73,9 @@ rm $PROJECT_ROOT/web/wp/wp-config.php
 
 /home/runner/terminus/vendor/bin/terminus art
 
-MSG=PANTHEONENV
+GH_MSG="Deployed from GitHub $GITHUB_REF"
 
-/home/runner/terminus/vendor/bin/terminus env:commit --message $GITHUB_REF --force -- $PANTHEONSITENAME.$PANTHEONENV
+/home/runner/terminus/vendor/bin/terminus env:commit --message $GH_MSG --force -- $PANTHEONSITENAME.$PANTHEONENV
 
 printf "[\e[0;34mNOTICE\e[0m] Deployed core and wp-config\n"
 

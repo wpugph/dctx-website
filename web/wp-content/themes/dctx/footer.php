@@ -1,6 +1,14 @@
-	<?php include_once('partials/members.php'); ?>
+<?php // phpcs:disable
+	/** 
+	 * 
+	 * include_once('partials/members.php');
+	 * 
+	 */
+	?>
 
-	<?php include_once('partials/sponsors.php'); ?>
+	<?php 
+	
+	include_once('partials/sponsors.php'); ?>
 
 	<?php include_once('partials/get-involved.php'); ?>
 
