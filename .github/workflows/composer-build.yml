@@ -64,21 +64,21 @@ jobs:
         sh $PROJECT_ROOT/scripts/github/build-wp-composer
         ls
 
-    - name: Save Vender folder
-      uses: actions/upload-artifact@v1
-      with:
-        name: vendor-data
-        path: vendor
+    # - name: Save Vender folder
+    #   uses: actions/upload-artifact@v1
+    #   with:
+    #     name: vendor-data
+    #     path: vendor
 
-    - name: Save WP compiled
-      uses: actions/upload-artifact@v1
-      with:
-        name: wp-compiled
-        path: web
+    # - name: Save WP compiled
+    #   uses: actions/upload-artifact@v1
+    #   with:
+    #     name: wp-compiled
+    #     path: web
     
-    - name: Save WP custom
-      uses: actions/upload-artifact@v1
-      with:
-        name: wp-compiled
-        path: web/wp-content/themes
+    # - name: Save WP custom
+    #   uses: actions/upload-artifact@v1
+    #   with:
+    #     name: wp-compiled
+    #     path: web/wp-content/themes
 

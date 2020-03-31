@@ -69,7 +69,7 @@ rm $PROJECT_ROOT/web/wp/wp-config.php
 # deploy core and root files
 rsync -rLvzc --size-only --ipv4 --progress -e 'ssh -p 2222' ./web/. --temp-dir=~/tmp/ $PANTHEONENV.$PANTHEONSITEUUID@appserver.$PANTHEONENV.$PANTHEONSITEUUID.drush.in:code/web/ --exclude='*.git*' --exclude node_modules/ --exclude wp-content/ --exclude gulp/ --exclude source/
 
-
+/home/runner/terminus/vendor/bin/terminus art
 printf "[\e[0;34mNOTICE\e[0m] Deployed core and wp-config\n"
 
 # setup backstop script

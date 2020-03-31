@@ -248,17 +248,18 @@ add_filter('xmlrpc_enabled', '__return_false');
  *
  * @return array
  */
-function pantheon_add_securityheaders( $headers ) {
+function additional_securityheaders( $headers ) {
 	if ( ! is_admin() ) {
 		$headers['Referrer-Policy']             = 'no-referrer-when-downgrade';
 		$headers['X-Content-Type-Options']      = 'nosniff';
 		$headers['XX-XSS-Protection']           = '1; mode=block';
 		$headers['Feature-Policy: geolocation'] = 'geolocation "none" ; camera "none"';
 		$headers['Content-Security-Policy:']    = 'script-src "self"';
+		$headers['X-Frame-Options:']            = 'SAMEORIGIN';
 	}
 
 	return $headers;
 }
-add_filter( 'wp_headers', 'pantheon_add_securityheaders' );
+add_filter( 'wp_headers', 'additional_securityheaders' );
 
 ?>
