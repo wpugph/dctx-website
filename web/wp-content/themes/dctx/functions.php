@@ -242,7 +242,7 @@ add_filter('the_generator', '__return_null');
 add_filter('xmlrpc_enabled', '__return_false');
 
 /**
- * Add security headers
+ * Add security headers for Nginx based sites
  *
  * @param [type] $headers add security headers as array.
  *
