@@ -52,19 +52,11 @@ if ( ! function_exists('dctx_css_js')) {/*{{{*/
 
 if ( ! function_exists('dctx_post_meta')) {/*{{{*/
 	function dctx_post_meta() {
-		echo '<div class="post-meta">';
-
 		if (get_post_type() === 'post') {
 			$categories = get_the_category_list(', ');
-			$tags = get_the_tag_list('', ', ');
 
-			if ($tags)
-				echo '<div class="post-meta-date"><i class="fa fa-calendar" aria-hidden="true"></i> ' . dctx_published_link() . '</div><div class="post-meta-author"><i class="fa fa-user" aria-hidden="true"></i> <a href="' . get_author_posts_url(get_the_author_meta('ID')) . '">' . get_the_author() . '</a></div><div class="post-meta-cats"><i class="fa fa-folder-open" aria-hidden="true"></i> ' . $categories . '</div><div class="post-meta-tags"><i class="fa fa-tags" aria-hidden="true"></i> ' . $tags . '</div>';
-			else
-				echo '<div class="post-meta-date"><i class="fa fa-calendar" aria-hidden="true"></i> ' . dctx_published_link() . '</div><div class="post-meta-author"><i class="fa fa-user" aria-hidden="true"></i> <a href="' . get_author_posts_url(get_the_author_meta('ID'))  . '">' . get_the_author() . '</a></div><div class="post-meta-cats"><i class="fa fa-folder-open" aria-hidden="true"></i> ' . $categories . '</div>';
+			echo '<div class="post-meta">Posted on ' . dctx_published_link() . ' by <a href="' . get_author_posts_url(get_the_author_meta('ID'))  . '">' . get_the_author() . '</a> under ' . $categories . '</div>';
 		}
-
-		echo '</div>';
 	}
 }/*}}}*/
 
