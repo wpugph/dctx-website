@@ -1,7 +1,7 @@
-<?php 
+<?php
 // phpcs:disable
 
-get_header(); 
+get_header();
 ?>
 
 <div id="main">
