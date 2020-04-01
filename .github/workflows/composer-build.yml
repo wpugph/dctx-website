@@ -1,6 +1,6 @@
 name: Pantheon Build
-
-  push:
-    branches:
-      - master
-  run: echo ok
+  on:
+    push:
+      branches:
+        - master
+    run: echo ok
