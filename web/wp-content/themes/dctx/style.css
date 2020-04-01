@@ -571,6 +571,19 @@ header .header-container .nav-main #menu-header-menu li:hover ul {
 	padding: 40px 0;
 }
 
+.single #main .comment-form-comment label {
+	font-weight: 600;
+	padding-bottom: 10px;
+}
+
+.single #main .form-submit #submit {
+	border: 1px solid transparent;
+}
+
+.single #main .form-submit #submit:hover {
+	border: 1px solid #00BCD4;
+}
+
 /* TraceCOVID page - start */
 
 .page-id-24 .hero {
