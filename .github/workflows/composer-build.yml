@@ -1,9 +1,8 @@
 name: Pantheon Build
-  # push to dev will happen on merge only not on PRs
   push:
     branches:
       - master
-
+        # push to dev will happen on merge only not on PRs
   jobs:
     build:
 
