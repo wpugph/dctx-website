@@ -9,8 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package WordPress
- * @subpackage Twenty_Nineteen
+ * @package DCTx
  * @since 1.0.0
  */
 
@@ -26,9 +25,9 @@ get_header();
 
 		<div class="main-content">
 
-			<?php if (have_posts()) : ?>
+			<?php if ( have_posts() ) : ?>
 				<div class="posts">
-					<?php while (have_posts()) : the_post(); ?>
+					<?php while ( have_posts() ) : the_post(); ?>
 						<li>
 							<h2 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
