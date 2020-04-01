@@ -1,8 +1,6 @@
 name: Pantheon Build
 
 on: [push]
-  branches:
-    - master
 
 jobs:
   build:
