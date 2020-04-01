@@ -1,87 +1,85 @@
 name: Pantheon Build
-  on:
-    push:
-      branches:
-        - master
-          # push to dev will happen on merge only not on PRs
-      jobs:
-        build:
 
-          runs-on: ubuntu-latest
-          env:
-            PANTHEONSITEUUID: "${{ secrets.PANTHEONSITEUUID }}"
-            PANTHEONEMAIL: "${{ secrets.PANTHEONEMAIL }}"
-            MACHINETOKEN: "${{ secrets.MACHINETOKEN }}"
-            STAGING_PRIVATE_KEY: "${{ secrets.STAGING_PRIVATE_KEY }}"
-            PROJECT_ROOT: "$(pwd)"
-            GH_REF: "${GITHUB_REF##*/}"
+on: 
+  push:
+    jobs:
+      build:
 
-          steps:
-          - uses: actions/checkout@v2
+        runs-on: ubuntu-latest
+        env:
+          PANTHEONSITEUUID: "${{ secrets.PANTHEONSITEUUID }}"
+          PANTHEONEMAIL: "${{ secrets.PANTHEONEMAIL }}"
+          MACHINETOKEN: "${{ secrets.MACHINETOKEN }}"
+          STAGING_PRIVATE_KEY: "${{ secrets.STAGING_PRIVATE_KEY }}"
+          PROJECT_ROOT: "$(pwd)"
+          GH_REF: "${GITHUB_REF##*/}"
 
-          - name: Setup Caches
-            id: cache
-            uses: actions/cache@v1
-            with:
-              path: |
-                vendor
-                terminus
-                web/wp
-                web/wp-content
-              # key: ${{ runner.os }}-cache
-              key: cache
+        steps:
+        - uses: actions/checkout@v2
 
-          - name: Cache found load keys
-            if: steps.cache-vendor.outputs.cache-hit != 'true'
-            run: |
-              echo 'Cache found'
-              ls web
-              echo 'root folder'
-              ls
-              
-              export PROJECT_ROOT="$(pwd)"
-              . $PROJECT_ROOT/config
-              sh $PROJECT_ROOT/scripts/github/load-keys
-              # ssh-add -l
-              # if this is tru maybe we can use on each step
+        - name: Setup Caches
+          id: cache
+          uses: actions/cache@v1
+          with:
+            path: |
+              vendor
+              terminus
+              web/wp
+              web/wp-content
+            # key: ${{ runner.os }}-cache
+            key: cache
 
-          - name: Terminus Setup
-            id: cache-vendor
-            run: |
-              
-              export PROJECT_ROOT="$(pwd)"
-              . $PROJECT_ROOT/config  
+        - name: Cache found load keys
+          if: steps.cache-vendor.outputs.cache-hit != 'true'
+          run: |
+            echo 'Cache found'
+            ls web
+            echo 'root folder'
+            ls
+            
+            export PROJECT_ROOT="$(pwd)"
+            . $PROJECT_ROOT/config
+            sh $PROJECT_ROOT/scripts/github/load-keys
+            # ssh-add -l
+            # if this is tru maybe we can use on each step
 
-              sh $PROJECT_ROOT/scripts/github/load-variables
+        - name: Terminus Setup
+          id: cache-vendor
+          run: |
+            
+            export PROJECT_ROOT="$(pwd)"
+            . $PROJECT_ROOT/config  
 
-              sh $PROJECT_ROOT/scripts/github/setup-terminus
+            sh $PROJECT_ROOT/scripts/github/load-variables
 
-              printf "[\e[0;34mNOTICE\e[0m] Terminus Setup COMPLETE!!!.\n"
-              ls
+            sh $PROJECT_ROOT/scripts/github/setup-terminus
 
-          - name: Composer build and deploy
-            id: cache-composer
-            run: |
-              export PROJECT_ROOT="$(pwd)"
-              . $PROJECT_ROOT/config  
-              sh $PROJECT_ROOT/scripts/github/build-wp-composer-partial
-              ls
+            printf "[\e[0;34mNOTICE\e[0m] Terminus Setup COMPLETE!!!.\n"
+            ls
 
-          # - name: Save Vender folder
-          #   uses: actions/upload-artifact@v1
-          #   with:
-          #     name: vendor-data
-          #     path: vendor
+        - name: Composer build and deploy
+          id: cache-composer
+          run: |
+            export PROJECT_ROOT="$(pwd)"
+            . $PROJECT_ROOT/config  
+            sh $PROJECT_ROOT/scripts/github/build-wp-composer-partial
+            ls
 
-          # - name: Save WP compiled
-          #   uses: actions/upload-artifact@v1
-          #   with:
-          #     name: wp-compiled
-          #     path: web
-          
-          # - name: Save WP custom
-          #   uses: actions/upload-artifact@v1
-          #   with:
-          #     name: wp-compiled
-          #     path: web/wp-content/themes
+        # - name: Save Vender folder
+        #   uses: actions/upload-artifact@v1
+        #   with:
+        #     name: vendor-data
+        #     path: vendor
+
+        # - name: Save WP compiled
+        #   uses: actions/upload-artifact@v1
+        #   with:
+        #     name: wp-compiled
+        #     path: web
+        
+        # - name: Save WP custom
+        #   uses: actions/upload-artifact@v1
+        #   with:
+        #     name: wp-compiled
+        #     path: web/wp-content/themes
 
