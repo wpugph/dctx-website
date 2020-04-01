@@ -1,7 +1,16 @@
-<?php 
+<?php
+/**
+ * The template for displaying archive pages
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package DCTx
+ * @since 1.0.0
+ */
+
 // phpcs:disable
 
-get_header(); 
+get_header();
 ?>
 
 <div id="main">
