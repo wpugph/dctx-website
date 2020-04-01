@@ -1,4 +1,8 @@
-<?php get_header(); ?>
+<?php 
+// phpcs:disable
+
+get_header(); 
+?>
 
 <div id="main">
 	<?php the_archive_title('<h1 class="page-title">', '</h1>'); ?>
