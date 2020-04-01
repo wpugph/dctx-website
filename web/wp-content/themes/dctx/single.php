@@ -1,4 +1,8 @@
-<?php get_header(); ?>
+<?php 
+// phpcs:disable
+
+get_header(); 
+?>
 
 <div id="main">
 	<div class="container clearfix">
