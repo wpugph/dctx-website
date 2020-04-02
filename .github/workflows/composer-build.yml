@@ -63,7 +63,7 @@ jobs:
         export PROJECT_ROOT="$(pwd)"
         . $PROJECT_ROOT/config  
 
-        sh $PROJECT_ROOT/scripts/github/setup-terminus
+        # sh $PROJECT_ROOT/scripts/github/setup-terminus
 
         sh $PROJECT_ROOT/scripts/github/build-wp-composer-partial
         ls
