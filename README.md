@@ -33,6 +33,7 @@ If you wand to contribute and want to have a copy of your development environmen
 
 
 
+
 ## Local development
 You may need to have a local environment that supports nested docroot like Lando https://docs.lando.dev/config/wordpress.html#getting-started to make this work locally.
 

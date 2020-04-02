@@ -82,7 +82,7 @@ MSG1="$GH_REF2"
 export MSG1
 DEPLOYMSG="Deployed from GitHub $MSG1"
 export DEPLOYMSG
-echo "DEPLOYMSG"
+echo "$DEPLOYMSG"
 echo ::set-env name=PULL_NUMBER::$(echo "$GH_REF2" | awk -F / '{print $3}')
 
 /home/runner/terminus/vendor/bin/terminus env:commit --message "$DEPLOYMSG" --force -- $PANTHEONSITENAME.$PANTHEONENV
