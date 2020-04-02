@@ -10,7 +10,7 @@
 	
 	include_once('partials/sponsors.php'); ?>
 
-	<?php include_once('partials/get-involved.php'); ?>
+	<?php //include_once('partials/get-involved.php');  ?>
 
 	<footer id="footer">
 		<img src="<?php echo IMAGES; ?>logo-big.svg" alt="DevCon Community of Technology eXperts" width="90">
