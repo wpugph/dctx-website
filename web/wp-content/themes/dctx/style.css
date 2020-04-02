@@ -192,21 +192,6 @@ header .header-container .nav-main #menu-header-menu li:hover ul {
 	width: 35%;
 }
 
-.home .hero .button-group {
-	margin: 0;
-}
-
-.home .hero .button:last-of-type {
-	background: transparent;
-	border: 1px solid #00BCD4;
-	color: #00BCD4;
-}
-
-.home .hero .button:last-of-type:hover {
-	background: #00BCD4;
-	color: #fff;
-}
-
 .home .solutions {
 	margin-bottom: 74px;
 }
@@ -1410,18 +1395,6 @@ footer p:last-of-type {
 		text-align: center;
 	}
 
-	.home .hero .button-group {
-		flex-direction: row;
-	}
-
-	.home .hero .button-group .button {
-		margin: 0 20px 0 0;
-	}
-
-	.home .hero .button-group .button:last-of-type {
-		margin-right: 0;
-	}
-
 	.home .solutions .cards {
 		margin-top: 40px;
 	}
@@ -1586,15 +1559,6 @@ footer p:last-of-type {
 		margin-bottom: 40px;
 	}
 
-	.home .hero .button-group {
-		margin: 0 auto !important;
-	}
-
-	.home .hero .button-group .button {
-		margin: 10px auto !important;
-		width: 160px;
-	}
-
 	.home .hero .container > div {
 		float: none !important;
 		width: 100% !important;
@@ -1642,15 +1606,6 @@ footer p:last-of-type {
 }
 
 @media (max-width: 560px) {
-	.home .hero .button-group {
-		flex-direction: row;
-	}
-
-	.home .hero .button-group .button {
-		margin: 10px auto !important;
-		width: auto;
-	}
-
 	.single #main .author-container .author-img {
 		float: none;
 		width: 100%;
@@ -1677,10 +1632,6 @@ footer p:last-of-type {
 }
 
 @media (max-width: 430px) {
-	.home .hero .button-group {
-		flex-direction: column;
-	}
-
 	.home .projects #rapidpass h3 img,
 	.home .projects #tracecovid h3 img {
 		padding-bottom: 20px;
@@ -1701,7 +1652,6 @@ footer p:last-of-type {
 		font-size: 1.3rem;
 	}
 
-	.home .hero .button-group .button,
 	.get-involved .button-group .button {
 		width: 100%;
 		-webkit-box-sizing: border-box;

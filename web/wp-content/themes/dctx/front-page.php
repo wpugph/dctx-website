@@ -1,22 +1,20 @@
-<?php // phpcs:disable
+<?php
+// phpcs:disable
 
-get_header(); ?>
+get_header();
+?>
 
 <section class="hero">
 	<div class="container clearfix">
 		<div>
-			<h2>DevCon Community of Technology eXperts<br>A project of DevCon &amp; DOST</h2>
+			<h2>Who We Are</h2>
 
-			<p>With deep talents in digital technology, the Developers Connect (DevCon) organization formed DCTx or DevCon Community of Technology Experts, a volunteer-based worldwide community of experts from various fields working in partnership with the Department of Science and Technology (DOST) to develop digital platforms and solutions to help fight the COVID-19 pandemic.</p>
-
-			<div class="button-group">
-				<a class="button" href="#">Learn More</a>
-				<a class="button" href="#">Contact Us</a>
-			</div>
+			<p>The DEVCON Community of Technology Experts (DCTx) is a volunteer-based global community working in partnership with the Department of Science and Technology (DOST) to develop digital solutions that will help government response efforts to the COVID-19 pandemic.</p>
+			<p>DCTx is organized and led by Developers Connect Philippines (DEVCON), a non-profit entity that syncs, supports, and champions the success of Filipino developers.</p>
 		</div>
 
 		<div>
-			<img src="<?php echo IMAGES; ?>logo-big.svg" alt="DevCon Community of Technology eXperts">
+			<img src="<?php echo IMAGES; ?>logo-big.svg" alt="DEVCON Community of Technology eXperts">
 		</div>
 	</div>
 </section>
