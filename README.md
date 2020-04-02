@@ -31,9 +31,6 @@ If you wand to contribute and want to have a copy of your development environmen
 - If you will be needing WP CLI access, you will need Terminus to do that https://pantheon.io/docs/terminus/install
 - To know more about the Pantheon workflow https://pantheon.io/docs/pantheon-workflow
 
-
-
-
 ## Local development
 You may need to have a local environment that supports nested docroot like Lando https://docs.lando.dev/config/wordpress.html#getting-started to make this work locally.
 
