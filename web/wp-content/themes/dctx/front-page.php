@@ -84,7 +84,7 @@ get_header(); ?>
 	</div>
 </section>
 
-<?php include_once('partials/volunteer.php'); ?>
+<?php //include_once('partials/volunteer.php'); ?>
 
 <section class="projects" id="projects">
 	<div class="container clearfix">
