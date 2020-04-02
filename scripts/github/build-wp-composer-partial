@@ -42,6 +42,8 @@ cat $SSH_DIR/id_rsa1
 cat $SSH_DIR/config
 echo "SSH PRIVATE KEY IMPORTED!!!"
 
+/home/runner/terminus/vendor/bin/terminus connection:set $PANTHEONSITENAME.$PANTHEONENV sftp
+
 # deploy pantheon yml files
 rsync -rLvzc --size-only --ipv4 --progress -e 'ssh -p 2222' ./pantheon.yml --temp-dir=~/tmp/ $PANTHEONENV.$PANTHEONSITEUUID@appserver.$PANTHEONENV.$PANTHEONSITEUUID.drush.in:code/ --exclude='*.git*' --exclude node_modules/ --exclude gulp/ --exclude source/
 printf "[\e[0;34mNOTICE\e[0m] Deployed pantheon.yml file\n"

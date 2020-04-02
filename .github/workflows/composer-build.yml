@@ -12,7 +12,7 @@ jobs:
       MACHINETOKEN: "${{ secrets.MACHINETOKEN }}"
       STAGING_PRIVATE_KEY: "${{ secrets.STAGING_PRIVATE_KEY }}"
       PROJECT_ROOT: "$(pwd)"
-      GH_REF: "${GITHUB_REF##*/}"
+      GH_REF2: "${{ github.ref }}"
 
     steps:
     - uses: actions/checkout@v2
