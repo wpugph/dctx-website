@@ -75,6 +75,7 @@ rm $PROJECT_ROOT/web/wp/wp-config.php
 
 /home/runner/terminus/vendor/bin/terminus art
 
+
 #GH_MSG="Deployed from GitHub $GITHUB_REF"
 echo $GH_REF2
 GH_MSG="Deployed from GitHub"
