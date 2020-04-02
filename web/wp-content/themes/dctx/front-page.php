@@ -1,4 +1,16 @@
 <?php
+/**
+ * The front page template file
+ *
+ * This is used to render your site’s front page, whether the front page displays the blog posts index (mentioned above) or a static page.
+ * The front page template takes precedence over the blog posts index (home.php) template.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package DCTx
+ * @since 1.0.0
+ */
+
 // phpcs:disable
 
 get_header();
