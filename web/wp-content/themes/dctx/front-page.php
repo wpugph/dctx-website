@@ -31,7 +31,7 @@ get_header();
 	</div>
 </section>
 
-<section class="solutions" id="solutions">
+<!-- <section class="solutions" id="solutions">
 	<div class="container clearfix">
 		<h2 class="align-center">Our Solutions are</h2>
 
@@ -92,7 +92,7 @@ get_header();
 			</div>
 		</div>
 	</div>
-</section>
+</section>-->
 
 <?php //include_once('partials/volunteer.php'); ?>
 
