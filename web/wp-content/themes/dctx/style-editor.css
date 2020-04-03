@@ -13,10 +13,3 @@
 .wp-block[data-align="full"] {
     max-width: none;
 }
-
-@media (min-width: 600px)
-.edit-post-text-editor__body {
-	max-width: 1920px;
-    margin-left: auto;
-    margin-right: auto;
-}
