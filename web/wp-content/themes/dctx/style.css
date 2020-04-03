@@ -1718,4 +1718,6 @@ footer p:last-of-type {
 	}
 }
 
-
+.gberg_container .wp-block-cover.has-background-dim:before {
+	opacity: 0;
+}

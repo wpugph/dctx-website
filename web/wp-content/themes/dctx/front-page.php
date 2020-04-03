@@ -108,6 +108,7 @@ get_header();
 
 <?php //include_once('partials/volunteer.php'); ?>
 
+<?php /*
 <section class="projects" id="projects">
 	<div class="container clearfix">
 		<h2>Projects in development</h2>
@@ -147,5 +148,5 @@ get_header();
 		</div>
 	</div>
 </section>
-
+*/ ?>
 <?php get_footer(); ?>
