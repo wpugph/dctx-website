@@ -1,0 +1,22 @@
+/* Gutenberg Settings and Styles */
+/* Main column width */
+.wp-block {
+    max-width: 1920px;
+}
+ 
+/* Width of "wide" blocks */
+.wp-block[data-align="wide"] {
+    max-width: 1920px;
+}
+ 
+/* Width of "full-wide" blocks */
+.wp-block[data-align="full"] {
+    max-width: none;
+}
+
+@media (min-width: 600px)
+.edit-post-text-editor__body {
+	max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+}
