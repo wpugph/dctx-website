@@ -5,7 +5,7 @@
  * Version: 1.0
  */
 
-html {
+ html {
 	background: #fff;
 	color: #212121;
 	font-family: 'Work Sans', sans-serif;
@@ -69,7 +69,7 @@ body {
 }
 
 .container {
-	max-width: 980px;
+	max-width: 1120px;
 	margin: 0 auto;
 	padding: 0 20px;
 }
@@ -1720,4 +1720,201 @@ footer p:last-of-type {
 
 .gberg_container .wp-block-cover.has-background-dim:before {
 	opacity: 0;
+}
+
+.gberg_container .wp-block-cover.has-background-dim:not(.has-background-gradient):before {
+	opacity: 0;
+}
+
+@media (min-width: 782px) {
+	.wp-block-column:not(:first-child) {
+		margin-left: 0;
+	}
+}
+
+.row2 .wp-block-cover__inner-container {
+	max-width: 350px;
+}
+
+.wp-block-column.row3 {
+	position: relative;
+}
+
+.floatbottom {
+	position: absolute;
+	bottom: 0px;
+	margin: 0;
+	;
+}
+
+.floatbottom figure {
+	margin: 0;
+}
+
+.txt_black {
+	color: black;
+	text-align: center;
+}
+
+
+
+
+
+/* New Design based on Figma */
+/*	https://www.figma.com/file/ZP2wEI8IdAEWVr3pPFL8fW/DCTx-Landing-Page-04012020?node-id=2%3A220 */
+/*  */
+	
+/* New Home Page */
+
+
+h2.homepage {
+	margin-bottom: 30px;
+}
+
+h5 {
+	font-family: Work Sans;
+	font-style: normal;
+	font-weight: normal;
+	text-align: center;
+	font-size: 16px;
+	color: #2A2A2A;
+}
+
+
+.wp-block-button__link {
+    border-radius: 8px;
+    margin: 10px;
+    min-width: 220px;
+}
+
+.rapidpass .container {
+	background-image: url("/wp-content/uploads/2020/04/iphone-xs-front-rapidpass-project.png");
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	background-size: contain;
+}
+
+.rapidpass .wp-block-button__link  {
+    background-color: #5D35B0;
+}
+
+@media screen and (max-width: 1024px) {
+	
+  .wp-block-button__link {
+	  min-width: 90%;
+	  margin: 0 auto;
+	  text-align: center;  
+  }
+  
+  .rapidpass .column-second:last-child {
+	  margin-bottom: 600px;	  
+  }
+  
+  .rapidpass .container {
+	  background-position: center bottom;
+	  background-size: contain;
+    }
+
+}
+
+/* Homepage - Tracecovid */
+
+.tracecovid {
+	padding-top: 50px;
+	min-height: 720px;
+	background-color: #F1F2F0;
+	background-image: url("/wp-content/uploads/2020/04/iphone-xs-isometric-floor-right-1.png");
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	background-size: 68%;
+}
+
+.btn-tracecovid .wp-block-button__link  {
+    background-color: #EA641D;
+}
+
+@media screen and (max-width: 1024px) {
+	  
+  .tracecovid {
+	  padding: 20px;
+	  background-position: right bottom;
+	  background-size: contain;
+	  padding-bottom: 300px;
+  }
+    
+  .btn-tracecovid .wp-block-button__link {
+	  min-width: 75vw;
+	  margin: 0 auto;
+	  text-align: center;  
+  }
+
+}
+
+
+/* Homepage - Join our Mission */
+
+.join-our-mission {
+	padding: 50px;
+	min-height: 520px;
+	vertical-align: middle;
+	background-color: #71B406;
+	background-image: url("/wp-content/uploads/2020/04/Group-46.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	font-family: Work Sans;
+	color: white;
+}
+
+.join-our-mission-text {
+	padding: 4%;	
+}
+
+.join-our-mission h5 {
+	color: white;
+}
+
+
+.be-a-volunteer {
+	background-color: #F1F2F0;
+	padding-top: 50px;
+}
+
+.be-a-volunteer .wp-block-button__link  {
+	background: #71B406;
+	border-radius: 44px;
+	min-width: 220px;
+}
+
+.be-a-volunteer .wp-block-column.column-first {
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 1024px) {
+
+  .be-a-volunteer .container {
+	  padding: 25px;
+  }
+  
+  .be-a-volunteer .wp-block-button__link  {
+	  min-width: 80vw;
+  }
+
+}
+
+
+
+.partners-sponsors {
+	padding-top: 50px;	
+}
+
+.heading .sponsors {
+	margin-top: 50px;
+}
+
+
+/* Gutenberg Editor */
+
+.edit-post-text-editor__body {
+    max-width: 1920px;
 }
