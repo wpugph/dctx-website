@@ -71,9 +71,14 @@ rsync -rLvzc --size-only --ipv4 --progress -e 'ssh -p 2222' ./web/. --temp-dir=~
 
 /home/runner/terminus/vendor/bin/terminus art
 
-MSG=PANTHEONENV
+MSG1="$GH_REF2"
+export MSG1
+DEPLOYMSG="Complete rebuild. Deployed from GitHub $MSG1"
+export DEPLOYMSG
+echo "$DEPLOYMSG"
+echo ::set-env name=PULL_NUMBER::$(echo "$GH_REF2" | awk -F / '{print $3}')
 
-/home/runner/terminus/vendor/bin/terminus env:commit --message $GITHUB_REF --force -- $PANTHEONSITENAME.$PANTHEONENV
+/home/runner/terminus/vendor/bin/terminus env:commit --message "$DEPLOYMSG" --force -- $PANTHEONSITENAME.$PANTHEONENV
 
 printf "[\e[0;34mNOTICE\e[0m] Deployed core and wp-config\n"
 
