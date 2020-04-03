@@ -65,8 +65,8 @@ jobs:
 
         # sh $PROJECT_ROOT/scripts/github/setup-terminus
 
-        sh $PROJECT_ROOT/scripts/github/build-wp-composer-partial
-        # sh $PROJECT_ROOT/scripts/github/build-wp-composer
+        # sh $PROJECT_ROOT/scripts/github/build-wp-composer-partial
+        sh $PROJECT_ROOT/scripts/github/build-wp-composer
         ls
 
     # - name: Save Vender folder

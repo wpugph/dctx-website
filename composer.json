@@ -33,6 +33,7 @@
 	"wpackagist-plugin/wp-responsive-menu": "dev-trunk",
 	"wpackagist-plugin/wordpress-importer": "dev-trunk",
 	"wpackagist-plugin/wp-cfm": "dev-trunk",
+	"wpackagist-plugin/beaver-builder-lite-version": "dev-trunk",
     "wpackagist-theme/twentynineteen": "^1.2"
   },
 	"config": {
