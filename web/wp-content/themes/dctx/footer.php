@@ -8,7 +8,7 @@
 
 	<?php 
 	
-	include_once('partials/sponsors.php'); ?>
+	// include_once('partials/sponsors.php'); ?>
 
 	<?php //include_once('partials/get-involved.php');  ?>
 
@@ -32,7 +32,7 @@
 			$date = $from_year . (($from_year != $this_year) ? ' - ' . $this_year : '');
 		?>
 
-		<p>&copy; <?php echo $date; ?> <a href="<?php echo get_home_url(); ?>"><?php bloginfo('name'); ?></a>. All rights reserved. Powered by <a href="https://pantheon.io/" target="_blank">Pantheon</a></p>
+		<p>&copy; <?php echo $date; ?> <a href="<?php echo get_home_url(); ?>"><?php bloginfo('name'); ?></a>. All rights reserved. Website Powered by <a href="https://pantheon.io/" target="_blank">Pantheon</a></p>
 	</footer>
 
 	<a href="#" id="back-to-top" title="Back to top"><i class="fa fa-arrow-circle-o-up"></i></a>
