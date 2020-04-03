@@ -31,6 +31,18 @@ get_header();
 	</div>
 </section>
 
+<div id="main">
+	<div class="gberg_container clearfix">
+
+		<div class="main-content">
+			<?php while (have_posts()) : the_post(); ?>
+				<div><?php the_content(); ?></div>
+			<?php endwhile; ?>
+		</div>
+
+	</div>
+</div>
+
 <!-- <section class="solutions" id="solutions">
 	<div class="container clearfix">
 		<h2 class="align-center">Our Solutions are</h2>
