@@ -8,20 +8,26 @@
  * @since 1.0.0
  */
 
-// phpcs:disable
-
 get_header();
+$search_result = get_query_var( 's', 1 );
 ?>
 
 <div id="main">
-	<h1 class="page-title">Search results for '<?php echo $_GET['s']; ?>'</h1>
 
-	<div class="container clearfix">
-		
+	<h1 class="page-title">Search results for '
+	<?php
+		echo esc_html( wp_unslash( $search_result ) );
+	?>
+	'</h1>
+
+	<div class="container clearfix">	
 		<div class="main-content">
-			<?php if (have_posts()) : ?>
+			<?php if ( have_posts() ) : ?>
 				<div class="posts">
-					<?php while (have_posts()) : the_post(); ?>
+					<?php
+					while ( have_posts() ) {
+						the_post();
+						?>
 						<div class="post">
 							<h2 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
@@ -30,7 +36,7 @@ get_header();
 							<p class="post-excerpt"><?php the_excerpt(); ?></p>
 							<div class="read-more"><a href="<?php the_permalink(); ?>" class="button">Continue reading</a></div>
 						</div>
-					<?php endwhile; ?>
+					<?php } ?>
 				</div>
 
 				<?php dctx_numeric_posts_nav(); ?>
