@@ -1,4 +1,4 @@
-<?php 
+<?php //phpcs:disable
 
 /**
 * Template Name: No Title Page
@@ -26,4 +26,3 @@
 </div>
 
 <?php get_footer(); ?>
-
