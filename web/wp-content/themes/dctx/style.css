@@ -1582,7 +1582,7 @@ h5 {
     background-color: #5D35B0;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 600px) {
 	
   .wp-block-button__link {
 	  min-width: 90%;
@@ -1617,7 +1617,7 @@ h5 {
     background-color: #EA641D;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 600px) {
 	  
   .tracecovid {
 	  padding: 20px;
@@ -1674,7 +1674,7 @@ h5 {
     margin-bottom: 50px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 600px) {
 
   .be-a-volunteer .container {
 	  padding: 25px;
@@ -1740,7 +1740,7 @@ h5 {
 	line-height: 32px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 600px) {
 
   .rapidpass-hero .column-second:last-child {
 	  margin-bottom: 480px;	  
