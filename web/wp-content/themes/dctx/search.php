@@ -13,7 +13,12 @@ $search_result = get_query_var( 's', 1 );
 ?>
 
 <div id="main">
-	<h1 class="page-title">Search results for '<?php echo $search_result ); ?>'</h1>
+
+	<h1 class="page-title">Search results for '
+	<?php
+		echo esc_html( wp_unslash( $search_result ) );
+	?>
+	'</h1>
 
 	<div class="container clearfix">	
 		<div class="main-content">
