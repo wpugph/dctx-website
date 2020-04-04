@@ -1582,7 +1582,7 @@ h5 {
     background-color: #5D35B0;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 600px) {
 	
   .wp-block-button__link {
 	  min-width: 90%;
@@ -1617,7 +1617,7 @@ h5 {
     background-color: #EA641D;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 600px) {
 	  
   .tracecovid {
 	  padding: 20px;
@@ -1674,7 +1674,7 @@ h5 {
     margin-bottom: 50px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 600px) {
 
   .be-a-volunteer .container {
 	  padding: 25px;
@@ -1719,8 +1719,7 @@ h5 {
 
 
 .rapidpass-hero {
-	border-color: transparent transparent #000 transparent;
-	border-radius: 0 0 25%/50px 240px;
+	border-radius: 0px 0px 50% 50%;
 }
 
 .rapidpass-hero .container {
@@ -1741,7 +1740,7 @@ h5 {
 	line-height: 32px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 600px) {
 
   .rapidpass-hero .column-second:last-child {
 	  margin-bottom: 480px;	  
@@ -1763,11 +1762,85 @@ h5 {
 
 }
 
+.page-id-40 .curve {
+	width: 100%;
+	position: relative;
+	z-index: 2;
+	top: -220px;
+	margin-bottom: -110px;
+}
+
+.page-id-40 .curve img {
+	width: 100%;
+}
+
 
 .page-id-40 .fast-forward {
 	background-color: #EEEEEE;
+	padding-top: 50px;
+	margin-top: -110px;
 }
 
+.page-id-40 .fast-forward h2 {
+	margin-top: 50px;
+	font-family: Work Sans;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 36px;
+	line-height: 120%;
+	/* or 60px */
+	text-align: center;
+	color: #5D35B0;
+}
+
+
+.page-id-40 .fast-forward .wp-block-columns {
+	margin-bottom: 0;
+}
+
+.page-id-40 .fast-forward .cards {
+	height: 480px;
+	margin: 4em;
+	border-radius: 39px;
+	box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.page-id-40 .fast-forward .cards .card-image {
+	min-height: 240px;
+	background-color: #5D35B0;
+	width: 100%;
+	border-radius: 39px 39px 0px 0px;
+	margin-bottom: 0;
+}
+
+.page-id-40 .fast-forward .cards .card-text {
+	max-height: 240px;
+	background-color: #FFFFFF;
+	border-radius: 0px 0px 39px 39px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.page-id-40 .fast-forward .cards .card-text h4 {
+	font-family: Work Sans;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 26px;
+	line-height: 120%;
+	/* or 48px */
+	color: #FF6F00;
+	margin-top: 2em;
+	padding-bottom: 20px;
+}
+
+.page-id-40 .fast-forward .cards .card-text p {
+	padding: 0px 36px 36px 30px;
+}
 
 .page-id-40 .rapidpass-video {
 	background-color: #5D35B0;
