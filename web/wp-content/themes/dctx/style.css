@@ -5,7 +5,7 @@
  * Version: 1.0
  */
 
-html {
+ html {
 	background: #fff;
 	color: #212121;
 	font-family: 'Work Sans', sans-serif;
@@ -69,7 +69,7 @@ body {
 }
 
 .container {
-	max-width: 980px;
+	max-width: 1120px;
 	margin: 0 auto;
 	padding: 0 20px;
 }
@@ -778,220 +778,6 @@ header .header-container .nav-main #menu-header-menu li:hover ul {
 
 
 
-/* RapidPass.ph page - start */
-
-.page-id-40 .hero {
-	margin-top: 60px;
-}
-
-.page-id-40 .hero h2 {
-	color: #42257a;
-	font-weight: 700;
-	font-size: 2.3rem;
-}
-
-.page-id-40 .hero h4 {
-	font-weight: 400;
-}
-
-.page-id-40 .hero .button-group {
-	margin: 0;
-}
-
-.page-id-40 .hero .button:first-of-type {
-	background: #5e35b1;
-	border: 1px solid #5e35b1;
-}
-
-.page-id-40 .hero .button:first-of-type:hover {
-	background: transparent;
-	color: #5e35b1;
-}
-
-.page-id-40 .hero .button:last-of-type {
-	background: transparent;
-	border: 1px solid transparent;
-	color: #bbb;
-	padding: 8px 0;
-}
-
-.page-id-40 .hero .button:last-of-type:hover {
-	color: #5e35b1;
-}
-
-.page-id-40 .hero .container > div {
-	float: left;
-}
-
-.page-id-40 .hero .container > div:first-of-type {
-	margin-top: 30px;
-	width: 35%;
-	float: left;
-}
-
-.page-id-40 .hero .container > div:last-of-type {
-	width: 65%;
-	float: right;
-}
-
-.page-id-40 .hero .container > div:last-of-type img {
-	position: relative;
-	z-index: 1;
-	right: 80px;
-}
-
-.page-id-40 .curve {
-	width: 100%;
-	position: relative;
-	z-index: 10;
-	top: -240px;
-	margin-bottom: -240px;
-}
-
-.page-id-40 .curve img {
-	width: 100%;
-}
-
-.page-id-40 .how-it-works {
-	position: relative;
-	z-index: 3;
-	background: #EEEEEE;
-	padding: 80px 0 60px;
-	text-align: center;
-}
-
-.page-id-40 .how-it-works h2 {
-	color: #42257a;
-	font-weight: 700;
-	margin-bottom: 30px;
-}
-
-.page-id-40 .how-it-works .card-content {
-	padding: 0 20px;
-}
-
-.page-id-40 .how-it-works .items .item {
-	float: left;
-	min-width: 220px;
-	margin: 0 1%;
-
-}
-
-.page-id-40 .how-it-works .items .item .item-img {
-	background-color: #5e35b1;
-	min-height: 180px;
-	min-width: 180px;
-	border-radius: 15px;
-	padding: 20px;
-}
-
-.page-id-40 .how-it-works .items .item h3 span {
-	color: #ff7043;
-}
-
-
-.page-id-40 .personnel-pass {
-	margin-top: 30px;
-	
-}
-
-.page-id-40 .vehicle-verification {
-	margin-bottom: 60px;
-}
-
-.page-id-40 .personnel-pass,
-.page-id-40 .vehicle-verification {
-	color: #42257a;
-	font-weight: 700;
-	font-size: 2.3rem;
-}
-
-.page-id-40 .personnel-pass,
-.page-id-40 .vehicle-verification {
-	font-weight: 400;
-}
-
-.page-id-40 .personnel-pass,
-.page-id-40 .vehicle-verification {
-	width: 100%;
-}
-
-.page-id-40 .personnel-pass img {
-	float: left;
-	margin-top: 30px;
-	width: 34%;
-	position: relative;
-	z-index: 1;
-}
-
-.page-id-40 .personnel-pass .text-area {
-	margin-top: 30px;
-	width: 64%;
-	float: right;
-}
-
-
-.page-id-40 .vehicle-verification img {
-	float: right;
-	margin-top: 30px;
-	width: 34%;
-	position: relative;
-	z-index: 1;
-}
-
-.page-id-40 .vehicle-verification .text-area {
-	margin-top: 30px;
-	width: 64%;
-	float: left;
-}
-
-
-.page-id-40 .about {
-	background: #5e35b1;
-	color: #fff;
-	padding: 60px 0;
-}
-
-.page-id-40 .about .container > div {
-	float: left;
-}
-
-.page-id-40 .about .container > div:first-of-type {
-	width: 70%;
-}
-
-.page-id-40 .about .container > div:last-of-type {
-	width: 30%;
-}
-
-.page-id-40 .about h3 {
-	font-weight: 400;
-	font-size: 2.2rem;
-	margin-top: 30px;
-	padding-left: 18px;
-}
-
-.page-id-40 .about h2 {
-	font-weight: 700;
-	text-align: left;
-}
-
-.page-id-40 .about p {
-	padding: 0 0 20px;
-}
-
-.page-id-40 .about p:last-of-type {
-	padding-bottom: 0;
-}
-
-.page-id-40 .about h3 strong {
-	font-weight: 700;
-	font-size: 4rem;
-	margin-bottom: 16px;
-	display: block;
-}
-
-/* RapidPass.ph page - end */
 
 
 .volunteer {
@@ -1721,3 +1507,341 @@ footer p:last-of-type {
 .gberg_container .wp-block-cover.has-background-dim:before {
 	opacity: 0;
 }
+
+.gberg_container .wp-block-cover.has-background-dim:not(.has-background-gradient):before {
+	opacity: 0;
+}
+
+@media (min-width: 782px) {
+	.wp-block-column:not(:first-child) {
+		margin-left: 0;
+	}
+}
+
+.row2 .wp-block-cover__inner-container {
+	max-width: 350px;
+}
+
+.wp-block-column.row3 {
+	position: relative;
+}
+
+.floatbottom {
+	position: absolute;
+	bottom: 0px;
+	margin: 0;
+	;
+}
+
+.floatbottom figure {
+	margin: 0;
+}
+
+.txt_black {
+	color: black;
+	text-align: center;
+}
+
+
+
+
+
+/* ############# */
+	
+/* New Home Page */
+
+
+h2.homepage {
+	margin-bottom: 30px;
+}
+
+h5 {
+	font-family: Work Sans;
+	font-style: normal;
+	font-weight: normal;
+	text-align: center;
+	font-size: 16px;
+	color: #2A2A2A;
+}
+
+
+.wp-block-button__link {
+    border-radius: 8px;
+    margin: 10px;
+    min-width: 220px;
+}
+
+.rapidpass .container {
+	background-image: url("/wp-content/uploads/2020/04/iphone-xs-front-rapidpass-project.png");
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	background-size: contain;
+}
+
+.rapidpass .wp-block-button__link  {
+    background-color: #5D35B0;
+}
+
+@media screen and (max-width: 1024px) {
+	
+  .wp-block-button__link {
+	  min-width: 90%;
+	  margin: 0 auto;
+	  text-align: center;  
+  }
+  
+  .rapidpass .column-second:last-child {
+	  margin-bottom: 600px;	  
+  }
+  
+  .rapidpass .container {
+	  background-position: center bottom;
+	  background-size: contain;
+    }
+
+}
+
+/* Homepage - Tracecovid */
+
+.tracecovid {
+	padding-top: 50px;
+	min-height: 720px;
+	background-color: #F1F2F0;
+	background-image: url("/wp-content/uploads/2020/04/iphone-xs-isometric-floor-right-1.png");
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	background-size: 68%;
+}
+
+.btn-tracecovid .wp-block-button__link  {
+    background-color: #EA641D;
+}
+
+@media screen and (max-width: 1024px) {
+	  
+  .tracecovid {
+	  padding: 20px;
+	  background-position: right bottom;
+	  background-size: contain;
+	  padding-bottom: 300px;
+  }
+    
+  .btn-tracecovid .wp-block-button__link {
+	  min-width: 75vw;
+	  margin: 0 auto;
+	  text-align: center;  
+  }
+
+}
+
+
+/* Homepage - Join our Mission */
+
+.join-our-mission {
+	padding: 50px;
+	min-height: 520px;
+	vertical-align: middle;
+	background-color: #71B406;
+	background-image: url("/wp-content/uploads/2020/04/Group-46.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	font-family: Work Sans;
+	color: white;
+}
+
+.join-our-mission-text {
+	padding: 4%;	
+}
+
+.join-our-mission h5 {
+	color: white;
+}
+
+
+.be-a-volunteer {
+	background-color: #F1F2F0;
+	padding-top: 50px;
+}
+
+.be-a-volunteer .wp-block-button__link  {
+	background: #71B406;
+	border-radius: 44px;
+	min-width: 220px;
+}
+
+.be-a-volunteer .wp-block-column.column-first {
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 1024px) {
+
+  .be-a-volunteer .container {
+	  padding: 25px;
+  }
+  
+  .be-a-volunteer .wp-block-button__link  {
+	  min-width: 80vw;
+  }
+
+}
+
+.join-our-mission {
+	padding: 50px;
+	min-height: 520px;
+	vertical-align: middle;
+	background-color: #71B406;
+	background-image: url("/wp-content/uploads/2020/04/Group-46.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	font-family: Work Sans;
+	color: white;
+}
+
+
+.partners-sponsors {
+	padding-top: 50px;	
+}
+
+.heading .sponsors {
+	margin-top: 50px;
+}
+
+
+/* Home Page End */
+
+
+/* ############## */
+
+
+/* RapidPass.ph page - start */
+
+
+.rapidpass-hero {
+	border-color: transparent transparent #000 transparent;
+	border-radius: 0 0 25%/50px 240px;
+}
+
+.rapidpass-hero .container {
+	padding: 30px;
+	vertical-align: middle;
+	background-image: url("/wp-content/uploads/2020/04/iphone-xs-front-rapidpass-project.png");
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	background-size: contain;	font-family: Work Sans;
+}
+
+.rapidpass-hero .container h3 {
+	color: #311B92;
+	font-family: Work Sans;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 28px;
+	line-height: 32px;
+}
+
+@media screen and (max-width: 1024px) {
+
+  .rapidpass-hero .column-second:last-child {
+	  margin-bottom: 480px;	  
+  }
+  
+  .rapidpass-hero .container {
+	  background-position: center bottom;
+	  background-size: contain;
+  }
+  
+  .rapidpass-hero .wp-block-button__link,
+  .rapidpass-how-it-works .wp-block-button__link,
+  .rapidpass-registration .wp-block-button__link
+   {
+	  min-width: 78vw;
+	  margin: 0 auto;
+	  text-align: center;  
+  }
+
+}
+
+
+.page-id-40 .fast-forward {
+	background-color: #EEEEEE;
+}
+
+
+.page-id-40 .rapidpass-video {
+	background-color: #5D35B0;
+	background-image: url("/wp-content/uploads/2020/04/image-1-1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	min-height: 600px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.page-id-40 .rapidpass-video .container {
+	background-color: #C4C4C4;
+}
+
+.page-id-40 .rapidpass-video .container .video-embed {
+	background-color: #C4C4C4;
+	max-width: auto;
+}
+
+.page-id-40 .rapidpass-how-it-works {
+	min-height: 600px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.rapidpass-how-it-works .wp-block-column {
+	margin: 20px;
+}
+
+.rapidpass-how-it-works .wp-block-column .wp-block-image {
+	background-color: #EFEEF1;
+	border-radius: 37px;
+}
+
+.rapidpass-how-it-works .wp-block-column h3 {
+	color: #FF6F00;
+}
+
+.page-id-40 .rapidpass-registration {
+	min-height: 480px;
+	background-color: #5D35B0;
+	background-image: url("/wp-content/uploads/2020/04/dctx-logo-white.png");
+	background-position: right center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-blend-mode: multiply;
+	color: white;
+}
+
+.page-id-40 .rapidpass-registration .container {
+	padding-top: 50px;
+}
+
+.page-id-40 .rapidpass-registration h3 {
+	font-family: Work Sans;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 26px;
+	line-height: 120%;
+	/* or 48px */
+	letter-spacing: -0.03em;
+	color: #FFE082;
+}
+
+.page-id-40 .be-a-volunteer .wp-block-button__link {
+	background-color: #5D35B0;
+}
+
+
+.project-members {
+	display: none;
+}
+
+/* RapidPass.ph page - end */
