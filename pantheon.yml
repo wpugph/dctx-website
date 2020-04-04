@@ -6,4 +6,4 @@ protected_web_paths:
   - /xmlrpc.php
   - /wp-admin
   - /wp-includes
-  - /wp-json
+  - /wp-json/wp/v2/users
