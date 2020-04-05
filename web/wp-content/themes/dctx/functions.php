@@ -257,7 +257,7 @@ function additional_securityheaders( $headers ) {
 add_filter( 'wp_headers', 'additional_securityheaders' );
 
 /* Gutenberg Settings */
-add_theme_support('editor-styles');
+add_theme_support( 'editor-styles' );
 add_editor_style( 'style-editor.css' );
 
 ?>
