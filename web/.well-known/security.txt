@@ -1,0 +1,4 @@
+Contact: ajdctx@devcon.ph
+Acknowledgments: https://app.secuna.io/dctx
+Preferred-Languages: en
+Policy: https://dctx.ph/privacy-policy/

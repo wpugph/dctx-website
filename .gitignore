@@ -37,6 +37,8 @@ web/private/scripts/quicksilver
 !.circleci
 .bashrc
 
+!web/.well-known
+
 # custom theme and plugin should also be included here
 !web/wp-content/themes/dctx/
 
