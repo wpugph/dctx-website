@@ -676,7 +676,7 @@ header .header-container .nav-main #menu-header-menu li:hover ul {
 }
 
 .page-id-24 .hero .container > div:last-of-type {
-	width: 40%; 
+	width: 40%;
 	float: right;
 }
 
@@ -1136,7 +1136,7 @@ footer p:last-of-type {
 }
 
 @media (max-width: 1022px) {
-	.page-id-24 .preventions.
+	.page-id-24 .preventions,
 	.page-id-24 .how-it-works {
 		padding: 90px 0 60px;
 	}
@@ -1454,7 +1454,7 @@ footer p:last-of-type {
 		float: none;
 		width: 100%;
 	}
-	
+
 	.members .column {
 		width: 90%;
 	}
@@ -1544,7 +1544,7 @@ footer p:last-of-type {
 
 
 /* ############# */
-	
+
 /* New Home Page */
 
 
@@ -1580,17 +1580,17 @@ h5 {
 }
 
 @media screen and (max-width: 1024px) {
-	
+
   .wp-block-button__link {
 	  min-width: 90%;
 	  margin: 0 auto;
-	  text-align: center;  
+	  text-align: center;
   }
-  
+
   .rapidpass .column-second:last-child {
-	  margin-bottom: 600px;	  
+	  margin-bottom: 600px;
   }
-  
+
   .rapidpass .container {
 	  background-position: center bottom;
 	  background-size: contain;
@@ -1615,18 +1615,18 @@ h5 {
 }
 
 @media screen and (max-width: 1024px) {
-	  
+
   .tracecovid {
 	  padding: 20px;
 	  background-position: right bottom;
 	  background-size: contain;
 	  padding-bottom: 300px;
   }
-    
+
   .btn-tracecovid .wp-block-button__link {
 	  min-width: 75vw;
 	  margin: 0 auto;
-	  text-align: center;  
+	  text-align: center;
   }
 
 }
@@ -1648,7 +1648,7 @@ h5 {
 }
 
 .join-our-mission-text {
-	padding: 4%;	
+	padding: 4%;
 }
 
 .join-our-mission h5 {
@@ -1676,7 +1676,7 @@ h5 {
   .be-a-volunteer .container {
 	  padding: 25px;
   }
-  
+
   .be-a-volunteer .wp-block-button__link  {
 	  min-width: 80vw;
   }
@@ -1698,7 +1698,7 @@ h5 {
 
 
 .partners-sponsors {
-	padding-top: 50px;	
+	padding-top: 50px;
 }
 
 .heading .sponsors {
@@ -1732,24 +1732,43 @@ h5 {
 	line-height: 32px;
 }
 
+/* Hero curve. */
+.rapidpass-hero:after {
+	background-color: #fff;
+	border-radius: 0 0 50% 50%;
+	content: '';
+	display: block;
+	margin-bottom: -50px;
+	margin-top: -48px;
+	min-height: 50px;
+	position: relative;
+	width: 100%;
+	z-index: 999;
+}
+
+.rapidpass-hero > .wp-block-group__inner-container {
+	position: relative;
+	z-index: 1000;
+}
+
 @media screen and (max-width: 1024px) {
 
   .rapidpass-hero .column-second:last-child {
-	  margin-bottom: 480px;	  
+	  margin-bottom: 480px;
   }
-  
+
   .rapidpass-hero .container {
 	  background-position: center bottom;
 	  background-size: contain;
   }
-  
+
   .rapidpass-hero .wp-block-button__link,
   .rapidpass-how-it-works .wp-block-button__link,
   .rapidpass-registration .wp-block-button__link
    {
 	  min-width: 78vw;
 	  margin: 0 auto;
-	  text-align: center;  
+	  text-align: center;
   }
 
 }
