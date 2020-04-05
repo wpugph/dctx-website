@@ -1770,7 +1770,11 @@ h5 {
 	  margin: 0 auto;
 	  text-align: center;
   }
-
+  
+  .page-id-40 .rapidpass-video .container iframe{
+	width:380px;
+	height:240px;
+  }
 }
 
 .page-id-40 .fast-forward {
@@ -1851,13 +1855,18 @@ h5 {
 	justify-content: center;
 }
 
-.page-id-40 .rapidpass-video .container {
-	background-color: #C4C4C4;
+.page-id-40 .rapidpass-video .container .video-embed {
+	max-width: auto;
 }
 
-.page-id-40 .rapidpass-video .container .video-embed {
-	background-color: #C4C4C4;
-	max-width: auto;
+.page-id-40 .rapidpass-video .container {
+        max-width: auto;
+	padding: 0;
+}
+
+.page-id-40 .rapidpass-video .container iframe{
+	width: 820px;
+	height: 500px;
 }
 
 .page-id-40 .rapidpass-how-it-works {
