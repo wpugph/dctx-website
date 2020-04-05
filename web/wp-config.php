@@ -1,4 +1,4 @@
-<?php
+<?php //phpcs:disable
 /*
  * Don't show deprecations
  */
@@ -12,19 +12,21 @@ $rootPath = realpath( __DIR__ . '/..' );
 /**
  * Include the Composer autoload
  */
-require_once( $rootPath . '/vendor/autoload.php' );
+require_once $rootPath . '/vendor/autoload.php';
 
 /*
  * Fetch .env
  */
 if ( ! isset( $_ENV['PANTHEON_ENVIRONMENT'] ) && file_exists( $rootPath . '/.env' ) ) {
-	$dotenv = Dotenv\Dotenv::create($rootPath);
+	$dotenv = Dotenv\Dotenv::create( $rootPath );
 	$dotenv->load();
-	$dotenv->required( array(
-		'DB_NAME',
-		'DB_USER',
-		'DB_HOST',
-	) )->notEmpty();
+	$dotenv->required(
+		array(
+			'DB_NAME',
+			'DB_USER',
+			'DB_HOST',
+		)
+	)->notEmpty();
 }
 
 /**
@@ -46,7 +48,7 @@ define( 'WP_POST_REVISIONS', 3 );
 /*
  * If NOT on Pantheon
  */
-if ( ! isset( $_ENV['PANTHEON_ENVIRONMENT'] ) ):
+if ( ! isset( $_ENV['PANTHEON_ENVIRONMENT'] ) ) :
 	/**
 	 * Define site and home URLs
 	 */
@@ -86,20 +88,20 @@ if ( ! isset( $_ENV['PANTHEON_ENVIRONMENT'] ) ):
 	 * @since 2.6.0
 	 */
 	define( 'AUTH_KEY', $_ENV['AUTH_KEY'] );
-    define( 'SECURE_AUTH_KEY', $_ENV['SECURE_AUTH_KEY'] );
-    define( 'LOGGED_IN_KEY', $_ENV['LOGGED_IN_KEY'] );
-    define( 'NONCE_KEY', $_ENV['NONCE_KEY'] );
-    define( 'AUTH_SALT', $_ENV['AUTH_SALT'] );
-    define( 'SECURE_AUTH_SALT', $_ENV['SECURE_AUTH_SALT'] );
-    define( 'LOGGED_IN_SALT', $_ENV['LOGGED_IN_SALT'] );
-    define( 'NONCE_SALT', $_ENV['NONCE_SALT'] );
+	define( 'SECURE_AUTH_KEY', $_ENV['SECURE_AUTH_KEY'] );
+	define( 'LOGGED_IN_KEY', $_ENV['LOGGED_IN_KEY'] );
+	define( 'NONCE_KEY', $_ENV['NONCE_KEY'] );
+	define( 'AUTH_SALT', $_ENV['AUTH_SALT'] );
+	define( 'SECURE_AUTH_SALT', $_ENV['SECURE_AUTH_SALT'] );
+	define( 'LOGGED_IN_SALT', $_ENV['LOGGED_IN_SALT'] );
+	define( 'NONCE_SALT', $_ENV['NONCE_SALT'] );
 
 endif;
 
 /*
  * If on Pantheon
  */
-if ( isset( $_ENV['PANTHEON_ENVIRONMENT'] ) ):
+if ( isset( $_ENV['PANTHEON_ENVIRONMENT'] ) ) :
 
 	// ** MySQL settings - included in the Pantheon Environment ** //
 	/** The name of the database for WordPress */
@@ -142,7 +144,7 @@ if ( isset( $_ENV['PANTHEON_ENVIRONMENT'] ) ):
 	define( 'NONCE_SALT', $_ENV['NONCE_SALT'] );
 	/**#@-*/
 
-	/** A couple extra tweaks to help things run well on Pantheon. **/
+	/** A couple extra tweaks to help things run well on Pantheon. */
 	if ( isset( $_SERVER['HTTP_HOST'] ) ) {
 		// HTTP is still the default scheme for now.
 		$scheme = 'http';
@@ -158,7 +160,7 @@ if ( isset( $_ENV['PANTHEON_ENVIRONMENT'] ) ):
 	}
 
 	// Force the use of a safe temp directory when in a container
-	if ( defined( 'PANTHEON_BINDING' ) ):
+	if ( defined( 'PANTHEON_BINDING' ) ) :
 		define( 'WP_TEMP_DIR', sprintf( '/srv/bindings/%s/tmp', PANTHEON_BINDING ) );
 	endif;
 
@@ -183,6 +185,10 @@ define( 'WP_CONTENT_URL', WP_HOME . '/wp-content' );
  */
 $table_prefix = getenv( 'DB_PREFIX' ) !== false ? getenv( 'DB_PREFIX' ) : 'wp_';
 
+if ( file_exists( dirname( __FILE__ ) . '/wp-content/uploads/private/wp-config-redirect.php' ) && ! isset( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
+	require_once dirname( __FILE__ ) . '/wp-content/uploads/private/wp-config-redirect.php';
+}
+
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */
@@ -190,4 +196,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 	define( 'ABSPATH', dirname( __FILE__ ) . '/' );
 }
 /** Sets up WordPress vars and included files. */
-require_once( ABSPATH . 'wp-settings.php' );
+require_once ABSPATH . 'wp-settings.php';
