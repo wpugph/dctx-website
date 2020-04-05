@@ -260,4 +260,20 @@ add_filter( 'wp_headers', 'additional_securityheaders' );
 add_theme_support('editor-styles');
 add_editor_style( 'style-editor.css' );
 
+
+// Function to add analyticstracking.js to the site
+function add_google_analytics() {
+    // Register analyticstracking.js file (Google Analytics)
+    wp_register_script(
+        'google-analytics', // handle name referred to in the "wp_enqueue_script" call below
+        get_stylesheet_directory_uri() . '/analyticstracking.js', // location of your file
+        false, // no dependencies
+        '1.0', // version number
+        true // if true, the script is placed before the  end tag
+    );
+    // Enqueue the registered script file
+    wp_enqueue_script('google-analytics');
+}
+add_action('wp_enqueue_scripts', 'add_google_analytics');
+
 ?>
