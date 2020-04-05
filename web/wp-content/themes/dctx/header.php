@@ -1,3 +1,13 @@
+<?php 
+	/**
+	 * Header
+	 *
+	 * @package WordPress
+	 * @subpackage dctx
+	 * @since dctx 1.0
+	 */
+
+?>
 <!DOCTYPE html>
 <html class="no-js" <?php language_attributes(); ?>>
 <head>
@@ -25,7 +35,7 @@
 					<?php 
 						wp_nav_menu(array(
 							'theme_location' => 'header',
-							'container' 		=> '',
+							'container' => '',
 							'container_class' => '',
 							'menu_class' => 'clearfix'
 						)); 
