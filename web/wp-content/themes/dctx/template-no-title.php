@@ -1,21 +1,22 @@
-<?php //phpcs:disable
-
-/**
-* Template Name: No Title Page
-*
-* @package WordPress
-* @subpackage dctx
-* @since dctx 1.0
-*/
+<?php
+	/**
+	 * Template Name: Full-Width No Title Page
+	 *
+	 * @package WordPress
+	 * @subpackage dctx
+	 * @since dctx 1.0
+	 */
 	
 	get_header(); ?>
-
 
 <div id="main">
 	<div class="clearfix">
 
 		<div class="main-content">
-			<?php while (have_posts()) : the_post(); ?>
+			<?php 
+			while ( have_posts() ) : 
+					the_post(); 
+				?>
 				<div><?php the_content(); ?></div>
 			<?php endwhile; ?>
 		</div>

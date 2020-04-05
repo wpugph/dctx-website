@@ -25,7 +25,7 @@
 					<?php 
 						wp_nav_menu(array(
 							'theme_location' => 'header',
-							'container' => '',
+							'container' 		=> '',
 							'container_class' => '',
 							'menu_class' => 'clearfix'
 						)); 
@@ -33,5 +33,5 @@
 				</nav>
 			</div>
 		</div>
-	</header>
-	
+</header>
+

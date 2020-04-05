@@ -1,10 +1,22 @@
-<?php get_header(); ?>
+<?php 
+	/**
+	 * Template Name: Default Page
+	 *
+	 * @package WordPress
+	 * @subpackage dctx
+	 * @since dctx 1.0
+	 */
+
+get_header(); ?>
 
 <div id="main">
 	<div class="container clearfix">
 
 		<div class="main-content">
-			<?php while (have_posts()) : the_post(); ?>
+			<?php 
+			while ( have_posts() ) : 
+				the_post(); 
+				?>
 				<h1><?php the_title(); ?></h1>
 				<div><?php the_content(); ?></div>
 			<?php endwhile; ?>
@@ -15,8 +27,10 @@
 	</div>
 </div>
 
-<?php if (!is_page(15)): ?>
-	<?php include_once('partials/volunteer.php'); ?>
+<?php if ( ! is_page( 15 ) ) : ?>
+	<?php 
+	include_once 'partials/volunteer.php'; 
+	?>
 <?php endif; ?>
 
 <?php get_footer(); ?>
