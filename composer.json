@@ -36,6 +36,7 @@
 	"wpackagist-plugin/wp-cfm": "dev-trunk",
 	"wpackagist-plugin/wp-redis": "dev-trunk",
 	"wpackagist-plugin/autoptimize": "dev-trunk",
+	"wpackagist-plugin/inline-google-spreadsheet-viewer": "dev-trunk",
 	"wpackagist-plugin/beaver-builder-lite-version": "dev-trunk",
     "wpackagist-theme/twentynineteen": "^1.2"
   },
