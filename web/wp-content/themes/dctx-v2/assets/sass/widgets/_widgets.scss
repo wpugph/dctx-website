@@ -1,0 +1,90 @@
+//--------------------------------------------------------------
+// Widgets
+//--------------------------------------------------------------
+
+.widget {
+	@include margin(0 0 $space);
+
+	// Make sure select elements fit in widgets.
+	select {
+		max-width: 100%;
+	} // select
+
+	// Extend the h3 style for the widget titles.
+	.widget-title {
+		@extend .h3 !optional;
+
+		text-align: center;
+		text-transform: none;
+	} // .widget-title
+} // .widget
+
+// Search widget.
+.widget_search .search-submit {
+	display: none;
+} // .widget_search .search-submit
+
+// Galery widget.
+.widget_media_gallery {
+
+	.gallery {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: center;
+		max-width: 100%;
+
+		@include media($tablet-portrait) {
+			flex-direction: row;
+		}
+
+		.gallery-item {
+			@include margin(rem(15) 0);
+			@include padding(rem(10) rem(15));
+
+			height: auto;
+			min-width: 80%;
+			overflow: hidden;
+			width: auto;
+
+			@include media($tablet-portrait) {
+				min-width: rem(200);
+			}
+
+			img {
+				height: auto;
+				object-fit: cover;
+				object-position: center;
+				width: 100%;
+			} // img
+		} // .gallery-item
+	} // .gallery
+} // .widget-media-gallery
+
+// Media image
+.widget_media_image {
+	display: flex;
+	justify-content: center;
+
+	.wp-caption {
+		margin-bottom: 0;
+		min-width: rem(400);
+	} //
+
+	.dctx-footer-logo {
+		height: auto;
+		width: rem(136);
+
+		+ .wp-caption-text {
+			border: none;
+			color: $color-black;
+			font-size: rem(16);
+			font-weight: 600;
+			margin-bottom: 0;
+			padding-bottom: 0;
+			text-align: center;
+			text-transform: uppercase;
+		} // .wp-caption-text
+	} // .dctx-footer-logo
+} // .widget_media_image
