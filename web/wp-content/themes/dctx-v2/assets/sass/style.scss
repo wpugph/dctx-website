@@ -1,0 +1,59 @@
+/*
+Theme Name: dctx
+Theme URI: https://www.dctx.ph/
+Author: JC Palmes
+Author URI: https://khleomix.com/
+Description: Custom theme for DCTx
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: dctx
+Tags: custom
+
+This theme, like WordPress, is licensed under the GPL.
+
+Based on Underscores http://underscores.me/, (C) 2012-2017 Automattic, Inc.
+*/
+
+//-----------------------------------------
+// Extras
+//-----------------------------------------
+@import 'vendor/sanitize/sanitize';
+
+//-----------------------------------------
+// Utilities
+//-----------------------------------------
+
+// Helper functions.
+@import 'utilities/functions/index';
+
+// Mixins.
+@import 'utilities/mixins/index';
+
+// Global variables.
+@import 'utilities/variables/index';
+
+// Quick Helpers.
+@import 'utilities/helpers/index';
+
+//-----------------------------------------
+// Theme Styles
+//-----------------------------------------
+
+// Global elements.
+@import 'base/index';
+
+// Layout.
+@import 'structure/index';
+
+// Modules.
+@import 'modules/index';
+
+// Plugin overrides.
+@import 'plugins/index';
+
+// Views/Pages.
+@import 'views/index';
+
+// WP Widgets.
+@import 'widgets/index';
