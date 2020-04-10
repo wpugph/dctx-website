@@ -42,6 +42,7 @@ web/private/scripts/quicksilver
 # custom theme and plugin should also be included here
 !web/wp-content/themes/dctx/
 !web/wp-content/themes/dctx-v2/
+!web/wp-content/themes/dctx2/
 
 # Add directories containing build assets below.
 # Keep all additions above the "cut" line.
