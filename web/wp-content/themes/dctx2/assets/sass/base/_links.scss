@@ -48,8 +48,10 @@ a {
 			border-radius: rem(4);
 			color: $color-limeaid;
 			font-size: rem(20);
+			opacity: 1;
 			text-align: center;
 			text-decoration: none;
+			transition: $transition-color;
 
 			&:visited {
 				color: $color-limeaid;
@@ -60,6 +62,7 @@ a {
 			&:active {
 				background-color: $color-limeaid;
 				color: $color-white;
+				opacity: 1;
 			} // &:hover, &:focus, &:active
 		} // a
 

@@ -46,9 +46,11 @@ $color-tango:           #ea641d;
 $color-corn:            #e8ca04;
 $color-limeaid:         #71b406;
 $color-electric-violet: #7f08ff;
+$color-jacksons-purple: #311b92;
 $color-gigas:           #5641a5;
 $color-robins-egg:      #00bcd4;
 $color-desert-storm:    #f1f2f0;
+$color-alabaster:       #fafafa;
 
 //-----------------------------------------
 // Grayscale Colors
@@ -295,6 +297,14 @@ $color-background-scaffolding: $color-white;
 
 /// Sass map used for creating color presentational classes.
 $theme-colors: (
+	tango: $color-tango,
+	corn: $color-corn,
+	limeaid: $color-limeaid,
+	electric-violet: $color-electric-violet,
+	jacksons-purple: $color-jacksons-purple,
+	gigas: $color-gigas,
+	robins-egg: $color-robins-egg,
+	desert-storm: $color-desert-storm,
 	alto: $color-alto,
 	black: $color-black,
 	blue: $color-blue,
