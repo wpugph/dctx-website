@@ -1,0 +1,21 @@
+{
+    "sidebars_widgets": "a:3:{s:19:\"wp_inactive_widgets\";a:0:{}s:10:\"footer-bar\";a:4:{i:0;s:15:\"media_gallery-2\";i:1;s:13:\"media_image-2\";i:2;s:15:\"media_gallery-3\";i:3;s:13:\"media_image-4\";}s:13:\"array_version\";i:3;}",
+    "widget_archives": "a:1:{s:12:\"_multiwidget\";i:1;}",
+    "widget_calendar": "a:1:{s:12:\"_multiwidget\";i:1;}",
+    "widget_categories": "a:1:{s:12:\"_multiwidget\";i:1;}",
+    "widget_custom_html": "a:1:{s:12:\"_multiwidget\";i:1;}",
+    "widget_media_audio": "a:1:{s:12:\"_multiwidget\";i:1;}",
+    "widget_media_gallery": "a:3:{i:2;a:6:{s:5:\"title\";s:35:\"Our Partners and Strategic Sponsors\";s:3:\"ids\";a:2:{i:0;i:347;i:1;i:346;}s:7:\"columns\";i:2;s:4:\"size\";s:5:\"large\";s:9:\"link_type\";s:4:\"none\";s:14:\"orderby_random\";b:0;}i:3;a:6:{s:5:\"title\";s:31:\"Our Major Contributing Sponsors\";s:3:\"ids\";a:7:{i:0;i:348;i:1;i:351;i:2;i:349;i:3;i:354;i:4;i:353;i:5;i:350;i:6;i:352;}s:7:\"columns\";i:4;s:4:\"size\";s:6:\"medium\";s:9:\"link_type\";s:4:\"none\";s:14:\"orderby_random\";b:0;}s:12:\"_multiwidget\";i:1;}",
+    "widget_media_image": "a:3:{i:2;a:15:{s:4:\"size\";s:6:\"medium\";s:5:\"width\";i:0;s:6:\"height\";i:0;s:7:\"caption\";s:0:\"\";s:3:\"alt\";s:0:\"\";s:9:\"link_type\";s:6:\"custom\";s:8:\"link_url\";s:0:\"\";s:13:\"image_classes\";s:0:\"\";s:12:\"link_classes\";s:0:\"\";s:8:\"link_rel\";s:0:\"\";s:17:\"link_target_blank\";b:0;s:11:\"image_title\";s:0:\"\";s:13:\"attachment_id\";i:0;s:3:\"url\";s:0:\"\";s:5:\"title\";s:0:\"\";}i:4;a:15:{s:4:\"size\";s:9:\"thumbnail\";s:5:\"width\";i:150;s:6:\"height\";i:150;s:7:\"caption\";s:38:\"DevCon Community Technology Initiative\";s:3:\"alt\";s:0:\"\";s:9:\"link_type\";s:6:\"custom\";s:8:\"link_url\";s:0:\"\";s:13:\"image_classes\";s:16:\"dctx-footer-logo\";s:12:\"link_classes\";s:0:\"\";s:8:\"link_rel\";s:0:\"\";s:17:\"link_target_blank\";b:0;s:11:\"image_title\";s:0:\"\";s:13:\"attachment_id\";i:528;s:3:\"url\";s:81:\"https:\/\/dev-dctx1.pantheonsite.io\/wp-content\/uploads\/2020\/04\/logo-big-150x150.png\";s:5:\"title\";s:0:\"\";}s:12:\"_multiwidget\";i:1;}",
+    "widget_media_video": "a:1:{s:12:\"_multiwidget\";i:1;}",
+    "widget_meta": "a:1:{s:12:\"_multiwidget\";i:1;}",
+    "widget_nav_menu": "a:1:{s:12:\"_multiwidget\";i:1;}",
+    "widget_pages": "a:1:{s:12:\"_multiwidget\";i:1;}",
+    "widget_recent-comments": "a:1:{s:12:\"_multiwidget\";i:1;}",
+    "widget_recent-posts": "a:1:{s:12:\"_multiwidget\";i:1;}",
+    "widget_rss": "a:2:{i:1;a:0:{}s:12:\"_multiwidget\";i:1;}",
+    "widget_search": "a:1:{s:12:\"_multiwidget\";i:1;}",
+    "widget_tag_cloud": "a:1:{s:12:\"_multiwidget\";i:1;}",
+    "widget_text": "a:2:{i:1;a:0:{}s:12:\"_multiwidget\";i:1;}",
+    ".label": "widgets"
+}
