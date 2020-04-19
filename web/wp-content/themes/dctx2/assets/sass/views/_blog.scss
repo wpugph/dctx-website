@@ -1,0 +1,17 @@
+//--------------------------------------------------------------
+// Blog
+//--------------------------------------------------------------
+
+article.post {
+	margin-bottom: 40px;
+    padding: 30px 40px 40px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+time a,
+.author a,
+.tags-links a {
+	text-decoration: underline;
+	color: #00BCD4;
+}
