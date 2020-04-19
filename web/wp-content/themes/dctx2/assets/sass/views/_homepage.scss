@@ -79,14 +79,29 @@
 			a {
 				@include padding(rem(10) rem(30));
 
+				border: rem(2) solid;
 				border-radius: rem(8);
 				min-width: rem(200);
 				text-decoration: none;
+				transition: $transition-color;
 
 				@include media($tablet-portrait) {
 					font-size: rem(31);
 				}
-			}
+			} // a
+
+			&.is-style-fill {
+				a {
+					border: rem(2) solid;
+
+					&:hover,
+					&:focus,
+					&:active {
+						background-color: transparent;
+						color: $color-gigas;
+					} // &:hover, &:focus, &:active
+				} // a
+			} // &.is-style-fill
 		} // .wp-block-button
 
 		@include media(null, $tablet-landscape - 1) {
@@ -237,6 +252,20 @@
 					padding-left: 0;
 				}
 			} // .content-wrapper
+
+			.wp-block-button {
+				a {
+					border: rem(2) solid $color-gigas;
+
+					&:hover,
+					&:focus,
+					&:active {
+						background-color: transparent !important;
+						color: $color-gigas;
+						opacity: 1;
+					} // &:hover, &:focus, &:active
+				} // a
+			} // .wp-block-button
 		} // &.rapidpass
 
 		&.tracecovid {
@@ -261,6 +290,20 @@
 					@include padding(rem(100) 0);
 				} // iPad Pro Landscape.
 			} // .content-wrapper
+
+			.wp-block-button {
+				a {
+					border: rem(2) solid $color-tango;
+
+					&:hover,
+					&:focus,
+					&:active {
+						background-color: transparent !important;
+						color: $color-tango;
+						opacity: 1;
+					} // &:hover, &:focus, &:active
+				} // a
+			} // .wp-block-button
 		} // &.tracecovid
 
 		&.mission {
@@ -304,86 +347,115 @@
 			} // .content-wrapper
 		} // &.mission
 
-		&.volunteer {
-			.block-wrapper {
-				@include padding(rem(50) $space);
-
-				text-align: center;
-
-				@include media($desktop) {
-					@include padding(rem(100) 15% null);
-
-					text-align: left;
-
-					p {
-						font-size: rem(24);
-					}
-				}
-
-				.block-content-wrapper {
-					flex-direction: column;
-					text-align: center;
-
-					@include media($desktop-large) {
-						flex-direction: row;
-						text-align: left;
-					}
-				} // .block-content-wrapper
-
-				.icon-wrapper {
-					@include margin(0 null);
-
-					flex-wrap: wrap;
-
-					.wp-block-column {
-						margin-top: 0;
-
-						@include media($desktop) {
-							max-width: rem(200);
-							min-width: rem(150);
-						}
-
-						figure {
-							height: 100%;
-							overflow: hidden;
-							text-align: center;
-							width: 100%;
-
-							img {
-								height: 100%;
-								max-width: rem(100);
-								object-fit: contain;
-								object-position: center;
-								width: 100%;
-
-								@include media($desktop) {
-									max-width: rem(120);
-								}
-							} // img
-						}
-					} // .wp-block-column
-
-					p {
-						font-size: rem(14);
-
-						@include media($desktop) {
-							font-size: rem(22);
-						}
-					} // p
-				} // .icon-wrapper
-
-				.wp-block-button {
-					a {
-						@include padding(null rem(15));
-
-						border-radius: rem(44);
-
-						@include media($tablet-landscape) {
-							@include padding(null rem(55));
-						}
-					}
-				} // .wp-block-button
-			} // .block-wrapper
-		} // &.volunteer
 	} // .wp-block-cover
 } // .home
+
+// Global Volunteer Block
+.volunteer {
+	.block-wrapper {
+		@include padding(rem(50) $space);
+
+		text-align: center;
+
+		@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+			@include padding(null 5%);
+		} // iPad Pro Landscape.
+
+		@include media($desktop) {
+			@include padding(rem(100) 15% null);
+
+			text-align: left;
+
+			p {
+				font-size: rem(24);
+			}
+		}
+
+		.block-content-wrapper {
+			flex-direction: column;
+			text-align: center;
+
+			@include media($desktop-large) {
+				flex-direction: row;
+				text-align: left;
+			}
+
+			.wp-block-column {
+				margin-left: 0;
+			} // .wp-block-column
+		} // .block-content-wrapper
+
+		.icon-wrapper {
+			@include margin(0 null);
+
+			flex-wrap: wrap;
+
+			.wp-block-column {
+				margin-top: 0;
+
+				@include media($desktop) {
+					max-width: rem(200);
+					min-width: rem(150);
+				}
+
+				figure {
+					height: 100%;
+					overflow: hidden;
+					text-align: center;
+					width: 100%;
+
+					img {
+						height: 100%;
+						max-width: rem(100);
+						object-fit: contain;
+						object-position: center;
+						width: 100%;
+
+						@include media($desktop) {
+							max-width: rem(120);
+						}
+					} // img
+				}
+			} // .wp-block-column
+
+			p {
+				font-size: rem(14);
+
+				@include media($desktop) {
+					font-size: rem(22);
+				}
+			} // p
+		} // .icon-wrapper
+
+		.wp-block-buttons {
+			justify-content: center;
+
+			@include media($tablet-landscape) {
+				justify-content: flex-start;
+			}
+
+			.wp-block-button {
+				width: auto;
+
+				a {
+					@include padding(null rem(15));
+					border: rem(2) solid $color-limeaid;
+					border-radius: rem(44);
+
+					@include media($tablet-landscape) {
+						@include padding(null rem(55));
+					}
+
+					&:hover,
+					&:focus,
+					&:active {
+						background-color: transparent !important;
+						color: $color-limeaid;
+						opacity: 1;
+					} // &:hover, &:focus, &:active
+				} // a
+			} // .wp-block-button
+		} // .wp-block-buttons
+
+	} // .block-wrapper
+} // .volunteer

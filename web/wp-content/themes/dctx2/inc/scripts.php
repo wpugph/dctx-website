@@ -33,7 +33,7 @@ function dctx_font_url() {
 		}
 
 		if ( 'off' !== $work_sans ) {
-			$font_families[] = 'Work Sans';
+			$font_families[] = 'Work+Sans:300,400,500,600,700,800,900';
 		}
 
 		$query_args = array(

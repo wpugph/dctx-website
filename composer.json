@@ -38,6 +38,7 @@
 	"wpackagist-plugin/autoptimize": "dev-trunk",
 	"wpackagist-plugin/inline-google-spreadsheet-viewer": "dev-trunk",
 	"wpackagist-plugin/beaver-builder-lite-version": "dev-trunk",
+	"wpackagist-plugin/unicard": "dev-trunk",
     "wpackagist-theme/twentynineteen": "^1.2"
   },
 	"config": {
