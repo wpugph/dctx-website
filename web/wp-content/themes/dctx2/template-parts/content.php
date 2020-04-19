@@ -27,7 +27,7 @@
 
 		<div class="entry-content">
 			<?php
-				the_content(
+				the_excerpt(
 					sprintf(
 						wp_kses(
 							/* translators: %s: Name of current post. */
