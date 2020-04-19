@@ -43,6 +43,7 @@ web/private/scripts/quicksilver
 !web/wp-content/themes/dctx/
 !web/wp-content/themes/dctx-v2/
 !web/wp-content/themes/dctx2/
+web/wp-content/themes/dctx2/node_modules
 
 # Add directories containing build assets below.
 # Keep all additions above the "cut" line.
