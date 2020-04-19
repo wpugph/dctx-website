@@ -102,6 +102,39 @@ msgstr ""
 msgid "Main Navigation"
 msgstr ""
 
+#. translators: the term(s) searched
+#: search.php:17
+msgid "Search Results for: %s"
+msgstr ""
+
+#: searchform.php:14
+msgid "To search this site, enter a search term"
+msgstr ""
+
+#: searchform.php:15, inc/template-tags.php:431, inc/template-tags.php:432
+msgid "Search"
+msgstr ""
+
+#: searchform.php:17
+msgid "Submit"
+msgstr ""
+
+#: template-rapidpass.php:3
+msgid "RapidPass"
+msgstr ""
+
+#: template-scaffolding.php:3
+msgid "Scaffolding"
+msgstr ""
+
+#: template-sidebar-left.php:3
+msgid "Sidebar Left"
+msgstr ""
+
+#: template-sidebar-right.php:3
+msgid "Sidebar Right"
+msgstr ""
+
 #: inc/acf-gutenberg.php:31
 msgid "Accordion"
 msgstr ""
@@ -224,156 +257,99 @@ msgid "expired"
 msgstr ""
 
 #: inc/acf.php:346
-msgid "Alto"
+msgid "Tango"
 msgstr ""
 
 #: inc/acf.php:347
-msgid "Black"
+msgid "corn"
 msgstr ""
 
 #: inc/acf.php:348
-msgid "Blue"
+msgid "Limeaid"
 msgstr ""
 
 #: inc/acf.php:349
-msgid "Cod Gray"
+msgid "Electric Violet"
 msgstr ""
 
 #: inc/acf.php:350
-msgid "Dove Gray"
+msgid "Jacksons Purple"
 msgstr ""
 
 #: inc/acf.php:351
-msgid "Gallery"
+msgid "Gigas"
 msgstr ""
 
 #: inc/acf.php:352
-msgid "Gray"
+msgid "Robins Egg"
 msgstr ""
 
 #: inc/acf.php:353
-msgid "Gray Alt"
+msgid "Desert Storm"
 msgstr ""
 
 #: inc/acf.php:354
-msgid "Light Yellow"
+msgid "Alabaster"
 msgstr ""
 
 #: inc/acf.php:355
-msgid "Mineshaft"
+msgid "Alto"
 msgstr ""
 
 #: inc/acf.php:356
-msgid "Silver"
+msgid "Black"
 msgstr ""
 
 #: inc/acf.php:357
-msgid "Silver Chalice"
+msgid "Blue"
 msgstr ""
 
 #: inc/acf.php:358
-msgid "White"
+msgid "Cod Gray"
 msgstr ""
 
 #: inc/acf.php:359
+msgid "Dove Gray"
+msgstr ""
+
+#: inc/acf.php:360
+msgid "Gallery"
+msgstr ""
+
+#: inc/acf.php:361
+msgid "Gray"
+msgstr ""
+
+#: inc/acf.php:362
+msgid "Gray Alt"
+msgstr ""
+
+#: inc/acf.php:363
+msgid "Light Yellow"
+msgstr ""
+
+#: inc/acf.php:364
+msgid "Mineshaft"
+msgstr ""
+
+#: inc/acf.php:365
+msgid "Silver"
+msgstr ""
+
+#: inc/acf.php:366
+msgid "Silver Chalice"
+msgstr ""
+
+#: inc/acf.php:367
+msgid "White"
+msgstr ""
+
+#: inc/acf.php:368
 msgid "Whitesmoke"
 msgstr ""
 
-#: inc/acf.php:435, inc/hooks.php:99, inc/template-tags.php:395
+#: inc/acf.php:444, inc/hooks.php:99, inc/template-tags.php:395
 msgid "Read More"
-msgstr ""
-
-#: inc/customizer/panels.php:23
-msgid "Site Options"
-msgstr ""
-
-#: inc/customizer/panels.php:24
-msgid "Other theme options."
-msgstr ""
-
-#: inc/customizer/sections.php:20
-msgid "Additional Scripts"
-msgstr ""
-
-#: inc/customizer/sections.php:30
-msgid "Social Media"
-msgstr ""
-
-#: inc/customizer/sections.php:31
-msgid "Links here power the display_social_network_links() template tag."
-msgstr ""
-
-#: inc/customizer/sections.php:41
-msgid "Header Customizations"
-msgstr ""
-
-#: inc/customizer/sections.php:51
-msgid "Footer Customizations"
-msgstr ""
-
-#: inc/customizer/settings.php:29
-msgid "Header Scripts"
-msgstr ""
-
-#: inc/customizer/settings.php:30
-msgid "Additional scripts to add to the header. Basic HTML tags are allowed."
-msgstr ""
-
-#: inc/customizer/settings.php:49
-msgid "Footer Scripts"
-msgstr ""
-
-#: inc/customizer/settings.php:50
-msgid "Additional scripts to add to the footer. Basic HTML tags are allowed."
-msgstr ""
-
-#. translators: the social network name.
-#: inc/customizer/settings.php:85
-msgid "%s URL"
-msgstr ""
-
-#: inc/customizer/settings.php:117
-msgid "Copyright Text"
-msgstr ""
-
-#: inc/customizer/settings.php:118
-msgid "The copyright text will be displayed in the footer. Basic HTML tags allowed."
-msgstr ""
-
-#: inc/customizer/settings.php:148
-msgid "Header Button"
-msgstr ""
-
-#: inc/customizer/settings.php:149
-msgid "Display a custom button in the header."
-msgstr ""
-
-#: inc/customizer/settings.php:153
-msgid "No button"
-msgstr ""
-
-#: inc/customizer/settings.php:154
-msgid "Trigger a search field"
-msgstr ""
-
-#: inc/customizer/settings.php:155
-msgid "Link to a custom URL"
-msgstr ""
-
-#: inc/customizer/settings.php:173
-msgid "Header Button URL"
-msgstr ""
-
-#: inc/customizer/settings.php:174
-msgid "Enter the URL or email address to be used by the button in the header."
-msgstr ""
-
-#: inc/customizer/settings.php:194
-msgid "Header Button Text"
-msgstr ""
-
-#: inc/customizer/settings.php:195
-msgid "Enter the text to be displayed in the button in the header."
 msgstr ""
 
 #: inc/extras.php:115
@@ -491,7 +467,8 @@ msgstr ""
 #. translators: %s: Name of current post
 #. translators: %s: Name of current post
 #. translators: %s: Name of current post
-#: inc/template-tags.php:80, template-parts/content-home.php:33, template-parts/content-page.php:36
+#. translators: %s: Name of current post
+#: inc/template-tags.php:80, template-parts/content-home.php:33, template-parts/content-page.php:36, template-parts/content-rapidpass.php:33
 msgid "Edit %s"
 msgstr ""
 
@@ -507,10 +484,6 @@ msgstr ""
 msgid "More Information"
 msgstr ""
 
-#: inc/template-tags.php:431, inc/template-tags.php:432, searchform.php:15
-msgid "Search"
-msgstr ""
-
 #: inc/template-tags.php:468
 msgid "numeric pagination"
 msgstr ""
@@ -519,24 +492,7 @@ msgstr ""
 msgid "Close Menu"
 msgstr ""
 
-#. translators: the term(s) searched
-#: search.php:17
-msgid "Search Results for: %s"
-msgstr ""
-
-#: searchform.php:14
-msgid "To search this site, enter a search term"
-msgstr ""
-
-#: searchform.php:17
-msgid "Submit"
-msgstr ""
-
-#: template-parts/content-blocks/block-wds-accordion.php:37
-msgid "Accordion Content Block"
-msgstr ""
-
-#: template-parts/content-home.php:20, template-parts/content-page.php:23, template-parts/content.php:47
+#: template-parts/content-home.php:20, template-parts/content-page.php:23, template-parts/content-rapidpass.php:20, template-parts/content.php:47
 msgid "Pages:"
 msgstr ""
 
@@ -556,6 +512,131 @@ msgstr ""
 #. translators: %s: Name of current post.
 #: template-parts/content.php:34
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: template-parts/sharing-icons.php:11
+msgid "Share This"
+msgstr ""
+
+#: template-parts/sharing-icons.php:19
+msgid "Twitter"
+msgstr ""
+
+#: template-parts/sharing-icons.php:20, template-parts/sharing-icons.php:24
+msgid "Share on Twitter"
+msgstr ""
+
+#: template-parts/sharing-icons.php:33
+msgid "Facebook"
+msgstr ""
+
+#: template-parts/sharing-icons.php:34, template-parts/sharing-icons.php:38
+msgid "Share on Facebook"
+msgstr ""
+
+#: template-parts/sharing-icons.php:47
+msgid "LinkedIn"
+msgstr ""
+
+#: template-parts/sharing-icons.php:48, template-parts/sharing-icons.php:52
+msgid "Share on LinkedIn"
+msgstr ""
+
+#: inc/customizer/panels.php:23
+msgid "Site Options"
+msgstr ""
+
+#: inc/customizer/panels.php:24
+msgid "Other theme options."
+msgstr ""
+
+#: inc/customizer/sections.php:20
+msgid "Additional Scripts"
+msgstr ""
+
+#: inc/customizer/sections.php:30
+msgid "Social Media"
+msgstr ""
+
+#: inc/customizer/sections.php:31
+msgid "Links here power the display_social_network_links() template tag."
+msgstr ""
+
+#: inc/customizer/sections.php:41
+msgid "Header Customizations"
+msgstr ""
+
+#: inc/customizer/sections.php:51
+msgid "Footer Customizations"
+msgstr ""
+
+#: inc/customizer/settings.php:29
+msgid "Header Scripts"
+msgstr ""
+
+#: inc/customizer/settings.php:30
+msgid "Additional scripts to add to the header. Basic HTML tags are allowed."
+msgstr ""
+
+#: inc/customizer/settings.php:49
+msgid "Footer Scripts"
+msgstr ""
+
+#: inc/customizer/settings.php:50
+msgid "Additional scripts to add to the footer. Basic HTML tags are allowed."
+msgstr ""
+
+#. translators: the social network name.
+#: inc/customizer/settings.php:85
+msgid "%s URL"
+msgstr ""
+
+#: inc/customizer/settings.php:117
+msgid "Copyright Text"
+msgstr ""
+
+#: inc/customizer/settings.php:118
+msgid "The copyright text will be displayed in the footer. Basic HTML tags allowed."
+msgstr ""
+
+#: inc/customizer/settings.php:148
+msgid "Header Button"
+msgstr ""
+
+#: inc/customizer/settings.php:149
+msgid "Display a custom button in the header."
+msgstr ""
+
+#: inc/customizer/settings.php:153
+msgid "No button"
+msgstr ""
+
+#: inc/customizer/settings.php:154
+msgid "Trigger a search field"
+msgstr ""
+
+#: inc/customizer/settings.php:155
+msgid "Link to a custom URL"
+msgstr ""
+
+#: inc/customizer/settings.php:173
+msgid "Header Button URL"
+msgstr ""
+
+#: inc/customizer/settings.php:174
+msgid "Enter the URL or email address to be used by the button in the header."
+msgstr ""
+
+#: inc/customizer/settings.php:194
+msgid "Header Button Text"
+msgstr ""
+
+#: inc/customizer/settings.php:195
+msgid "Enter the text to be displayed in the button in the header."
+msgstr ""
+
+#: template-parts/content-blocks/block-wds-accordion.php:37
+msgid "Accordion Content Block"
 msgstr ""
 
 #: template-parts/scaffolding/scaffolding-blank.php:11
@@ -588,48 +669,4 @@ msgstr ""
 
 #: template-parts/scaffolding/scaffolding-typography.php:12
 msgid "Typography"
-msgstr ""
-
-#: template-parts/sharing-icons.php:11
-msgid "Share This"
-msgstr ""
-
-#: template-parts/sharing-icons.php:19
-msgid "Twitter"
-msgstr ""
-
-#: template-parts/sharing-icons.php:20, template-parts/sharing-icons.php:24
-msgid "Share on Twitter"
-msgstr ""
-
-#: template-parts/sharing-icons.php:33
-msgid "Facebook"
-msgstr ""
-
-#: template-parts/sharing-icons.php:34, template-parts/sharing-icons.php:38
-msgid "Share on Facebook"
-msgstr ""
-
-#: template-parts/sharing-icons.php:47
-msgid "LinkedIn"
-msgstr ""
-
-#: template-parts/sharing-icons.php:48, template-parts/sharing-icons.php:52
-msgid "Share on LinkedIn"
-msgstr ""
-
-#: template-rapidpass.php:3
-msgid "RapidPass"
-msgstr ""
-
-#: template-scaffolding.php:3
-msgid "Scaffolding"
-msgstr ""
-
-#: template-sidebar-left.php:3
-msgid "Sidebar Left"
-msgstr ""
-
-#: template-sidebar-right.php:3
-msgid "Sidebar Right"
 msgstr ""
