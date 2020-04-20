@@ -27,7 +27,7 @@
 
 		<div class="entry-content">
 			<?php
-				the_excerpt(
+				the_content(
 					sprintf(
 						wp_kses(
 							/* translators: %s: Name of current post. */
@@ -49,7 +49,6 @@
 					)
 				);
 			?>
-			<div class="read-more"><a href="<?php the_permalink(); ?>" class="button">Continue reading</a></div>
 		</div><!-- .entry-content -->
 
 		<footer class="entry-footer">
