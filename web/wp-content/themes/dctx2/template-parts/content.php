@@ -42,8 +42,6 @@
 					)
 				);
 
-				the_permalink( '<div class="read-more"><a href="', '" class="button">Continue reading</a></div>', 'dctx' );
-
 				wp_link_pages(
 					array(
 						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'dctx' ),
