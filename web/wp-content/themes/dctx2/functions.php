@@ -239,3 +239,32 @@ require get_template_directory() . '/inc/customizer/customizer.php';
  * Scaffolding Library.
  */
 require get_template_directory() . '/inc/scaffolding.php';
+
+/**
+ * Security entries from Previous Theme
+ */
+
+add_filter( 'the_generator', '__return_null' );
+
+add_filter( 'xmlrpc_enabled', '__return_false' );
+
+/**
+ * Add security headers for Nginx based sites
+ *
+ * @param [type] $headers add security headers as array.
+ *
+ * @return array
+ */
+function additional_securityheaders( $headers ) {
+	if ( ! is_admin() ) {
+		$headers['Referrer-Policy']         = 'no-referrer-when-downgrade';
+		$headers['X-Content-Type-Options']  = 'nosniff';
+		$headers['XX-XSS-Protection']       = '1; mode=block';
+		$headers['Feature-Policy']          = 'geolocation "none" ; camera "none"';
+		$headers['X-Frame-Options']         = 'SAMEORIGIN';
+		$headers['Content-Security-Policy'] = "script-src-elem 'self' 'unsafe-inline' https://www.google.com https://js-agent.newrelic.com https://bam.nr-data.net https://www.gstatic.com https://cdn.datatables.net; script-src 'unsafe-inline' 'unsafe-eval' https://www.google.com https://fonts.googleapis.com https://cdnjs.cloudflare.com https://www.gstatic.com https://js-agent.newrelic.com/";
+	}
+
+	return $headers;
+}
+add_filter( 'wp_headers', 'additional_securityheaders' );
