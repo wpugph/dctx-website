@@ -15,3 +15,43 @@ time,
 	text-decoration: underline;
 	color: #00BCD4;
 }
+
+.blog .site-header {
+    margin-bottom: 0;
+}
+
+.blog .site-main > header {
+    text-align: center;
+    color: white;
+    background: #ff7043;
+    max-width: 100%;
+    position: relative;
+    height: auto;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.blog .page-title.screen-reader-text {
+    all: unset;
+    font-size: 2em;
+    font-weight: bold;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.blog a.button {
+    background-color: #00BCD4;
+    border: 1px solid #00BCD4;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.125rem;
+    font-weight: 600;
+    padding: 8px 36px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+}

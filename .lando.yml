@@ -1,0 +1,6 @@
+name: dctx1
+recipe: pantheon
+config:
+  framework: wordpress_network
+  site: dctx1
+  id: 3feca929-81f6-4c67-8a4d-98a5d7c51d55
