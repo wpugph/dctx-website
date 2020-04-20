@@ -49,6 +49,7 @@
 					)
 				);
 			?>
+			<div class="read-more"><a href="<?php the_permalink(); ?>" class="button">Continue reading</a></div>
 		</div><!-- .entry-content -->
 
 		<footer class="entry-footer">
