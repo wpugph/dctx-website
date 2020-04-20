@@ -108,7 +108,7 @@ add_filter( 'the_content_more_link', 'dctx_content_more_link' );
  * @return string
  */
 function dctx_excerpt_more( $more ) {
-	return sprintf( ' <a class="more-link" href="%1$s">%2$s</a>', get_permalink( get_the_ID() ), esc_html__( 'Read more...', 'dctx' ) );
+	return sprintf( ' <a class="more-link" href="%1$s">%2$s</a>', get_permalink( get_the_ID() ), esc_html__( '...', 'dctx' ) );
 }
 add_filter( 'excerpt_more', 'dctx_excerpt_more' );
 

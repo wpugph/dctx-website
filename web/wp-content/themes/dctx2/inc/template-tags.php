@@ -41,6 +41,28 @@ if ( ! function_exists( 'dctx_posted_on' ) ) :
 
 		echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
 
+		// Hide category and tag text for pages.
+		if ( 'post' === get_post_type() ) {
+			/* translators: used between list items, there is a space after the comma */
+			$categories_list = get_the_category_list( esc_html__( ', ', 'dctx' ) );
+			if ( $categories_list && dctx_categorized_blog() ) {
+				/* translators: the post category */
+				printf( '<span class="cat-links">' . esc_html__( ' under %1$s', 'dctx' ) . '.</span> ', $categories_list ); // WPCS: XSS OK.
+			}
+
+			/* translators: used between list items, there is a space after the comma */
+			$tags_list = get_the_tag_list( '', esc_html__( ', ', 'dctx' ) );
+			if ( $tags_list ) {
+				/* translators: the post tags */
+				printf( '<span class="tags-links">' . esc_html__( ' tagged %1$s', 'dctx' ) . '.</span> ', $tags_list ); // WPCS: XSS OK.
+			}
+		}
+
+		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
+			echo '<span class="comments-link">';
+			comments_popup_link( esc_html__( 'Leave a comment', 'dctx' ), esc_html__( 'With 1 Comment', 'dctx' ), esc_html__( 'With % Comments', 'dctx' ) );
+			echo '</span>';
+		}
 	}
 endif;
 
@@ -51,28 +73,6 @@ if ( ! function_exists( 'dctx_entry_footer' ) ) :
 	 * @author WDS
 	 */
 	function dctx_entry_footer() {
-		// Hide category and tag text for pages.
-		if ( 'post' === get_post_type() ) {
-			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', 'dctx' ) );
-			if ( $categories_list && dctx_categorized_blog() ) {
-				/* translators: the post category */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'dctx' ) . '</span>', $categories_list ); // WPCS: XSS OK.
-			}
-
-			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html__( ', ', 'dctx' ) );
-			if ( $tags_list ) {
-				/* translators: the post tags */
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'dctx' ) . '</span>', $tags_list ); // WPCS: XSS OK.
-			}
-		}
-
-		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-			echo '<span class="comments-link">';
-			comments_popup_link( esc_html__( 'Leave a comment', 'dctx' ), esc_html__( '1 Comment', 'dctx' ), esc_html__( '% Comments', 'dctx' ) );
-			echo '</span>';
-		}
 
 		edit_post_link(
 			sprintf(
@@ -470,6 +470,50 @@ function dctx_display_numeric_pagination( $args = array() ) {
 	</nav>
 
 	<?php
+}
+
+
+/**
+ * Displays post pagination on single posts.
+ *
+ * @param array $args Array of params to customize output.
+ *
+ * @author JC Palmes
+ */
+function dctx_the_post_navigation( $args = array() ) {
+	$args = wp_parse_args( $args, array(
+		'prev_text'          => '<img src="' . get_bloginfo( 'stylesheet_directory' ) . '/assets/images/arrow-prev.png" class="arrow" /> Older',
+		'next_text'          => 'Newer  <img src="' . get_bloginfo( 'stylesheet_directory' ) . '/assets/images/arrow-next.png" class="arrow" />',
+		'in_same_term'       => false,
+		'excluded_terms'     => '',
+		'taxonomy'           => 'category',
+		'screen_reader_text' => __( 'Post navigation' ),
+	) );
+
+	$navigation = '';
+
+	$previous = get_previous_post_link(
+		'<div class="nav-previous">%link</div>',
+		$args['prev_text'],
+		$args['in_same_term'],
+		$args['excluded_terms'],
+		$args['taxonomy']
+	);
+
+	$next = get_next_post_link(
+		'<div class="nav-next">%link</div>',
+		$args['next_text'],
+		$args['in_same_term'],
+		$args['excluded_terms'],
+		$args['taxonomy']
+	);
+
+	// Only add markup if there's somewhere to navigate to.
+	if ( $previous || $next ) {
+		$navigation = _navigation_markup( $previous . $next, 'post-navigation', $args['screen_reader_text'] );
+	}
+
+	return $navigation;
 }
 
 /**

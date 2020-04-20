@@ -1,40 +1,31 @@
 //--------------------------------------------------------------
-// Blog/Archive Page
+// Blog Page
 //--------------------------------------------------------------
-.blog,
-.archive {
+.single {
 
 	.site-header {
-		margin-bottom: 0;
+		margin-bottom: rem(30);
 	} //.site-header
 
-	.blog-header {
-		@include margin(0 auto rem(60));
-		@include padding(rem(20));
+	.entry-header {
+		@include margin(null null rem(50));
+		@include padding(rem(20) null);
 
-		background-color: $color-tango;
-		color: $color-white;
-		text-align: center;
+		border-bottom: rem(2) solid $color-robins-egg;
 
-		.page-title {
+		.entry-title {
+			font-size: rem(30);
+			line-height: rem(36);
 			margin-bottom: 0;
+
+			@include media($tablet-portrait) {
+				font-size: rem(50);
+				line-height: rem(60);
+			}
 		} // .page-title
 	} // .blog-header
 
-	.article-wrapper {
-		@include padding(null 10%);
-		@include margin(null auto);
-
-		max-width: 100% !important;
-	} // .article-wrapper
-
 	article {
-		@include padding(rem(20) rem(50));
-		@include margin(null 10%);
-
-		border-radius: rem(10);
-		box-shadow: 0 rem(5) rem(20) rgba($color-black, 0.1);
-		max-width: 100% !important;
 
 		.entry-meta {
 			color: $color-gray;

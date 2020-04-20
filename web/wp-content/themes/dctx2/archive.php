@@ -11,14 +11,18 @@ get_header(); ?>
 
 	<main id="main" class="site-main">
 
-		<?php if ( have_posts() ) : ?>
+		<header class="blog-header full-width">
 
-			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
+			<div class="container">
+
+				<?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
+
+			</div><!-- .container -->
+
+		</header><!-- .blog-header -->
+		<div class="article-wrapper">
+
+		<?php if ( have_posts() ) : ?>
 
 			<?php
 			/* Start the Loop */
@@ -30,7 +34,7 @@ get_header(); ?>
 					* If you want to override this in a child theme, then include a file
 					* called content-___.php (where ___ is the Post Format name) and that will be used instead.
 					*/
-				get_template_part( 'template-parts/content', get_post_format() );
+				get_template_part( 'template-parts/content', 'blog' );
 
 			endwhile;
 
@@ -42,6 +46,6 @@ get_header(); ?>
 
 		endif;
 		?>
-
+		</div><!-- .article-wrapper -->
 	</main><!-- #main -->
 <?php get_footer(); ?>
