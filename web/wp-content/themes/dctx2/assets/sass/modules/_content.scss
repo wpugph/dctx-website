@@ -1,0 +1,84 @@
+//--------------------------------------------------------------
+// Site Content
+//--------------------------------------------------------------
+
+//-----------------------------------------
+// Posts and Pages
+//-----------------------------------------
+
+// Entry Title
+.entry-title {
+	font-size: rem(36);
+} // .entry-title
+
+// Sticy and Comments Link
+.stickyk {
+	display: block;
+} // .sticky
+
+.comments-link {
+	display: inline-block;
+} // .comments-link
+
+// hentry
+.hentry {
+	@include margin(0 0 $space 0);
+} // .hentry
+
+// update post date
+.updated:not(.published) {
+	display: none;
+} // .updated:not(.published)
+
+// Byline for single and group
+.single .byline,
+.group-blog .byline {
+	display: inline;
+} // .single .byline, .group-blog .byline
+
+// Page content, entry content and entry summary
+.page-content,
+.entry-content,
+.entry-footer,
+.entry-summary {
+	@include margin($space 0 0);
+} // .page-content, .entry-content, .entry-footer, .entry-summary
+
+// Page links
+.page-links {
+	@include margin(0 0 $space 0);
+
+	clear: both;
+} // .page-links
+
+// Tags links
+.tags-links {
+	margin-left: $space;
+} // .tags-links
+
+// Edit link
+.edit-link {
+	@include margin(0 0 0 rem(5));
+
+	a {
+		display: inline-block;
+		font-size: rem(12);
+		text-transform: lowercase;
+
+		&::before {
+			content: '(';
+		}
+
+		&::after {
+			content: ')';
+		}
+	} // a
+} // .edit-link
+
+//-----------------------------------------
+// Asides
+//-----------------------------------------
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+	display: none;
+} // .blog .format-aside .entry-title, .archive .format-aside .entry-title

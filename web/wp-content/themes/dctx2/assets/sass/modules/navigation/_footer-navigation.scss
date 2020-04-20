@@ -1,0 +1,22 @@
+//--------------------------------------------------------------
+// Footer Navigation.
+//--------------------------------------------------------------
+
+.footer-navigation {
+	@include margin(rem(12) auto);
+
+	align-items: center;
+	display: flex;
+	justify-content: center;
+
+	ul {
+		max-width: $max-width;
+
+		li {
+
+			a {
+				font-size: rem(16);
+			} // a
+		} // li
+	} // ul
+} // .footer-navigation

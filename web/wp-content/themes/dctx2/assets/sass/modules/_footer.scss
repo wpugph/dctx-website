@@ -1,0 +1,20 @@
+//--------------------------------------------------------------
+// Footer
+//--------------------------------------------------------------
+
+.site-footer {
+	@include padding($space null);
+
+	background-color: $color-white;
+	flex: 0 0 100%;
+	width: 100%;
+
+	.site-info {
+		text-align: center;
+
+		p {
+			font-size: rem(16);
+			margin-bottom: 0;
+		} // p
+	} // .site-info
+}

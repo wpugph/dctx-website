@@ -1,0 +1,118 @@
+//--------------------------------------------------------------
+// Global Link Styles
+//--------------------------------------------------------------
+
+// a:not(.button):not(.wp-block-button__link) {
+a {
+	color: $color-link;
+	opacity: 1;
+	text-decoration: none;
+	transition: $transition-opacity;
+
+	&:visited {
+		color: $color-link-visited;
+	} // &:visited
+
+	&:hover,
+	&:active {
+		color: $color-link-hover;
+		text-decoration: underline;
+	} // &:hover, &:active
+
+	&:focus {
+		color: $color-link-focus;
+	} //  &:focus
+} // a
+
+//--------------------------------------------------------------
+// Main Navigation — Desktop.
+//--------------------------------------------------------------
+
+.main-navigation {
+
+	a {
+		font-size: rem(20);
+		font-weight: 600;
+		line-height: rem(31);
+	} // a
+
+	.button {
+		background-color: transparent;
+		padding: 0;
+
+		a {
+			@include padding(rem(5) rem(30));
+
+			background-color: transparent;
+			border: rem(1) solid $color-limeaid;
+			border-radius: rem(4);
+			color: $color-limeaid;
+			font-size: rem(20);
+			opacity: 1;
+			text-align: center;
+			text-decoration: none;
+			transition: $transition-color;
+
+			&:visited {
+				color: $color-limeaid;
+			} // &:visited
+
+			&:hover,
+			&:focus,
+			&:active {
+				background-color: $color-limeaid;
+				color: $color-white;
+				opacity: 1;
+			} // &:hover, &:focus, &:active
+		} // a
+
+	} // .button
+
+} // .main-navigation
+
+//--------------------------------------------------------------
+// Main Navigation — Mobile.
+//--------------------------------------------------------------
+
+.mobile-menu {
+
+	a {
+		font-size: rem(16);
+		font-weight: 600;
+		line-height: rem(20);
+
+	} // a
+
+	.button {
+		@include padding(rem(5) rem(12));
+
+		background-color: transparent;
+
+		a {
+			@include padding(rem(5) rem(30));
+
+			background-color: transparent;
+			border: rem(1) solid $color-limeaid;
+			border-radius: rem(4);
+			color: $color-limeaid;
+			font-size: rem(16);
+			font-weight: 600;
+			line-height: rem(20);
+			text-align: center;
+			text-decoration: none;
+
+			&:visited {
+				color: $color-limeaid;
+			} // &:visited
+
+			&:hover,
+			&:focus,
+			&:active {
+				background-color: $color-limeaid;
+				color: $color-white;
+			} // &:hover, &:focus, &:active
+		} // a
+
+	} // .button
+
+} // .mobile-navigation
