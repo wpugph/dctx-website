@@ -20,10 +20,29 @@
 		flex: 0 0 100%;
 		flex-flow: row wrap;
 		width: 100%; // For IE11.
+
+		a {
+			text-decoration: none;
+
+			&:hover,
+			&:active,
+			&:focus {
+
+				.arrow {
+					opacity: 0.5;
+				} //.arrow
+
+			} // &:hover, &:active, &:focus
+
+			.arrow {
+				@include size(rem(30));
+			} // .arrow
+		} // a
+
 	} // .nav-links
 
 	.site-main & {
-		@include margin(0 0 $space);
+		@include margin(0 auto $space);
 
 		overflow: hidden;
 	} // .site-main &

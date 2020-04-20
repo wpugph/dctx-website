@@ -13,7 +13,7 @@ input[type='submit'] {
 	appearance: none;
 	background-color: $color-background-button;
 	border: none;
-	border-radius: 0;
+	border-radius: rem(5);
 	border-width: 0;
 	box-shadow: none;
 	color: $color-text-button;

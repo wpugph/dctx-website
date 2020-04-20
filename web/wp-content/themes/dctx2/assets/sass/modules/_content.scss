@@ -12,21 +12,23 @@
 } // .entry-title
 
 // Sticy and Comments Link
-.sticky,
-.comments-link {
+.stickyk {
 	display: block;
-} // .sticky, .comments-link
+} // .sticky
+
+.comments-link {
+	display: inline-block;
+} // .comments-link
 
 // hentry
 .hentry {
 	@include margin(0 0 $space 0);
 } // .hentry
 
-// Byline and update post date
-.byline,
+// update post date
 .updated:not(.published) {
 	display: none;
-} // .byline, .updated:not(.published)
+} // .updated:not(.published)
 
 // Byline for single and group
 .single .byline,
