@@ -39,6 +39,8 @@
 	"wpackagist-plugin/inline-google-spreadsheet-viewer": "dev-trunk",
 	"wpackagist-plugin/beaver-builder-lite-version": "dev-trunk",
 	"wpackagist-plugin/unicard": "dev-trunk",
+	"wpackagist-plugin/plugin-organizer": "dev-trunk",
+	"wpackagist-plugin/wp-smushit": "dev-trunk",
     "wpackagist-theme/twentynineteen": "^1.2"
   },
 	"config": {
