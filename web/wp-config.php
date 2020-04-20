@@ -189,6 +189,9 @@ if ( file_exists( dirname( __FILE__ ) . '/wp-content/uploads/private/wp-config-r
 	require_once dirname( __FILE__ ) . '/wp-content/uploads/private/wp-config-redirect.php';
 }
 
+/** Changes location where Autoptimize stores optimized files */
+define('AUTOPTIMIZE_CACHE_CHILD_DIR','/uploads/autoptimize/');
+
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */
