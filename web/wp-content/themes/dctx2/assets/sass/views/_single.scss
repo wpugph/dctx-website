@@ -4,8 +4,12 @@
 .single {
 
 	.site-header {
-		margin-bottom: rem(30);
+		@include margin(0 null rem(30));
 	} //.site-header
+
+	.grid-wrapper {
+		margin-top: rem(100);
+	}
 
 	.entry-header {
 		@include margin(null null rem(50));

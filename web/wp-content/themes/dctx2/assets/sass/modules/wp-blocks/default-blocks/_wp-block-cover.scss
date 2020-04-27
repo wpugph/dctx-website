@@ -1,0 +1,55 @@
+//-----------------------------------------
+// WordPress Default Cover Block
+//-----------------------------------------
+// sass-lint:disable class-name-format
+
+.wp-block-cover {
+
+	&.alignfull {
+
+		.wp-block-cover__inner-container {
+			@include margin(null auto);
+
+			max-width: $max-width;
+
+			.content-wrapper {
+				@include padding(rem(30) 0);
+				@include margin(0 auto);
+
+				text-align: center;
+
+				@include media(null, $desktop) {
+
+					&.wp-block-column {
+						flex-basis: auto !important;
+					} // &.wp-block-column
+
+					.wp-block-image {
+						@include margin(0 auto rem(20));
+
+						img {
+							height: auto;
+						}
+					} // .wp-block-image
+				}
+
+				@include media($tablet-landscape) {
+					@include margin(0);
+
+					text-align: left;
+				}
+
+				@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+					@include padding(rem(10) 0);
+				} // iPad Pro Landscape.
+
+			} // .content-wrapper
+
+		} // .wp-block-cover__inner-container
+
+	} // &.alignfull
+
+} // .wp-block-cover
+
+
+

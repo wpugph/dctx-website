@@ -1,0 +1,91 @@
+//--------------------------------------------------------------
+// Globally shared elements
+//--------------------------------------------------------------
+
+// Volunteer Block
+.volunteer {
+
+	.block-wrapper {
+		@include padding(rem(50) $space);
+
+		text-align: center;
+
+		@include media($desktop) {
+			@include padding(rem(100) 0 null);
+
+			text-align: left;
+		}
+
+		.block-content-wrapper {
+			flex-direction: column;
+			text-align: center;
+
+			@include media($desktop-large) {
+				flex-direction: row;
+				text-align: left;
+			}
+
+			.wp-block-column {
+				margin-left: 0;
+			} // .wp-block-column
+		} // .block-content-wrapper
+
+		.icon-wrapper {
+			@include margin(0 null);
+
+			.wp-block-column {
+				@include margin(0 null);
+				@include padding(0 rem(10));
+
+			} // .wp-block-column
+
+		} // .icon-wrapper
+
+		.wp-block-buttons {
+			justify-content: center;
+
+			@include media($tablet-landscape) {
+				justify-content: flex-start;
+			}
+
+			.wp-block-button {
+				width: auto;
+
+				a {
+					@include padding(null rem(15));
+					border: rem(2) solid $color-limeaid;
+					border-radius: rem(44);
+
+					@include media($tablet-landscape) {
+						@include padding(null rem(55));
+					}
+
+					&:hover,
+					&:focus,
+					&:active {
+						background-color: transparent !important;
+						color: $color-limeaid;
+						opacity: 1;
+					} // &:hover, &:focus, &:active
+
+				} // a
+
+				.page-template-template-rapidpass & {
+					a {
+						background-color: $color-gigas !important;
+						border: rem(2) solid $color-gigas;
+
+						&:hover,
+						&:focus,
+						&:active {
+							background-color: transparent !important;
+							color: $color-gigas;
+						} // &:hover, &:focus, &:active
+					} // a
+				} // .page-template-template-rapidpass &
+
+			} // .wp-block-button
+		} // .wp-block-buttons
+
+	} // .block-wrapper
+} // .volunteer

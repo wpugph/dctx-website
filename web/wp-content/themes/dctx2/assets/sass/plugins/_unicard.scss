@@ -2,72 +2,65 @@
 // UniCard
 //--------------------------------------------------------------
 .wp-block-unicard-block-unicard {
-	background: $color-alabaster;
-	border-radius: rem(39);
-	box-shadow: 0 rem(4) rem(30) rgba($color-black, 0.15);
-	flex: 1;
-	margin-bottom: $gutter * 2;
-	max-width: rem(500);
-	overflow: hidden;
-	padding: 0;
 
-	// Card images.
-	img {
-		width: 100%;
-	} // img
+	.page-template-template-rapidpass & {
+		background: $color-alabaster;
+		border-radius: rem(39);
+		box-shadow: 0 rem(4) rem(30) rgba($color-black, 0.15);
+		flex: 1;
+		margin-bottom: $gutter * 2;
+		max-width: rem(500);
+		overflow: hidden;
+		padding: 0;
 
-	.card-content {
-		@include padding(rem(10) rem(30));
+		// Card images.
+		img {
+			width: 100%;
+		} // img
 
-		@include media($tablet-landscape) {
-			@include padding(null rem(50));
-		}
+		.card-content {
+			@include padding(rem(10) rem(30));
 
-		.card-title {
-
-			h3 {
-				color: $color-black;
-				font-size: rem(22);
-				line-height: rem(30);
-				margin-bottom: 0;
-
-				@include media($tablet-portrait) {
-					font-size: rem(40);
-					font-weight: 600;
-					line-height: rem(46);
-				}
-			} // h3
-		} // .card-title
-
-		.card-description {
-			@include margin(0 null rem(30));
-
-			p {
-				@include margin(0 null);
-
-				color: $color-black;
-				font-size: rem(14);
-				line-height: rem(20);
-
-				@include media($tablet-portrait) {
-					font-size: rem(22);
-					line-height: rem(36);
-				}
+			@include media($tablet-landscape) {
+				@include padding(null rem(50));
 			}
-		} // .card-description
-	} // .card-content
 
-	&.column {
-		.card-image {
-			background-color: $color-gigas;
-			max-height: 45%;
+			.card-title {
 
-			.featured-image {
-				@include padding(rem(20));
-				@include size(100%);
+				h3 {
+					color: $color-black;
+					font-weight: 600;
+					margin-bottom: 0;
+				} // h3
+			} // .card-title
 
-				object-fit: contain;
-			} // .featured-image
-		} // .card-image
-	} // &.column
+			.card-description {
+				@include margin(0 null rem(30));
+
+				p {
+					@include margin(0 null);
+
+					color: $color-black;
+				}
+			} // .card-description
+		} // .card-content
+
+		&.column {
+			.card-image {
+				background-color: $color-gigas;
+				max-height: rem(250);
+
+				.featured-image {
+					@include margin(null auto);
+					@include padding(rem(20));
+					@include size(auto);
+
+					display: block;
+					max-width: rem(250);
+					object-fit: contain;
+				} // .featured-image
+			} // .card-image
+		} // &.column
+	} // .page-template-template-rapidpass &
+
 } // .card

@@ -4,201 +4,59 @@
 
 .page-template-template-rapidpass {
 
-	h2 {
-		@include media($tablet-portrait) {
-			font-size: rem(50);
-		}
-	} // h3
-
-	h3 {
-		margin-bottom: rem(30);
-
-		@include media($tablet-portrait) {
-			font-size: rem(40);
-		}
-	} // h3
-
-	p {
-		@include margin(rem(30) null);
-
-		@include media($tablet-portrait) {
-			font-size: rem(28);
-			line-height: rem(38);
-		}
-
-		&.small {
-			color: $color-gray-alt;
-			font-size: rem(14);
-
-			@include media($tablet-landscape) {
-				font-size: rem(22);
-			}
-		} // &.small
-	} // p
-
-	.icon-wrapper {
-		@include margin(rem(20) auto);
-
-		@include media($desktop) {
-			@include margin(rem(40) null);
-		}
-
-		.wp-block-column {
-			@include margin(rem(20) auto 0);
-
-			img {
-				height: auto;
-				max-width: rem(100);
-
-				@include media($tablet-portrait) {
-					height: rem(100);
-					width: auto;
-				}
-
-				@include media($tablet-landscape) {
-					height: auto;
-					max-width: rem(150);
-				}
-			} // img
-		} // .wp-block-column
-
-		p {
-			font-size: rem(14);
-			line-height: rem(20);
-
-			@include media($tablet-landscape) {
-				font-size: rem(22);
-				line-height: rem(31);
-			}
-		} // p
-	} // .icon-wrapper
-
-	.wp-block-buttons {
-		@include margin(rem(15) null);
-
-		align-items: center;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-
-		@include media($tablet-portrait) {
-			flex-direction: row;
-		}
-
-		@include media(null, $tablet-landscape - 1) {
-			@include margin(rem(5) null);
-		}
-
-		.wp-block-button {
-			width: auto;
-
-			@include media($tablet-landscape) {
-				min-width: 46%;
-			}
-
-			a {
-				@include padding(rem(5) rem(10));
-
-				border-radius: rem(44);
-				min-width: rem(200);
-				text-decoration: none;
-				transition: $transition-color;
-				width: 100%;
-
-				@include media($tablet-landscape) {
-					font-size: rem(31);
-				}
-
-				&:hover,
-				&:focus,
-				&:active {
-					background-color: $color-gigas;
-					color: $color-white;
-					opacity: 1;
-				} // &:hover, &:focus, &:active
-			} // a
-
-			&.is-style-fill {
-				a {
-					border: rem(2) solid;
-
-					&:hover,
-					&:focus,
-					&:active {
-						background-color: transparent;
-						color: $color-gigas;
-					} // &:hover, &:focus, &:active
-				} // a
-			} // &.is-style-fill
-		} // .wp-block-button
-
-	} // .wp-block-buttons
-
 	.wp-block-cover {
 
-		.content-wrapper {
-			@include padding(rem(50) $space);
-
-			text-align: center;
-
-			@include media(null, $desktop) {
-
-				&.wp-block-column {
-					flex-basis: auto !important;
-				} // &.wp-block-column
-
-				.wp-block-image {
-					@include margin(0 auto rem(20));
-
-					img {
-						height: auto;
-					}
-				} // .wp-block-image
-			}
-
-			@include media($desktop) {
-				@include margin(0 0 0 45%);
-				@include padding(rem(100) 0);
-
-				max-width: rem(800);
-				text-align: left;
-			}
-
-		} // .content-wrapper
-
 		&.rapidpass-hero {
-			@include padding(rem(20) $space);
+			@include padding(rem(20) $space 0);
 
-			background-position: 100px top;
-			background-size: cover;
 			margin-bottom: rem(-110);
-
-			@include media($tablet-portrait) {
-				background-size: contain;
-			}
-
-			@include media($tablet-landscape) {
-				background-position: -10% 5%;
-				background-size: rem(800) auto;
-			}
-
-
-			@include media($desktop) {
-				&::before {
-					opacity: 0 !important;
-				} // &::before
-			}
-
-			@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-				background-position: 0 5%;
-			} // iPad Pro Landscape.
-
-			@include media($desktop-large) {
-				background-position: 15% 5%;
-			}
+			z-index: 1;
 
 			.content-wrapper {
-				@include padding(0 null null);
+				@include padding(rem(50) null null);
+
+				@include media($tablet-landscape) {
+					@include padding(rem(150) null null);
+				}
+
+				.wp-block-media-text {
+					position: relative;
+
+					@include media(null, $tablet-landscape) {
+						grid-template-columns: 100% !important;
+					}
+
+					.wp-block-media-text__media {
+						background-position: 0 0;
+						display: none;
+
+						@include media($tablet-landscape) {
+							display: block;
+
+							img {
+								@include position(absolute, -30% null null -5%);
+
+								width: rem(700);
+							}
+						}
+
+					} // .wp-block-media-text__media
+
+					.wp-block-media-text__content {
+						@include padding( null 0 rem(50));
+
+						@include media(null, $tablet-landscape) {
+							grid-column: 1 ;
+							grid-template-columns: 100% !important;
+						}
+
+						@include media($tablet-landscape) {
+							@include padding( null 0 rem(50) null);
+						}
+
+					} // .wp-block-media-text__content
+
+				} // .wp-block-media-text
 
 				.wp-block-buttons {
 					justify-content: space-around;
@@ -212,116 +70,64 @@
 			background-size: cover;
 			color: $color-gigas;
 			padding-top: rem(140);
+			z-index: 1;
 
-			.content-wrapper {
-				@include margin(null auto);
+			.card-block {
+				@include margin(rem(30) auto);
 
-				@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-					max-width: 100%;
-				} // iPad Pro Landscape.
+				align-content: center;
+				flex-direction: column;
 
-				@include media($desktop) {
-					max-width: 90%;
+				@include media($tablet-landscape) {
+					@include margin(rem(60) auto);
+
+					align-content: space-around;
+					flex-direction: row;
+
+					.card {
+						@include size(rem(660), rem(500));
+
+						max-width: 90%;
+					} // .card
 				}
+
+				.wp-block-column {
+					@include margin(null 0);
+
+				} // .wp-block-column
+
+			} // .card-block
+
+			.card-content {
+				@include padding(null rem(20));
 
 				@include media($desktop-large) {
-					max-width: 80%;
+					@include padding(null rem(50));
 				}
 
-				h1 {
-					font-size: rem(26);
-					font-weight: 600;
-					line-height: rem(40);
+				.card-title {
 
-					@include media($tablet-landscape) {
-						@include padding(null rem(50));
+					h3 {
+						color: $color-tango !important;
+					} // h3
 
-						font-size: rem(50);
-						font-weight: 600;
-						line-height: rem(70);
+					@include media($desktop) {
+						margin-bottom: rem(20);
 					}
-				} // h1
+				} // .card-title
 
-				.card-block {
-					@include margin(rem(30) auto);
+			} // .card-content
 
-					align-content: center;
-					flex-direction: column;
-
-					@include media($tablet-landscape) {
-						@include margin(rem(60) auto);
-
-						align-content: space-around;
-						flex-direction: row;
-
-						.card {
-							@include size(rem(660), rem(750));
-
-							max-width: 90%;
-
-							@include media($desktop-large) {
-								@include size(rem(660), rem(730));
-							}
-
-						} // .card
-					}
-
-					.card-content {
-						@include padding(null rem(20));
-
-						@include media($desktop-large) {
-							@include padding(null rem(50));
-						}
-
-						.card-title {
-
-							h3 {
-								color: $color-tango !important;
-							} // h3
-
-							@include media($desktop) {
-								margin-bottom: rem(20);
-							}
-						} // .card-title
-
-					} // .card-content
-
-					.wp-block-column {
-						@include margin(null 0);
-
-					} // .wp-block-column
-
-				} // .card-block
-			} // .content-wrapper
 		}// &.fast-forward
 
 		&.rapid-video {
 
 			.content-wrapper {
-				@include margin(null auto);
 				@include padding(rem(80) rem(10));
-
-				max-width: 100%;
-
-				@include media(null, $desktop) {
-
-					&.wp-block-column {
-						flex-basis: auto !important;
-					} // &.wp-block-column
-
-					.wp-block-image {
-						@include margin(0 auto rem(20));
-
-						img {
-							height: auto;
-						}
-					} // .wp-block-image
-				}
 
 				@include media($tablet-landscape) {
 					@include padding(rem(170) rem(50));
 
-					max-width: 70%;
 				}
 
 			} // .content-wrapper
@@ -339,21 +145,10 @@
 			}
 
 			.content-wrapper {
-				@include margin(null 0);
-				@include padding(rem(50) 0);
+				@include padding(rem(50) 0 0);
 
-				max-width: 100%;
-
-
-				@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-					@include padding(rem(50) 0);
-					@include margin(null 0);
-				} // iPad Pro Landscape.
-
-				@include media($desktop) {
-					@include margin(null 10%);
-
-					max-width: 100%;
+				@include media($tablet-portrait) {
+					text-align: left;
 				}
 
 				.content-columns {
@@ -367,9 +162,17 @@
 							&:first-of-type {
 								flex-basis: 33.33% !important;
 							}
-
 						}
 					} // .wp-block-column
+					@include media(null, $tablet-portrait) {
+						.wp-block-image {
+
+							img {
+								max-height: rem(300);
+							} // img
+						} // .wp-block-image
+					}
+
 				} // .content-columns
 			} // .content-wrapper
 
@@ -377,7 +180,8 @@
 
 				.wp-block-column {
 					@include media(null, $tablet-portrait) {
-						@include padding(null $space);
+						@include padding(null 0);
+						@include margin(null 0);
 
 						flex-basis: 100% !important;
 					}
@@ -385,9 +189,16 @@
 			} // .content-columns
 
 			.wp-block-buttons {
+				flex-direction: column;
 				justify-content: space-around;
 
+				@include media($tablet-landscape) {
+					flex-direction: row;
+				}
+
 				.wp-block-button {
+					min-width: rem(300);
+
 					a {
 						border: rem(2) solid $color-white;
 
@@ -417,108 +228,97 @@
 			} // .wp-block-buttons
 		} // &.rapidpass-project
 
-		&.volunteer {
-
-			.wp-block-buttons {
-				justify-content: center;
-
-				@include media($desktop) {
-					justify-content: flex-start;
-				}
-
-				.wp-block-button {
-					width: auto;
-
-					a {
-						border: rem(2) solid $color-gigas;
-
-						&:hover,
-						&:focus,
-						&:active {
-							color: $color-gigas;
-							opacity: 1;
-						} // &:hover, &:focus, &:active
-					} // a
-				} // .wp-block-button
-			} // .wp-block-buttons
-
-		} // &.volunteer
-
 	} // .wp-block-cover
 
 	.how-it-works {
 		@include padding(rem(80) $space);
 
-		@include media($tablet-landscape) {
-			@include padding(rem(130) null);
-		}
-
-		.content-wrapper {
+		.wp-block-group__inner-container {
 			@include margin(null auto);
 
-			@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-				max-width: 100%;
-			} // iPad Pro Landscape.
+			max-width: $max-width;
 
-			@include media($desktop) {
-				max-width: 80%;
-			}
+			.content-wrapper {
+				@include padding(rem(30) 0);
+				@include margin(0 auto);
 
-			.card-column {
-				@include margin(0 null rem(30));
-				@include padding(0 rem(30) rem(20));
+				text-align: center;
 
-				.wp-block-column {
+				@include media(null, $desktop) {
+
+					&.wp-block-column {
+						flex-basis: auto !important;
+					} // &.wp-block-column
 
 					.wp-block-image {
-						margin-top: rem(50);
+						@include margin(0 auto rem(20));
+
+						img {
+							height: auto;
+						}
 					} // .wp-block-image
+				}
 
-					h3 {
-						@include margin(rem(30) null rem(10));
-						@include padding(0 null);
+				@include media($tablet-landscape) {
+					@include margin(0);
 
-						color: $color-tango;
-						font-size: rem(26);
-						line-height: rem(36);
+					text-align: left;
+				}
 
-						@include media($desktop) {
-							font-size: rem(40);
+				@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+					@include padding(rem(10) 0);
+				} // iPad Pro Landscape.
+
+
+				.card-column {
+					@include margin(0 null rem(30));
+					@include padding(0 rem(30) rem(20));
+
+					.wp-block-column {
+
+						.wp-block-image {
+							margin-top: rem(50);
+
+							img {
+								height: auto;
+								max-width: rem(200);
+							} // img
+						} // .wp-block-image
+
+						h3 {
+							@include margin(rem(30) null rem(10));
+							@include padding(0 null);
+
+							color: $color-tango;
 							font-weight: 600;
-							line-height: rem(46);
-						}
-					} // h3
+						} // h3
 
-					p {
-						@include margin(0 null);
+						p {
+							@include margin(0 null);
 
-						color: $color-black;
-						font-size: rem(20);
-						line-height: rem(26);
+							color: $color-black;
+						} // p
+					} // .wp-block-column
 
-						@include media($desktop) {
-							font-size: rem(22);
-							line-height: rem(36);
-						}
-					} // p
-				} // .wp-block-column
+				} // .card-column
 
-			} // .card-column
+				.wp-block-button {
+					a {
+						border: rem(2) solid;
 
-			.wp-block-button {
-				a {
-					border: rem(2) solid;
+						&:hover,
+						&:focus,
+						&:active {
+							background-color: transparent;
+							color: $color-gigas;
+						} // &:hover, &:focus, &:active
+					} // a
+				} // .wp-block-button
 
-					&:hover,
-					&:focus,
-					&:active {
-						background-color: transparent;
-						color: $color-gigas;
-					} // &:hover, &:focus, &:active
-				} // a
-			} // .wp-block-button
+			} // .content-wrapper
 
-		} // .content-wrapper
+		} // .wp-block-group__inner-container
+
 	} // .how-it-works
 
 } // .page-template-template-rapidpass

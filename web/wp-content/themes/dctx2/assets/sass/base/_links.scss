@@ -31,9 +31,7 @@ a {
 .main-navigation {
 
 	a {
-		font-size: rem(20);
 		font-weight: 600;
-		line-height: rem(31);
 	} // a
 
 	.button {
@@ -43,25 +41,24 @@ a {
 		a {
 			@include padding(rem(5) rem(30));
 
-			background-color: transparent;
+			background-color: $color-limeaid;
 			border: rem(1) solid $color-limeaid;
 			border-radius: rem(4);
-			color: $color-limeaid;
-			font-size: rem(20);
+			color: $color-white;
 			opacity: 1;
 			text-align: center;
 			text-decoration: none;
 			transition: $transition-color;
 
 			&:visited {
-				color: $color-limeaid;
+				color: $color-white;
 			} // &:visited
 
 			&:hover,
 			&:focus,
 			&:active {
-				background-color: $color-limeaid;
-				color: $color-white;
+				background-color: transparent;
+				color: $color-limeaid;
 				opacity: 1;
 			} // &:hover, &:focus, &:active
 		} // a
@@ -91,10 +88,10 @@ a {
 		a {
 			@include padding(rem(5) rem(30));
 
-			background-color: transparent;
+			background-color: $color-limeaid;
 			border: rem(1) solid $color-limeaid;
 			border-radius: rem(4);
-			color: $color-limeaid;
+			color: $color-white;
 			font-size: rem(16);
 			font-weight: 600;
 			line-height: rem(20);
@@ -102,14 +99,14 @@ a {
 			text-decoration: none;
 
 			&:visited {
-				color: $color-limeaid;
+				color: $color-white;
 			} // &:visited
 
 			&:hover,
 			&:focus,
 			&:active {
-				background-color: $color-limeaid;
-				color: $color-white;
+				background-color: transparent;
+				color: $color-limeaid;
 			} // &:hover, &:focus, &:active
 		} // a
 
