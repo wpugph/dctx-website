@@ -94,6 +94,15 @@ p {
 	&:last-child {
 		@include margin(0);
 	} // &:last-child
+
+	&.small {
+		color: $color-gray-alt;
+		font-size: rem(14);
+
+		@include media($tablet-landscape) {
+			font-size: rem(16);
+		}
+	} // &.small
 } // p
 
 .has-small-font-size {

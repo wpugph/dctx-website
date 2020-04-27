@@ -127,3 +127,36 @@ $social-sites: facebook instagram linkedin twitter;
 		transform: rotate(-225deg);
 	}
 } // .down-arrow
+
+
+//--------------------------------------------------------------
+// Icon wrapper for groups.
+//--------------------------------------------------------------
+.icon-wrapper {
+	@include margin(rem(20) auto);
+
+	@include media($desktop) {
+		@include margin(rem(40) null);
+	}
+
+	.wp-block-column {
+		@include margin(rem(20) auto 0);
+		@include padding(null $space);
+
+		img {
+			height: auto;
+			max-width: rem(100);
+			object-fit: contain;
+
+			@include media($tablet-portrait) {
+				height: rem(80);
+				width: auto;
+			}
+
+			@include media($tablet-landscape) {
+				height: auto;
+			}
+		} // img
+	} // .wp-block-column
+
+} // .icon-wrapper

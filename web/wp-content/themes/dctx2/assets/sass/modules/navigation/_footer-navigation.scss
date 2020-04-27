@@ -13,8 +13,11 @@
 		max-width: $max-width;
 
 		li {
+			display: inline;
 
 			a {
+				@include margin(null rem(20));
+
 				font-size: rem(16);
 			} // a
 		} // li

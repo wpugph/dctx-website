@@ -52,7 +52,7 @@
 
 	// Sub-menu
 	ul {
-		@include position(absolute, rem(30) null null -999em);
+		@include position(absolute, rem(25) null null -999em);
 
 		border: rem(1) solid $color-alto;
 		border-radius: rem(4);

@@ -3,121 +3,9 @@
 //--------------------------------------------------------------
 
 .home {
-	h2 {
-		@include media($tablet-portrait) {
-			font-size: rem(50);
-		}
-	} // h3
-
-	h3 {
-		margin-bottom: rem(30);
-
-		@include media($tablet-portrait) {
-			font-size: rem(40);
-		}
-	} // h3
-
-	p {
-		@include margin(rem(30) null);
-
-		@include media($tablet-portrait) {
-			font-size: rem(28);
-			line-height: rem(38);
-		}
-
-		&.small {
-			color: $color-gray-alt;
-			font-size: rem(14);
-
-			@include media($tablet-landscape) {
-				font-size: rem(22);
-			}
-		} // &.small
-	} // p
-
-	.icon-wrapper {
-		@include margin(rem(20) auto);
-
-		@include media($desktop) {
-			@include margin(rem(40) null);
-		}
-
-		.wp-block-column {
-			@include margin(rem(20) auto 0);
-
-			img {
-				height: auto;
-				max-width: rem(100);
-
-				@include media($tablet-portrait) {
-					height: rem(100);
-					width: auto;
-				}
-
-				@include media($tablet-landscape) {
-					height: auto;
-					max-width: rem(150);
-				}
-			} // img
-		} // .wp-block-column
-
-		p {
-			font-size: rem(14);
-			line-height: rem(20);
-
-			@include media($tablet-landscape) {
-				font-size: rem(22);
-				line-height: rem(31);
-			}
-		} // p
-	} // .icon-wrapper
-
-	.wp-block-buttons {
-		@include margin(rem(15) null);
-
-		.wp-block-button {
-			a {
-				@include padding(rem(10) rem(30));
-
-				border: rem(2) solid;
-				border-radius: rem(8);
-				min-width: rem(200);
-				text-decoration: none;
-				transition: $transition-color;
-
-				@include media($tablet-portrait) {
-					font-size: rem(31);
-				}
-			} // a
-
-			&.is-style-fill {
-				a {
-					border: rem(2) solid;
-
-					&:hover,
-					&:focus,
-					&:active {
-						background-color: transparent;
-						color: $color-gigas;
-					} // &:hover, &:focus, &:active
-				} // a
-			} // &.is-style-fill
-		} // .wp-block-button
-
-		@include media(null, $tablet-landscape - 1) {
-			@include margin(rem(5) null);
-
-			display: flex;
-			justify-content: center;
-		}
-	} // .wp-block-buttons
 
 	.projects {
 		@include padding(rem(30) null 0);
-
-		@include media($desktop) {
-			@include padding(rem(120) null 0);
-		}
 
 		.wp-block-columns {
 			@include padding(rem(30) null 0);
@@ -138,119 +26,125 @@
 				@include padding(rem(60) null 0);
 
 				.wp-block-cover__inner-container {
+					max-width: rem(700);
+
 					p {
 						@include padding(null rem(60));
+
+						font-size: rem(20);
 					} // p
+
+					.wp-block-image {
+
+						img {
+							height: rem(150);
+							max-width: rem(455);
+							object-fit: contain;
+							width: auto;
+						} // img
+
+					} // .wp-block-image
+
 				} // .wp-block-cover__inner-container
 			}
 		} // .wp-block-columns
 	} // .projects
 
 	.wp-block-cover {
-		.content-wrapper {
-			@include padding(rem(50) $space);
-
-			text-align: center;
-
-			@include media(null, $desktop) {
-				margin-left: 0 !important;
-
-				&.wp-block-column {
-					flex-basis: auto !important;
-				} // &.wp-block-column
-
-				.wp-block-image {
-					@include margin(0 auto rem(20));
-
-					img {
-						height: auto;
-					}
-				} // .wp-block-image
-			}
-
-			@include media($desktop) {
-				@include margin(0 0 0 45%);
-				@include padding(rem(100) 0);
-
-				max-width: rem(800);
-				text-align: left;
-			}
-
-			@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-				@include margin(0 0 0 45%);
-				@include padding(rem(10) 0);
-			} // iPad Pro Landscape.
-		} // .content-wrapper
 
 		&.hero {
-			background-position: 80% rem(50);
-			background-size: rem(400);
+			background-size: rem(300);
 
-			@include media($desktop) {
+			@include media($tablet-landscape) {
+				background-position: 65vw 50%;
+
 				&::before {
 					opacity: 0 !important;
 				} // &::before
+
+			}
+
+			@include media($desktop) {
+				background-position: 60vw 50%;
 			}
 
 			.content-wrapper {
-				@include padding(rem(30) null);
-
 				color: $color-mineshaft;
+				max-width: rem(800);
 
-				@include media($desktop) {
-					@include padding(rem(55) null 0);
-
-					margin-left: 10%;
-					max-width: rem(850);
+				@include media($tablet-landscape) {
+					width: 50%;
 				}
 
 				@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-					@include margin(0 0 0);
 					@include padding(rem(100) 0);
 				} // iPad Pro Landscape.
 			} // .content-wrapper
 		} // &.hero
 
 		&.rapidpass {
-			background-position: 100px bottom;
-			background-size: cover;
-
-			@include media($tablet-portrait) {
-				background-size: contain;
-			}
+			background-size: rem(650);
 
 			@include media($tablet-landscape) {
-				background-position: rem(-300) bottom;
+				background-position: -60% 0;
 			}
 
 			@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-				background-position: left bottom;
+				background-position: -20% 0;
 			} // iPad Pro Landscape.
 
-			@include media($desktop) {
+			@include media($tablet-landscape) {
 				&::before {
 					opacity: 0 !important;
 				} // &::before
 			}
 
-			@include media($desktop-large) {
-				background-position: 10% bottom;
+			@include media($desktop) {
+				background-position: 15% 0;
 			}
 
 			.content-wrapper {
-				@include media($desktop-large) {
-					margin-left: rem(850);
-				}
+				padding-bottom: 0;
 
-				@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-					@include margin(0 0 0 rem(750));
-					@include padding(rem(100) 0);
-				} // iPad Pro Landscape.
+				.wp-block-media-text {
+					position: relative;
 
-				@include media($tablet-landscape) {
-					margin-left: rem(400);
-					padding-left: 0;
-				}
+					@include media(null, $tablet-landscape) {
+						grid-template-columns: 100% !important;
+					}
+
+					.wp-block-media-text__media {
+						background-position: 0 0;
+						display: none;
+
+						@include media($tablet-landscape) {
+							display: block;
+
+							img {
+								@include position(absolute, 0 null null -5%);
+
+								width: rem(700);
+							}
+						}
+
+					} // .wp-block-media-text__media
+
+					.wp-block-media-text__content {
+						@include padding( null 0 rem(50));
+
+						@include media(null, $tablet-landscape) {
+							grid-column: 1 ;
+							grid-template-columns: 100% !important;
+						}
+
+						@include media($tablet-landscape) {
+							@include padding( null 0 rem(50) null);
+						}
+
+					} // .wp-block-media-text__content
+
+				} // .wp-block-media-text
+
 			} // .content-wrapper
 
 			.wp-block-button {
@@ -269,24 +163,25 @@
 		} // &.rapidpass
 
 		&.tracecovid {
-			background-position: right bottom;
-			background-size: cover;
+			background-size: rem(1024) auto;
 
-			@include media($desktop) {
-				background-size: contain;
+			@include media($tablet-landscape) {
+				background-position: top right;
 
 				&::before {
 					opacity: 0 !important;
 				} // &::before
+
 			}
 
 			.content-wrapper {
-				@include media($desktop) {
-					margin-left: 10%;
+				max-width: rem(800);
+
+				@include media($tablet-landscape) {
+					width: 60%;
 				}
 
 				@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-					@include margin(0 0 0);
 					@include padding(rem(100) 0);
 				} // iPad Pro Landscape.
 			} // .content-wrapper
@@ -312,21 +207,13 @@
 			color: $color-white;
 
 			.content-wrapper {
-				@include margin(null auto);
-
-				@include media($desktop) {
-					max-width: 80%;
-				}
+				@include padding(rem(100) null);
 
 				.icon-group {
 					margin-top: rem(60);
 
-					@include media($desktop) {
-						margin-top: rem(140);
-					}
-
 					.icon-wrapper {
-						margin-bottom: 0;
+						@include margin(0 null);
 
 						img {
 							@include media($tablet-portrait) {
@@ -349,113 +236,3 @@
 
 	} // .wp-block-cover
 } // .home
-
-// Global Volunteer Block
-.volunteer {
-	.block-wrapper {
-		@include padding(rem(50) $space);
-
-		text-align: center;
-
-		@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-			@include padding(null 5%);
-		} // iPad Pro Landscape.
-
-		@include media($desktop) {
-			@include padding(rem(100) 15% null);
-
-			text-align: left;
-
-			p {
-				font-size: rem(24);
-			}
-		}
-
-		.block-content-wrapper {
-			flex-direction: column;
-			text-align: center;
-
-			@include media($desktop-large) {
-				flex-direction: row;
-				text-align: left;
-			}
-
-			.wp-block-column {
-				margin-left: 0;
-			} // .wp-block-column
-		} // .block-content-wrapper
-
-		.icon-wrapper {
-			@include margin(0 null);
-
-			flex-wrap: wrap;
-
-			.wp-block-column {
-				margin-top: 0;
-
-				@include media($desktop) {
-					max-width: rem(200);
-					min-width: rem(150);
-				}
-
-				figure {
-					height: 100%;
-					overflow: hidden;
-					text-align: center;
-					width: 100%;
-
-					img {
-						height: 100%;
-						max-width: rem(100);
-						object-fit: contain;
-						object-position: center;
-						width: 100%;
-
-						@include media($desktop) {
-							max-width: rem(120);
-						}
-					} // img
-				}
-			} // .wp-block-column
-
-			p {
-				font-size: rem(14);
-
-				@include media($desktop) {
-					font-size: rem(22);
-				}
-			} // p
-		} // .icon-wrapper
-
-		.wp-block-buttons {
-			justify-content: center;
-
-			@include media($tablet-landscape) {
-				justify-content: flex-start;
-			}
-
-			.wp-block-button {
-				width: auto;
-
-				a {
-					@include padding(null rem(15));
-					border: rem(2) solid $color-limeaid;
-					border-radius: rem(44);
-
-					@include media($tablet-landscape) {
-						@include padding(null rem(55));
-					}
-
-					&:hover,
-					&:focus,
-					&:active {
-						background-color: transparent !important;
-						color: $color-limeaid;
-						opacity: 1;
-					} // &:hover, &:focus, &:active
-				} // a
-			} // .wp-block-button
-		} // .wp-block-buttons
-
-	} // .block-wrapper
-} // .volunteer

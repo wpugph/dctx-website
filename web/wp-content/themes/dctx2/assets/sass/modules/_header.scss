@@ -3,29 +3,25 @@
 //--------------------------------------------------------------
 
 .site-header {
-	@include padding(rem(20) null);
+	@include padding(rem(5) null);
 
 	background-color: $color-white;
 	box-shadow: 0 0 rem(4) 0 rgba($color-black, 0.25);
 	flex: 0 0 100%;
-	margin-bottom: rem(30);
+	position: fixed;
+	top: 0;
 	width: 100%;
+	z-index: 999;
 
-	@include media($tablet-portrait) {
-		margin-bottom: rem(65);
-	}
+	+ .site-main {
+		padding-top: rem(90);
+	} // + .site-main
 
 	// Header Wrapper.
 	.header-wrapper {
 		align-items: center;
 		display: flex;
 		flex-flow: row wrap;
-
-		@include media($desktop) {
-			@include padding(null 10%);
-
-			max-width: 100%;
-		}
 	} // .header-wrapper
 
 	// Site logo.
@@ -46,13 +42,7 @@
 
 		// Don't let the logo get out of control.
 		img {
-			@include media($tablet-portrait, $tablet-landscape) {
-				width: 50%;
-			}
-
-			@include media($tablet-landscape) {
-				min-height: rem(103);
-			}
+			max-width: rem(280);
 		} // img
 	} // .site-branding
 

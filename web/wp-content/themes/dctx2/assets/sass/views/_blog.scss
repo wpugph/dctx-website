@@ -22,19 +22,14 @@
 	} // .blog-header
 
 	.article-wrapper {
-		@include padding(null 10%);
 		@include margin(null auto);
-
-		max-width: 100% !important;
-	} // .article-wrapper
+	} //.article-wrapper
 
 	article {
 		@include padding(rem(20) rem(50));
-		@include margin(null 10%);
 
 		border-radius: rem(10);
 		box-shadow: 0 rem(5) rem(20) rgba($color-black, 0.1);
-		max-width: 100% !important;
 
 		.entry-meta {
 			color: $color-gray;
