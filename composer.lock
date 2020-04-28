@@ -4,32 +4,35 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fa3b1814247ea41b7ddf24f15de906cc",
+    "content-hash": "78f505a7168b3c635856e4b131fb393a",
     "packages": [
         {
             "name": "composer/installers",
-            "version": "v1.8.0",
+            "version": "v1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "7d610d50aae61ae7ed6675e58efeabdf279bb5e3"
+                "reference": "b93bcf0fa1fccb0b7d176b0967d969691cd74cca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/7d610d50aae61ae7ed6675e58efeabdf279bb5e3",
-                "reference": "7d610d50aae61ae7ed6675e58efeabdf279bb5e3",
+                "url": "https://api.github.com/repos/composer/installers/zipball/b93bcf0fa1fccb0b7d176b0967d969691cd74cca",
+                "reference": "b93bcf0fa1fccb0b7d176b0967d969691cd74cca",
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "^1.0"
+                "composer-plugin-api": "^1.0 || ^2.0"
             },
             "replace": {
                 "roundcube/plugin-installer": "*",
                 "shama/baton": "*"
             },
             "require-dev": {
-                "composer/composer": "1.0.*@dev",
-                "phpunit/phpunit": "^4.8.36"
+                "composer/composer": "1.6.* || 2.0.*@dev",
+                "composer/semver": "1.0.* || 2.0.*@dev",
+                "phpunit/phpunit": "^4.8.36",
+                "sebastian/comparator": "^1.2.4",
+                "symfony/process": "^2.3"
             },
             "type": "composer-plugin",
             "extra": {
@@ -128,7 +131,17 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2020-02-07T10:39:20+00:00"
+            "funding": [
+                {
+                    "url": "https://packagist.com",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-04-07T06:57:05+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core-installer",
@@ -205,16 +218,16 @@
         },
         {
             "name": "pantheon-systems/wordpress-composer",
-            "version": "5.3.2",
+            "version": "5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pantheon-systems/wordpress-composer.git",
-                "reference": "b44925dcc067897febb0a017d0011c67ab1f885a"
+                "reference": "498f3da98eeafa5afb436bcf73ca76c610517a82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pantheon-systems/wordpress-composer/zipball/b44925dcc067897febb0a017d0011c67ab1f885a",
-                "reference": "b44925dcc067897febb0a017d0011c67ab1f885a",
+                "url": "https://api.github.com/repos/pantheon-systems/wordpress-composer/zipball/498f3da98eeafa5afb436bcf73ca76c610517a82",
+                "reference": "498f3da98eeafa5afb436bcf73ca76c610517a82",
                 "shasum": ""
             },
             "require": {
@@ -232,10 +245,10 @@
             ],
             "description": "WordPress for Pantheon with a composer.json file.",
             "support": {
-                "source": "https://github.com/pantheon-systems/wordpress-composer/tree/5.3.2",
+                "source": "https://github.com/pantheon-systems/wordpress-composer/tree/5.4",
                 "issues": "https://github.com/pantheon-systems/wordpress-composer/issues"
             },
-            "time": "2019-12-18T23:51:39+00:00"
+            "time": "2020-04-01T06:11:03+00:00"
         },
         {
             "name": "phpoption/phpoption",
@@ -447,16 +460,16 @@
         },
         {
             "name": "vlucas/phpdotenv",
-            "version": "v3.6.2",
+            "version": "v3.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "786a947e57086cf236cefdee80784634224b99fa"
+                "reference": "1b3103013797f04521c6cae5560f604649484066"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/786a947e57086cf236cefdee80784634224b99fa",
-                "reference": "786a947e57086cf236cefdee80784634224b99fa",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/1b3103013797f04521c6cae5560f604649484066",
+                "reference": "1b3103013797f04521c6cae5560f604649484066",
                 "shasum": ""
             },
             "require": {
@@ -506,7 +519,13 @@
                 "env",
                 "environment"
             ],
-            "time": "2020-03-27T23:36:02+00:00"
+            "funding": [
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/vlucas/phpdotenv",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-04-12T15:18:03+00:00"
         },
         {
             "name": "wpackagist-plugin/all-in-one-wp-security-and-firewall",
@@ -518,9 +537,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/all-in-one-wp-security-and-firewall.zip?timestamp=1583901815",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/all-in-one-wp-security-and-firewall.zip?timestamp=1583901815"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -530,25 +547,80 @@
             "time": "2020-03-11T04:43:35+00:00"
         },
         {
-            "name": "wpackagist-plugin/disable-gutenberg",
+            "name": "wpackagist-plugin/autoptimize",
             "version": "dev-trunk",
             "source": {
                 "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/disable-gutenberg/",
+                "url": "https://plugins.svn.wordpress.org/autoptimize/",
                 "reference": "trunk"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/disable-gutenberg.zip?timestamp=1585082564",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/autoptimize.zip?timestamp=1587904004"
             },
             "require": {
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/disable-gutenberg/",
-            "time": "2020-03-24T20:42:44+00:00"
+            "homepage": "https://wordpress.org/plugins/autoptimize/",
+            "time": "2020-04-26T12:26:44+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/beaver-builder-lite-version",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/beaver-builder-lite-version/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/beaver-builder-lite-version.zip?timestamp=1585324203"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/beaver-builder-lite-version/",
+            "time": "2020-03-27T15:50:03+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/host-analyticsjs-local",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/host-analyticsjs-local/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/host-analyticsjs-local.zip?timestamp=1587897346"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/host-analyticsjs-local/",
+            "time": "2020-04-26T10:35:46+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/inline-google-spreadsheet-viewer",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/inline-google-spreadsheet-viewer/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/inline-google-spreadsheet-viewer.zip?timestamp=1585869550"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/inline-google-spreadsheet-viewer/",
+            "time": "2020-04-02T23:19:10+00:00"
         },
         {
             "name": "wpackagist-plugin/lh-hsts",
@@ -560,9 +632,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/lh-hsts.zip?timestamp=1558146276",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/lh-hsts.zip?timestamp=1558146276"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -580,15 +650,32 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/pantheon-advanced-page-cache.1.0.0.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/pantheon-advanced-page-cache.1.0.0.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/pantheon-advanced-page-cache/"
+        },
+        {
+            "name": "wpackagist-plugin/plugin-organizer",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/plugin-organizer/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/plugin-organizer.zip?timestamp=1572013968"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/plugin-organizer/",
+            "time": "2019-10-25T14:32:48+00:00"
         },
         {
             "name": "wpackagist-plugin/redirection",
@@ -600,9 +687,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/redirection.zip?timestamp=1584192505",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/redirection.zip?timestamp=1584192505"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -621,9 +706,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/stream.zip?timestamp=1584654909",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/stream.zip?timestamp=1584654909"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -642,9 +725,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/two-factor.zip?timestamp=1581536465",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/two-factor.zip?timestamp=1581536465"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -654,39 +735,91 @@
             "time": "2020-02-12T19:41:05+00:00"
         },
         {
-            "name": "wpackagist-plugin/wordpress-seo",
+            "name": "wpackagist-plugin/unicard",
             "version": "dev-trunk",
             "source": {
                 "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
+                "url": "https://plugins.svn.wordpress.org/unicard/",
                 "reference": "trunk"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.zip?timestamp=1584541141",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/unicard.zip?timestamp=1585321692"
             },
             "require": {
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/wordpress-seo/",
-            "time": "2020-03-18T14:19:01+00:00"
+            "homepage": "https://wordpress.org/plugins/unicard/",
+            "time": "2020-03-27T15:08:12+00:00"
         },
         {
-            "name": "wpackagist-plugin/wp-native-php-sessions",
-            "version": "1.0.0",
+            "name": "wpackagist-plugin/wordpress-importer",
+            "version": "dev-trunk",
             "source": {
                 "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/wp-native-php-sessions/",
-                "reference": "tags/1.0.0"
+                "url": "https://plugins.svn.wordpress.org/wordpress-importer/",
+                "reference": "trunk"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-native-php-sessions.1.0.0.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/wordpress-importer.zip?timestamp=1586006817"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wordpress-importer/",
+            "time": "2020-04-04T13:26:57+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/wordpress-seo",
+            "version": "13.5",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
+                "reference": "tags/13.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.13.5.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wordpress-seo/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-cfm",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-cfm/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-cfm.zip?timestamp=1567186972"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-cfm/",
+            "time": "2019-08-30T17:42:52+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/wp-native-php-sessions",
+            "version": "1.1.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-native-php-sessions/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-native-php-sessions.zip?timestamp=1587680029"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -695,39 +828,54 @@
             "homepage": "https://wordpress.org/plugins/wp-native-php-sessions/"
         },
         {
-            "name": "wpackagist-plugin/wp-responsive-menu",
+            "name": "wpackagist-plugin/wp-redis",
             "version": "dev-trunk",
             "source": {
                 "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/wp-responsive-menu/",
+                "url": "https://plugins.svn.wordpress.org/wp-redis/",
                 "reference": "trunk"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-responsive-menu.zip?timestamp=1582122998",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/wp-redis.zip?timestamp=1586899795"
             },
             "require": {
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/wp-responsive-menu/",
-            "time": "2020-02-19T14:36:38+00:00"
+            "homepage": "https://wordpress.org/plugins/wp-redis/",
+            "time": "2020-04-14T21:29:55+00:00"
         },
         {
-            "name": "wpackagist-theme/twentynineteen",
-            "version": "1.4",
+            "name": "wpackagist-plugin/wp-smushit",
+            "version": "dev-trunk",
             "source": {
                 "type": "svn",
-                "url": "https://themes.svn.wordpress.org/twentynineteen/",
-                "reference": "1.4"
+                "url": "https://plugins.svn.wordpress.org/wp-smushit/",
+                "reference": "trunk"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/theme/twentynineteen.1.4.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://downloads.wordpress.org/plugin/wp-smushit.zip?timestamp=1586123397"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-smushit/",
+            "time": "2020-04-05T21:49:57+00:00"
+        },
+        {
+            "name": "wpackagist-theme/twentynineteen",
+            "version": "1.5",
+            "source": {
+                "type": "svn",
+                "url": "https://themes.svn.wordpress.org/twentynineteen/",
+                "reference": "1.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/theme/twentynineteen.1.5.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1338,23 +1486,24 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "6.5.2",
+            "version": "6.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "43ece0e75098b7ecd8d13918293029e555a50f82"
+                "reference": "aab4ebd862aa7d04f01a4b51849d657db56d882e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/43ece0e75098b7ecd8d13918293029e555a50f82",
-                "reference": "43ece0e75098b7ecd8d13918293029e555a50f82",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/aab4ebd862aa7d04f01a4b51849d657db56d882e",
+                "reference": "aab4ebd862aa7d04f01a4b51849d657db56d882e",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "guzzlehttp/promises": "^1.0",
                 "guzzlehttp/psr7": "^1.6.1",
-                "php": ">=5.5"
+                "php": ">=5.5",
+                "symfony/polyfill-intl-idn": "^1.11"
             },
             "require-dev": {
                 "ext-curl": "*",
@@ -1362,7 +1511,6 @@
                 "psr/log": "^1.1"
             },
             "suggest": {
-                "ext-intl": "Required for Internationalized Domain Name (IDN) support",
                 "psr/log": "Required for using the Log middleware"
             },
             "type": "library",
@@ -1401,7 +1549,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2019-12-23T11:57:10+00:00"
+            "time": "2020-04-18T10:38:46+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -2487,6 +2635,82 @@
             "time": "2020-03-27T16:54:36+00:00"
         },
         {
+            "name": "symfony/polyfill-intl-idn",
+            "version": "v1.15.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-intl-idn.git",
+                "reference": "47bd6aa45beb1cd7c6a16b7d1810133b728bdfcf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-idn/zipball/47bd6aa45beb1cd7c6a16b7d1810133b728bdfcf",
+                "reference": "47bd6aa45beb1cd7c6a16b7d1810133b728bdfcf",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "symfony/polyfill-mbstring": "^1.3",
+                "symfony/polyfill-php72": "^1.10"
+            },
+            "suggest": {
+                "ext-intl": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.15-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Intl\\Idn\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Laurent Bassin",
+                    "email": "laurent@bassin.info"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for intl's idn_to_ascii and idn_to_utf8 functions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "idn",
+                "intl",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-03-09T19:04:49+00:00"
+        },
+        {
             "name": "symfony/polyfill-mbstring",
             "version": "v1.15.0",
             "source": {
@@ -2544,6 +2768,75 @@
                 "shim"
             ],
             "time": "2020-03-09T19:04:49+00:00"
+        },
+        {
+            "name": "symfony/polyfill-php72",
+            "version": "v1.15.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-php72.git",
+                "reference": "37b0976c78b94856543260ce09b460a7bc852747"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/37b0976c78b94856543260ce09b460a7bc852747",
+                "reference": "37b0976c78b94856543260ce09b460a7bc852747",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.15-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php72\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill backporting some PHP 7.2+ features to lower PHP versions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-02-27T09:26:54+00:00"
         },
         {
             "name": "symfony/polyfill-php73",
@@ -3009,13 +3302,20 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "wpackagist-plugin/host-analyticsjs-local": 20,
         "wpackagist-plugin/two-factor": 20,
         "wpackagist-plugin/redirection": 20,
         "wpackagist-plugin/stream": 20,
-        "wpackagist-plugin/wordpress-seo": 20,
-        "wpackagist-plugin/disable-gutenberg": 20,
         "wpackagist-plugin/all-in-one-wp-security-and-firewall": 20,
-        "wpackagist-plugin/wp-responsive-menu": 20
+        "wpackagist-plugin/wordpress-importer": 20,
+        "wpackagist-plugin/wp-cfm": 20,
+        "wpackagist-plugin/wp-redis": 20,
+        "wpackagist-plugin/autoptimize": 20,
+        "wpackagist-plugin/inline-google-spreadsheet-viewer": 20,
+        "wpackagist-plugin/beaver-builder-lite-version": 20,
+        "wpackagist-plugin/unicard": 20,
+        "wpackagist-plugin/plugin-organizer": 20,
+        "wpackagist-plugin/wp-smushit": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
@@ -3025,5 +3325,6 @@
     "platform-dev": [],
     "platform-overrides": {
         "php": "7.2"
-    }
+    },
+    "plugin-api-version": "1.1.0"
 }
