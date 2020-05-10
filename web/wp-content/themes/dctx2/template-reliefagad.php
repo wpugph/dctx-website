@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: RapidPass
+ * Template Name: ReliefAgad
  *
  * This template displays a page with a sidebar on the right side of the screen.
  *
