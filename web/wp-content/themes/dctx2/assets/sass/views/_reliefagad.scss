@@ -108,7 +108,7 @@
 				.card-title {
 
 					h3 {
-						color: $color-tango !important;
+						color: $color-lime-green !important;
 					} // h3
 
 					@include media($desktop) {
@@ -210,7 +210,7 @@
 						} // &:hover, &:focus, &:active
 					} // a
 
-					&.is-style-outline {
+					&.is-style-fill {
 						a {
 							border: rem(2) solid $color-white;
 
