@@ -120,7 +120,7 @@
 
 		}// &.fast-forward
 
-		&.rapid-video {
+		&.relief-flow {
 
 			.content-wrapper {
 				@include padding(rem(80) rem(10));
@@ -131,7 +131,7 @@
 				}
 
 			} // .content-wrapper
-		} // &.rapid-video
+		} // &.relief-flow
 
 		&.reliefagad-project {
 			background-blend-mode: multiply;
@@ -222,6 +222,19 @@
 							} // &:hover, &:focus, &:active
 						} // a
 					} // &.is-style-fill
+
+					&.is-style-outline {
+						a {
+							border: rem(2) solid $color-white;
+
+							&:hover,
+							&:focus,
+							&:active {
+								background-color: $color-white;
+								color: $color-lime-green;
+							} // &:hover, &:focus, &:active
+						} // a
+					} // &.is-style-outline
 
 				} // .wp-block-button
 
