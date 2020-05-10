@@ -84,6 +84,20 @@
 					} // a
 				} // .page-template-template-rapidpass &
 
+				.page-template-template-reliefagad & {
+					a {
+						background-color: $color-gigas !important;
+						border: rem(2) solid $color-gigas;
+
+						&:hover,
+						&:focus,
+						&:active {
+							background-color: transparent !important;
+							color: $color-gigas;
+						} // &:hover, &:focus, &:active
+					} // a
+				} // .page-template-template-reliefagad &
+
 			} // .wp-block-button
 		} // .wp-block-buttons
 

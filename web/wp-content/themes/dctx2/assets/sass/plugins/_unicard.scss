@@ -63,4 +63,64 @@
 		} // &.column
 	} // .page-template-template-rapidpass &
 
+	.page-template-template-reliefagad & {
+		background: $color-alabaster;
+		border-radius: rem(39);
+		box-shadow: 0 rem(4) rem(30) rgba($color-black, 0.15);
+		flex: 1;
+		margin-bottom: $gutter * 2;
+		max-width: rem(500);
+		overflow: hidden;
+		padding: 0;
+
+		// Card images.
+		img {
+			width: 100%;
+		} // img
+
+		.card-content {
+			@include padding(rem(10) rem(30));
+
+			@include media($tablet-landscape) {
+				@include padding(null rem(50));
+			}
+
+			.card-title {
+
+				h3 {
+					color: $color-black;
+					font-weight: 600;
+					margin-bottom: 0;
+				} // h3
+			} // .card-title
+
+			.card-description {
+				@include margin(0 null rem(30));
+
+				p {
+					@include margin(0 null);
+
+					color: $color-black;
+				}
+			} // .card-description
+		} // .card-content
+
+		&.column {
+			.card-image {
+				background-color: $color-dark-blue;
+				max-height: rem(250);
+
+				.featured-image {
+					@include margin(null auto);
+					@include padding(rem(20));
+					@include size(auto);
+
+					display: block;
+					max-width: rem(250);
+					object-fit: contain;
+				} // .featured-image
+			} // .card-image
+		} // &.column
+	} // .page-template-template-reliefagad &
+
 } // .card

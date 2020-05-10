@@ -1,0 +1,324 @@
+//--------------------------------------------------------------
+// reliefagad
+//--------------------------------------------------------------
+
+.page-template-template-reliefagad {
+
+	.wp-block-cover {
+
+		&.reliefagad-hero {
+			@include padding(rem(20) $space 0);
+
+			margin-bottom: rem(-110);
+			z-index: 1;
+
+			.content-wrapper {
+				@include padding(rem(50) null null);
+
+				@include media($tablet-landscape) {
+					@include padding(rem(150) null null);
+				}
+
+				.wp-block-media-text {
+					position: relative;
+
+					@include media(null, $tablet-landscape) {
+						grid-template-columns: 100% !important;
+					}
+
+					.wp-block-media-text__media {
+						background-position: 0 0;
+						display: none;
+
+						@include media($tablet-landscape) {
+							display: block;
+
+							img {
+								@include position(absolute, -30% null null -5%);
+
+								width: rem(700);
+							}
+						}
+
+					} // .wp-block-media-text__media
+
+					.wp-block-media-text__content {
+						@include padding( null 0 rem(50));
+
+						@include media(null, $tablet-landscape) {
+							grid-column: 1 ;
+							grid-template-columns: 100% !important;
+						}
+
+						@include media($tablet-landscape) {
+							@include padding( null 0 rem(50) null);
+						}
+
+					} // .wp-block-media-text__content
+
+				} // .wp-block-media-text
+
+				.wp-block-buttons {
+					justify-content: space-around;
+				} // .wp-block-buttons
+			} // .content-wrapper
+		} // &.reliefagad-pass
+
+		&.fast-forward {
+			background-color: transparent;
+			background-position: top center;
+			background-size: cover;
+			color: $color-dark-blue;
+			padding-top: rem(140);
+			z-index: 1;
+
+			.card-block {
+				@include margin(rem(30) auto);
+
+				align-content: center;
+				flex-direction: column;
+
+				@include media($tablet-landscape) {
+					@include margin(rem(60) auto);
+
+					align-content: space-around;
+					flex-direction: row;
+
+					.card {
+						@include size(rem(660), rem(500));
+
+						max-width: 90%;
+					} // .card
+				}
+
+				.wp-block-column {
+					@include margin(null 0);
+
+				} // .wp-block-column
+
+			} // .card-block
+
+			.card-content {
+				@include padding(null rem(20));
+
+				@include media($desktop-large) {
+					@include padding(null rem(50));
+				}
+
+				.card-title {
+
+					h3 {
+						color: $color-tango !important;
+					} // h3
+
+					@include media($desktop) {
+						margin-bottom: rem(20);
+					}
+				} // .card-title
+
+			} // .card-content
+
+		}// &.fast-forward
+
+		&.rapid-video {
+
+			.content-wrapper {
+				@include padding(rem(80) rem(10));
+
+				@include media($tablet-landscape) {
+					@include padding(rem(170) rem(50));
+
+				}
+
+			} // .content-wrapper
+		} // &.rapid-video
+
+		&.reliefagad-project {
+			background-blend-mode: multiply;
+			background-position: 100% center;
+			background-size: contain;
+
+			@include media($desktop) {
+				&::before {
+					opacity: 0 !important;
+				} // &::before
+			}
+
+			.content-wrapper {
+				@include padding(rem(50) 0 0);
+
+				@include media($tablet-portrait) {
+					text-align: left;
+				}
+
+				.content-columns {
+
+					.wp-block-column {
+						flex-basis: 100% !important;
+
+						@include media($tablet-landscape) {
+							@include padding(null $space);
+
+							&:first-of-type {
+								flex-basis: 33.33% !important;
+							}
+						}
+					} // .wp-block-column
+					@include media(null, $tablet-portrait) {
+						.wp-block-image {
+
+							img {
+								max-height: rem(300);
+							} // img
+						} // .wp-block-image
+					}
+
+				} // .content-columns
+			} // .content-wrapper
+
+			.content-columns {
+
+				.wp-block-column {
+					@include media(null, $tablet-portrait) {
+						@include padding(null 0);
+						@include margin(null 0);
+
+						flex-basis: 100% !important;
+					}
+				} // .wp-block-column
+			} // .content-columns
+
+			.wp-block-buttons {
+				flex-direction: column;
+				justify-content: space-around;
+
+				@include media($tablet-landscape) {
+					flex-direction: row;
+				}
+
+				.wp-block-button {
+					min-width: rem(300);
+
+					a {
+						border: rem(2) solid $color-white;
+
+						&:hover,
+						&:focus,
+						&:active {
+							background-color: transparent;
+							color: $color-white;
+						} // &:hover, &:focus, &:active
+					} // a
+
+					&.is-style-outline {
+						a {
+							border: rem(2) solid $color-white;
+
+							&:hover,
+							&:focus,
+							&:active {
+								background-color: $color-white;
+								color: $color-lime-green;
+							} // &:hover, &:focus, &:active
+						} // a
+					} // &.is-style-fill
+
+				} // .wp-block-button
+
+			} // .wp-block-buttons
+		} // &.reliefagad-project
+
+	} // .wp-block-cover
+
+	.how-it-works {
+		@include padding(rem(80) $space);
+
+		.wp-block-group__inner-container {
+			@include margin(null auto);
+
+			max-width: $max-width;
+
+			.content-wrapper {
+				@include padding(rem(30) 0);
+				@include margin(0 auto);
+
+				text-align: center;
+
+				@include media(null, $desktop) {
+
+					&.wp-block-column {
+						flex-basis: auto !important;
+					} // &.wp-block-column
+
+					.wp-block-image {
+						@include margin(0 auto rem(20));
+
+						img {
+							height: auto;
+						}
+					} // .wp-block-image
+				}
+
+				@include media($tablet-landscape) {
+					@include margin(0);
+
+					text-align: left;
+				}
+
+				@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+					@include padding(rem(10) 0);
+				} // iPad Pro Landscape.
+
+
+				.card-column {
+					@include margin(0 null rem(30));
+					@include padding(0 rem(30) rem(20));
+
+					.wp-block-column {
+
+						.wp-block-image {
+							margin-top: rem(50);
+
+							img {
+								height: auto;
+								max-width: rem(200);
+							} // img
+						} // .wp-block-image
+
+						h3 {
+							@include margin(rem(30) null rem(10));
+							@include padding(0 null);
+
+							color: $color-tango;
+							font-weight: 600;
+						} // h3
+
+						p {
+							@include margin(0 null);
+
+							color: $color-black;
+						} // p
+					} // .wp-block-column
+
+				} // .card-column
+
+				.wp-block-button {
+					a {
+						border: rem(2) solid;
+
+						&:hover,
+						&:focus,
+						&:active {
+							background-color: transparent;
+							color: $color-lime-green;
+						} // &:hover, &:focus, &:active
+					} // a
+				} // .wp-block-button
+
+			} // .content-wrapper
+
+		} // .wp-block-group__inner-container
+
+	} // .how-it-works
+
+} // .page-template-template-reliefagad
