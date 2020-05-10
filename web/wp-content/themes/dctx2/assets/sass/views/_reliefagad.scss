@@ -9,9 +9,13 @@
 		&.reliefagad-hero {
 			@include padding(rem(20) $space 0);
 
-			margin-bottom: rem(-220);
-			z-index: 1;
-
+			@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+				margin-bottom: rem(-220);
+				z-index: 1;
+			
+			}	
+			
 			.content-wrapper {
 				@include padding(rem(50) null null);
 
