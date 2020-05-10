@@ -9,9 +9,9 @@
 		&.reliefagad-hero {
 			@include padding(rem(20) $space 0);
 
-			@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+			@media (min-width: 768px) {
   
-				margin-bottom: rem(-220);
+				margin-bottom: rem(-250);
 				z-index: 1;
 			
 			}	
@@ -68,7 +68,7 @@
 			} // .content-wrapper
 
 			.reliefagad-mockup img {
-				max-width: 145%;
+				max-width: 130%;
 			} // .reliefagad-mockup
 
 		} // &.reliefagad-pass
