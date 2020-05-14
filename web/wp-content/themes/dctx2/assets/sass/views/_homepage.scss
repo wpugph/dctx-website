@@ -11,6 +11,7 @@
 			@include padding(rem(30) null 0);
 
 			justify-content: center;
+			margin-bottom: 0;
 
 			@include media($tablet-portrait) {
 				.wp-block-column {
@@ -200,7 +201,7 @@
 				} // a
 			} // .wp-block-button
 		} // &.tracecovid
-		
+
 		&.reliefagad-hero {
 			@include padding(rem(20) $space 0);
 
