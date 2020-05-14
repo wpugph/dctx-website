@@ -206,9 +206,8 @@
 			@include padding(rem(20) $space 0);
 
 			@media (min-width: 768px) {
-				margin-top: rem(-40);
-				margin-bottom: rem(-250);
-				z-index: 1;
+				margin-bottom: rem(-100);
+				z-index: -99;
 			
 			}	
 			
