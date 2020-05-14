@@ -50,6 +50,17 @@
 		} // .wp-block-columns
 	} // .projects
 
+	.reliefagad-project {
+		
+		@include padding(rem(20) $space 0);
+
+		@media (min-width: 768px) {
+			margin-top: rem(-40);
+			margin-bottom: rem(-250);
+			z-index: 1;
+		}	
+	}
+
 	.wp-block-cover {
 
 		&.hero {
@@ -200,6 +211,72 @@
 				} // a
 			} // .wp-block-button
 		} // &.tracecovid
+
+		&.reliefagad-hero {
+			@include padding(rem(20) $space 0);
+
+			@media (min-width: 768px) {
+				margin-top: rem(-40);
+				margin-bottom: rem(-250);
+				z-index: 1;
+			}	
+			
+			.content-wrapper {
+				@include padding(rem(50) null null);
+
+				@include media($tablet-landscape) {
+					@include padding(rem(150) null null);
+				}
+
+				.wp-block-media-text {
+					position: relative;
+
+					@include media(null, $tablet-landscape) {
+						grid-template-columns: 100% !important;
+					}
+
+					.wp-block-media-text__media {
+						background-position: 0 0;
+						display: none;
+
+						@include media($tablet-landscape) {
+							display: block;
+
+							img {
+								@include position(absolute, -30% null null -5%);
+
+								width: rem(700);
+							}
+						}
+
+					} // .wp-block-media-text__media
+
+					.wp-block-media-text__content {
+						@include padding( null 0 rem(50));
+
+						@include media(null, $tablet-landscape) {
+							grid-column: 1 ;
+							grid-template-columns: 100% !important;
+						}
+
+						@include media($tablet-landscape) {
+							@include padding( null 0 rem(50) null);
+						}
+
+					} // .wp-block-media-text__content
+
+				} // .wp-block-media-text
+
+				.wp-block-buttons {
+					justify-content: space-around;
+				} // .wp-block-buttons
+			} // .content-wrapper
+
+			.reliefagad-mockup img {
+				max-width: 130%;
+			} // .reliefagad-mockup
+
+		} // &.reliefagad-pass
 
 		&.mission {
 			background-position: 0 center;
