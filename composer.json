@@ -41,7 +41,8 @@
 	"wpackagist-plugin/wp-smushit": "dev-trunk",
 	"wpackagist-plugin/widget-context": "^1.3",
 	"wpackagist-plugin/seo-by-rank-math":"dev-trunk",
-    	"wpackagist-theme/twentynineteen": "^1.2"
+    	"wpackagist-plugin/airpress":"^1.*",
+	"wpackagist-theme/twentynineteen": "^1.2"
   },
 	"config": {
 	  "vendor-dir": "vendor",
