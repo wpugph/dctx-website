@@ -16,19 +16,19 @@
 	}
 
 	.volunteer-avatar img:before {
+		background-image: url('/wp-content/uploads/2020/04/logo-big-150x150.png');
 		display: block;
 		width: 140px;
 		height: 140px;
 		border-radius: 50%;
 		object-fit: cover;
-		background-image: url('/wp-content/uploads/2020/04/logo-big-150x150.png');
 		box-shadow: 0 rem(5) rem(20) rgba($color-black, 0.1);
 	}
 
 	.volunteer-avatar img {
 		display: block;
-		width: 180px;
-		height: 180px;
+		width: 140px;
+		height: 140px;
 		border-radius: 50%;
 		object-fit: cover;
 		box-shadow: 0 rem(5) rem(20) rgba($color-black, 0.1);
@@ -54,7 +54,7 @@
 
 	.volunteer-avatar .text {
 		color: #ffffff;
-		font-size: rem(30);
+		font-size: rem(15);
 		position: absolute;
 		top: 50%;
 		left: 50%;
