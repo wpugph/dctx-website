@@ -6,19 +6,19 @@
 
 	.volunteer {
 		display: inline-block;
-		margin: rem(15);
+		margin: rem(10);
 	}
 
 	.volunteer-avatar {
 		position: relative;
-		width: 180px;
+		width: 140px;
 		border-radius: 50%;
 	}
 
 	.volunteer-avatar img:before {
 		display: block;
-		width: 180px;
-		height: 180px;
+		width: 140px;
+		height: 140px;
 		border-radius: 50%;
 		object-fit: cover;
 		background-image: url('/wp-content/uploads/2020/04/logo-big-150x150.png');
@@ -31,7 +31,6 @@
 		height: 180px;
 		border-radius: 50%;
 		object-fit: cover;
-		background-image: url('/wp-content/uploads/2020/04/logo-big-150x150.png');
 		box-shadow: 0 rem(5) rem(20) rgba($color-black, 0.1);
 	}
 
@@ -47,15 +46,15 @@
 		right: 0;
 		height: 100%;
 		width: 100%;
-		opacity: 0;
+		opacity: 0.90;
 		transition: .5s ease;
 		background-color: $color-gigas;
 		border-radius: 50%;
 	}
 
 	.volunteer-avatar .text {
-		color: white;
-		font-size: 20px;
+		color: #ffffff;
+		font-size: rem(30);
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -63,6 +62,8 @@
 		-ms-transform: translate(-50%, -50%);
 		transform: translate(-50%, -50%);
 		text-align: center;
+		font-weight: bold;
+		line-height: 1em;
 	}
 
 } // .page-volunteers
