@@ -5,6 +5,7 @@
 
 	.site-header {
 		margin-bottom: 0;
+		border-bottom: 2px solid $color-blue;
 	} //.site-header
 
 	.entry-header {
@@ -17,9 +18,8 @@
 
 	.entry-content {
 		margin-top: 0; 
-		
+
 		figure.wp-block-image img {
-			border-radius: 50%;
 			min-height: 300px;
 			box-shadow: 0 rem(5) rem(20) rgba($color-black, 0.1);
 		}
@@ -29,36 +29,34 @@
 			padding: rem(20);
 			box-shadow: 0 rem(5) rem(20) rgba($color-black, 0.1);
 
-			span.volunteer-project {
-				color: white;
+			span {
+				display: inline-block;
 				margin: 5px;
-				background-color: $color-tango;
-				padding: 8px;
-				box-shadow: 0 rem(2) rem(10) rgba($color-black, 0.1);
-			}
-
-			span.volunteer-team {
-				margin: 5px;
-				background-color: $color-tango;
-				padding: 8px;
-				box-shadow: 0 rem(2) rem(10) rgba($color-black, 0.1);
-			}
-
-			span.volunteer-skill {
-				margin: 5px;
-				background-color: $color-tango;
-				padding: 8px;
-				box-shadow: 0 rem(2) rem(10) rgba($color-black, 0.1);
-			}
-
-			span.volunteer-technology {
-				margin: 5px;
-				background-color: $color-tango;
 				padding: 8px;
 				box-shadow: 0 rem(2) rem(10) rgba($color-black, 0.1);
 				border-radius: 5px;
 			}
+			span.volunteer-project {
+				color: white;
+				background-color: $color-tango;
+			}
+
+			span.volunteer-team {
+				background-color: $color-corn;
+			}
+
+			span.volunteer-skill {
+				background-color: $color-limeaid;
+			}
+
+			span.volunteer-technology {
+				background-color: $color-lime-green;
+			}
+
+			.volunteer-linkedin a {
+				color: $color-gigas;
+			}
 		}
 	}
 
-} // .page-id-808 volunteer-template
+} // .page-template-template-volunteer
