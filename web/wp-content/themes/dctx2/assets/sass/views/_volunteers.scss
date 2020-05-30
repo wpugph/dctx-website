@@ -6,7 +6,7 @@
 
 	.volunteer {
 		display: inline-block;
-		margin: rem(5);
+		margin: rem(15);
 	}
 
 	.volunteer-avatar {
@@ -31,11 +31,12 @@
 		height: 180px;
 		border-radius: 50%;
 		object-fit: cover;
+		background-image: url('/wp-content/uploads/2020/04/logo-big-150x150.png');
 		box-shadow: 0 rem(5) rem(20) rgba($color-black, 0.1);
 	}
 
 	.volunteer-avatar:hover .overlay {
-		opacity: 1;
+		opacity: 0;
 	}
 
 	.volunteer-avatar .overlay {
@@ -48,7 +49,7 @@
 		width: 100%;
 		opacity: 0;
 		transition: .5s ease;
-		background-color: #008CBA;
+		background-color: $color-gigas;
 		border-radius: 50%;
 	}
 
