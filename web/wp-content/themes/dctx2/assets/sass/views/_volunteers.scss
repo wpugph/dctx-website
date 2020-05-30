@@ -1,10 +1,12 @@
 //--------------------------------------------------------------
 // Volunteers List Page
 //--------------------------------------------------------------
-.page-volunteers {
+.page-volunteers,
+.volunteers-list {
 
 	.volunteer {
 		display: inline-block;
+		margin: rem(5);
 	}
 
 	.volunteer-avatar {
@@ -13,11 +15,27 @@
 		border-radius: 50%;
 	}
 
+	.volunteer-avatar img:before {
+		display: block;
+		width: 180px;
+		height: 180px;
+		border-radius: 50%;
+		object-fit: cover;
+		background-image: url('/wp-content/uploads/2020/04/logo-big-150x150.png');
+		box-shadow: 0 rem(5) rem(20) rgba($color-black, 0.1);
+	}
+
 	.volunteer-avatar img {
 		display: block;
 		width: 180px;
 		height: 180px;
 		border-radius: 50%;
+		object-fit: cover;
+		box-shadow: 0 rem(5) rem(20) rgba($color-black, 0.1);
+	}
+
+	.volunteer-avatar:hover .overlay {
+		opacity: 1;
 	}
 
 	.volunteer-avatar .overlay {

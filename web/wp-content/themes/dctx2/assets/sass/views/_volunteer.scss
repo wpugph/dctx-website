@@ -1,19 +1,13 @@
 //--------------------------------------------------------------
 // Volunteer Profile Page
 //--------------------------------------------------------------
-.page-volunteer-profile {
+.page-template-template-volunteer {
 
 	.site-header {
 		margin-bottom: 0;
 	} //.site-header
 
 	.entry-header {
-		@include margin(0 auto rem(60));
-		@include padding(rem(20));
-
-		background-color: $color-tango;
-		color: $color-white;
-		text-align: center;
 
 		.entry-title {
 			margin-bottom: 0;
@@ -22,19 +16,45 @@
 	} // .entry-header
 
 	.entry-content {
-		@include padding(rem(20) rem(50));
-
-		border-radius: rem(10);
-		box-shadow: 0 rem(5) rem(20) rgba($color-black, 0.1);
 
 		figure.wp-block-image img {
 			border-radius: 50%;
+			min-height: 300px;
+			box-shadow: 0 rem(5) rem(20) rgba($color-black, 0.1);
 		}
 
 		.wp-block-group {
 			margin: rem(15) rem(0);
 			padding: rem(20);
 			box-shadow: 0 rem(5) rem(20) rgba($color-black, 0.1);
+
+			.span.volunteer-project {
+				margin: 5px;
+				background-color: $color-tango;
+				padding: 10px;
+				box-shadow: 0 rem(2) rem(10) rgba($color-black, 0.1);
+			}
+
+			.span.volunteer-team {
+				margin: 5px;
+				background-color: $color-corn;
+				padding: 10px;
+				box-shadow: 0 rem(2) rem(10) rgba($color-black, 0.1);
+			}
+
+			.span.volunteer-skill {
+				margin: 5px;
+				background-color: $color-lime-green;
+				padding: 10px;
+				box-shadow: 0 rem(2) rem(10) rgba($color-black, 0.1);
+			}
+
+			.span.volunteer-technology {
+				margin: 5px;
+				background-color: $color-limeaid;
+				padding: 10px;
+				box-shadow: 0 rem(2) rem(10) rgba($color-black, 0.1);
+			}
 		}
 	}
 
