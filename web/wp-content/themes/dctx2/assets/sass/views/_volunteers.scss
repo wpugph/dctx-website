@@ -6,7 +6,7 @@
 
 	.volunteer {
 		display: inline-block;
-		margin: rem(5);
+		margin: rem(15);
 	}
 
 	.volunteer-avatar {
@@ -36,7 +36,7 @@
 	}
 
 	.volunteer-avatar:hover .overlay {
-		opacity: 1;
+		opacity: 0;
 	}
 
 	.volunteer-avatar .overlay {
@@ -49,7 +49,7 @@
 		width: 100%;
 		opacity: 0;
 		transition: .5s ease;
-		background-color: #008CBA;
+		background-color: $color-gigas;
 		border-radius: 50%;
 	}
 
