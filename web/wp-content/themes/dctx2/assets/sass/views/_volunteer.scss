@@ -1,0 +1,41 @@
+//--------------------------------------------------------------
+// Volunteer Profile Page
+//--------------------------------------------------------------
+.page-id-808 {
+
+	.site-header {
+		margin-bottom: 0;
+	} //.site-header
+
+	.entry-header {
+		@include margin(0 auto rem(60));
+		@include padding(rem(20));
+
+		background-color: $color-tango;
+		color: $color-white;
+		text-align: center;
+
+		.entry-title {
+			margin-bottom: 0;
+			font-weight: bold;
+		} 
+	} // .entry-header
+
+	.entry-content {
+		@include padding(rem(20) rem(50));
+
+		border-radius: rem(10);
+		box-shadow: 0 rem(5) rem(20) rgba($color-black, 0.1);
+
+		figure.wp-block-image img {
+			border-radius: 50%;
+		}
+
+		.wp-block-group {
+			margin: rem(15) rem(0);
+			padding: rem(20);
+			box-shadow: 0 rem(5) rem(20) rgba($color-black, 0.1);
+		}
+	}
+
+} // .page-id-808 volunteer-template
