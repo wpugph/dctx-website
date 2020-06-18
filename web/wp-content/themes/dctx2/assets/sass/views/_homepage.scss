@@ -7,8 +7,13 @@
 	.projects {
 		@include padding(rem(30) null 0);
 
+		.wp-block-group__inner-container {
+			@include padding(rem(60) null 0);
+		}
+
 		.wp-block-columns {
-			@include padding(rem(30) null 0);
+			padding-top: 0px;
+			padding-bottom: 0px;
 
 			justify-content: center;
 			margin-bottom: 0;
@@ -43,6 +48,10 @@
 							object-fit: contain;
 							width: auto;
 						} // img
+
+						img.wp-image-676 {
+							padding: 1.5rem;
+						}
 
 					} // .wp-block-image
 
@@ -85,6 +94,11 @@
 
 		&.rapidpass {
 			background-size: rem(650);
+			
+			.wp-block-cover.alignfull .wp-block-cover__inner-container {
+				margin-bottom: -10px;
+			}
+			
 
 			@include media($tablet-landscape) {
 				background-position: -60% 0;
@@ -120,6 +134,7 @@
 
 						@include media($tablet-landscape) {
 							display: block;
+							z-index: -1;
 
 							img {
 								@include position(absolute, 0 null null -5%);
