@@ -20,6 +20,8 @@ web/wp-content/*
 web/wp-content/mu-plugins/*
 !web/wp-content/mu-plugins/custom
 !web/wp-content/mu-plugins/.gitkeep
+!web/wp-content/mu-plugins/pantheon
+!web/wp-content/mu-plugins/pantheon.php
 !web/wp-content/plugins/
 web/wp-content/plugins/*
 !web/wp-content/plugins/custom/
