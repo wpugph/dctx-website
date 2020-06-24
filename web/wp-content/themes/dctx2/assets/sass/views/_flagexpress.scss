@@ -6,9 +6,10 @@
 	.site-header+.site-main {
 		padding-top: 0px !important;
 	}
+
 	.wp-block-cover {
 
-		&.flagexpress-hero {
+		&.rapidpass-hero {
 			@include padding(rem(20) $space 0);
 
 			margin-bottom: rem(-110);
@@ -59,7 +60,7 @@
 					justify-content: space-around;
 				} // .wp-block-buttons
 			} // .content-wrapper
-		} // &.flagexpress-pass
+		} // &.rapidpass-pass
 
 		&.fast-forward {
 			background-color: transparent;
@@ -130,7 +131,7 @@
 			} // .content-wrapper
 		} // &.rapid-video
 
-		&.flagexpress-project {
+		&.rapidpass-project {
 			background-blend-mode: multiply;
 			background-position: 100% center;
 			background-size: contain;
@@ -223,8 +224,8 @@
 				} // .wp-block-button
 
 			} // .wp-block-buttons
-		} // &.flagexpress-project
-		
+		} // &.rapidpass-project
+
 	} // .wp-block-cover
 
 	.how-it-works {
