@@ -4,6 +4,7 @@ enforce_https: full
 web_docroot: true
 protected_web_paths:
   - /xmlrpc.php
+  - /wp/xmlrpc.php
   - /wp-admin
   - /wp-includes
   - /wp-json/wp/v2/users
