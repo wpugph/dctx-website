@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7fa24a815add724cd5db5638f53485c9",
+    "content-hash": "11e0696674abde9aafe0caa2935c99db",
     "packages": [
         {
             "name": "composer/installers",
@@ -682,15 +682,15 @@
         },
         {
             "name": "wpackagist-plugin/redirection",
-            "version": "dev-trunk",
+            "version": "4.9",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/redirection/",
-                "reference": "trunk"
+                "reference": "tags/4.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/redirection.zip?timestamp=1603532565",
+                "url": "https://downloads.wordpress.org/plugin/redirection.4.9.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -698,20 +698,19 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/redirection/",
-            "time": "2020-10-24T09:42:45+00:00"
+            "homepage": "https://wordpress.org/plugins/redirection/"
         },
         {
             "name": "wpackagist-plugin/seo-by-rank-math",
-            "version": "dev-trunk",
+            "version": "1.0.50.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/seo-by-rank-math/",
-                "reference": "trunk"
+                "reference": "tags/1.0.50.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/seo-by-rank-math.zip?timestamp=1603311608",
+                "url": "https://downloads.wordpress.org/plugin/seo-by-rank-math.1.0.50.1.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -719,8 +718,7 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/seo-by-rank-math/",
-            "time": "2020-10-21T20:20:08+00:00"
+            "homepage": "https://wordpress.org/plugins/seo-by-rank-math/"
         },
         {
             "name": "wpackagist-plugin/stream",
@@ -766,15 +764,15 @@
         },
         {
             "name": "wpackagist-plugin/unicard",
-            "version": "dev-trunk",
+            "version": "1.0.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/unicard/",
-                "reference": "trunk"
+                "reference": "tags/1.0.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/unicard.zip?timestamp=1585321692",
+                "url": "https://downloads.wordpress.org/plugin/unicard.1.0.2.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -782,8 +780,7 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/unicard/",
-            "time": "2020-03-27T15:08:12+00:00"
+            "homepage": "https://wordpress.org/plugins/unicard/"
         },
         {
             "name": "wpackagist-plugin/widget-context",
@@ -828,15 +825,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "13.5",
+            "version": "15.1.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/13.5"
+                "reference": "tags/15.1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.13.5.zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.15.1.1.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -958,16 +955,13 @@
         "wpackagist-plugin/autoptimize": 20,
         "wpackagist-plugin/host-analyticsjs-local": 20,
         "wpackagist-plugin/two-factor": 20,
-        "wpackagist-plugin/redirection": 20,
         "wpackagist-plugin/stream": 20,
         "wpackagist-plugin/wordpress-importer": 20,
         "wpackagist-plugin/wp-cfm": 20,
         "wpackagist-plugin/wp-redis": 20,
         "wpackagist-plugin/inline-google-spreadsheet-viewer": 20,
-        "wpackagist-plugin/unicard": 20,
         "wpackagist-plugin/plugin-organizer": 20,
-        "wpackagist-plugin/wp-smushit": 20,
-        "wpackagist-plugin/seo-by-rank-math": 20
+        "wpackagist-plugin/wp-smushit": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
